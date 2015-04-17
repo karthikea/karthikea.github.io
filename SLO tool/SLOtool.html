@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+<style>
+
+
+.lw { font-size: 65px; }
+/*-----http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery---*/
+/*----- Tabs -----*/
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+ 
+    /*----- Tab Links -----*/
+    /* Clearfix */
+    .tab-links:after {
+        display:block;
+        clear:both;
+        content:'';
+    }
+ 
+    .tab-links li {
+        margin:0px 5px;
+        float:left;
+        list-style:none;
+    }
+ 
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+ 
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+ 
+    li.active a, li.active a:hover {
+        background:#fff;
+        color:#4c4c4c;
+    }
+ 
+    /*----- Content of Tabs -----*/
+    .tab-content {
+        padding:25px;
+        border-radius:10px;
+        box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+        background:#fff;
+    }
+ 
+        .tab {
+            display:none;
+        }
+ 
+        .tab.active {
+            display:block;
+        }
+</style>
+    <link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/demo/demo.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script type="text/javascript" src="libraries/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+ <script type="text/javascript" src="submit.js"></script>
+<script>
+/* Write JavaScript here */
+/*-----http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery---*/
+jQuery(document).ready(function() {
+    jQuery('.tabs .tab-links a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+});ddg
+</script>
+<title>SLO Tool</title>
+</head>
+<body>
+  
+<!-- Start your code here -->
+ <!-----http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery--->
+  </body>
+<div class="tabs">
+    <ul class="tab-links">
+        <li class="active"><a href="#tab1">General Information</a></li>
+      <li><a href="#tab2">Learning Goal</a></li>
+      <li><a href="#tab3">Assessment and Evaluation</a></li>
+        <li><a href="#tab4">Growth Targets</a></li>
+        <li><a href="#tab5">Outcomes</a></li>
+        <li><a href="#tab6">Rating</a></li>
+		<li><a href="#tab7">Summary</a></li>
+    </ul>
+ 
+    <div class="tab-content">
+        <div id="tab1" class="tab active">
+          <table  style="width:1000px;">
+            <tr height="100">
+               <td>Academic year</td>
+              <td><input type="text" id="year" value=" "></td>
+            </tr>
+            <tr height="100">
+               <td>Educator name</td>
+              <td><input type="text" id="name" value=" "></td>
+            </tr>
+            <tr height="100">
+              <td>Subject</td>
+              <td ><select id="subject" class="easyui-combobox"  style="width:500px;">
+			        <option disabled selected>--Choose or type in subject--</option>
+                    <option value="Math">Math</option>
+                    <option value="Reading">Reading</option>
+                    <option value="History">History</option>
+                    <option value="Science">Science</option>
+                    <option value="CSC316">Introduction to Data Structures and Algorithims</option>
+                </select></td>
+            </tr>
+			<tr height="100">
+              <td>Course</td>
+              <td ><input type="text" id="course"></input></td>
+            </tr>
+           <tr height="100">
+              <td>Grade</td>
+              <td><select class="easyui-combobox" id="grade" data-options="multiple:true,multiline:true" style="width:100px;height:50px">
+                    <option disabled selected>Choose or type in grade group</option>
+					<option value="PK-2">PK-2</option>
+					<option value="3-5">3-5</option>
+                    <option value="6-8">6-8</option>
+                    <option value="9-12">9-12</option>
+                    
+                   <! <option value="Other"><!</option>
+                    
+                </select></td>
+            </tr>
+           <tr height="100">
+               <td>Interval of instruction</td>
+              <td><select class="easyui-combobox" id="interval" style="width:500px;">
+			        <option disabled selected>Choose or type in interval</option>
+					<option value="PK">Quarterly</option>
+                    <option value="1">Semester</option>
+                    <option value="2">Yearly</option>
+			  <select></td>
+            </tr>
+          </table>
+		  
+		  <button onClick="submitElement0()">Submit</button>
+            
+        </div>
+ 
+        <div id="tab2" class="tab">
+              <table  style="width:1000px;">
+            <tr height="100">
+               <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info" class="easyui-tooltip" href="http://www.cnn.com/" target="_blank">learning goal.</a></td>
+              <td><textarea id="lgoal" cols="50" rows="1" value=" "></textarea></td>
+            </tr>
+            <tr>
+              <td>Identify the content standards associated with the learning goal.</td>
+              <td><select class="easyui-combobox" id="standard" data-options="multiple:true,multiline:true" style="width:500px;height:50px;">
+                    <option disabled selected>Choose or type in standard(s)</option>
+					<option value="Math">1.1 Students will learn math</option>
+                    <option value="Reading">1.2 Students will learn reading</option>
+                    <option value="History">1.3 Students will learn history</option>
+                    <option value="Science">1.4 students will learn science</option>
+                    <option value="CSC316">1.5 students will be able to implement stacks,linked lists, queues and determine time complexity as well as traverse through trees</option>
+                </select></td>
+            </tr>
+            <tr height="100">
+               <td>Describe the student population with attention to diverse learners.</td>
+              <td><input id="pop" type="text" value=""></td>
+            </tr>
+            <tr height="100">
+              <td>Methods of instruction.</td>
+                 <td><select class="easyui-combobox" id="method" data-options="multiple:true,multiline:true" style="width:500px;height:50px">
+			        <option disabled selected>Choose or type in method(s)</option>
+                    <option value="Lecture">Lecture</option>
+                    <option value="Discussion">Class Discussion</option>
+                    <option value="Laboratory">Laboratory</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="CSC316">Flash Cards</option>
+                </select></td>
+            </tr>
+          </table>
+		  <button onClick="submitElement1()">Submit</button>
+        </div>
+ 
+        <div id="tab3" class="tab">
+             <table  style="width:1000px;">
+            <tr height="100">
+               <td>Describe the assessments and evaluation procedures that measure student's understanding of the learning goal.</td>
+              <td><input type="text" id="assess1"></td>
+            </tr>
+            <tr height="100">
+               <td>Describe how the assessments and evaluation procedures may be differentiated to meet the
+needs of all students described in the student population.</td>
+              <td><input type="text" id="assess2"></td>
+            </tr>
+          </table>
+		  <button onClick="submitElement2()">Submit</button>
+        </div>
+        <div id="tab4" class="tab">
+               <table  style="width:1000px;">
+            <tr height="100">
+               <td>Document baseline data collected.</td>
+              <td><input type="text"></td>
+            </tr>
+			<tr>
+			   <td>Will there be a midpoint check-in?</td>
+			   <td><select id="mid">
+			       <option value=1>Yes</option>
+				   <option>No</option>
+				   </select>
+			   </td>
+			</tr>
+			
+			<tr>
+			<td>If you answered "Yes" to the previous question please describe the midpoint check in?</td>
+			<td><input type="text" id="midresp"></input></td>
+			</tr>
+			
+            <tr height="100">
+               <td>Using baseline data identify growth targets for your student population.</td>
+              <td><input type="text"></td>
+            </tr>
+          </table>
+		  <button onClick="submitElement3()">Submit</button>
+        </div>
+       <div id="tab5" class="tab">
+               <table  style="width:1000px;">
+            <tr height="100">
+               <td>Document the number or percentage of students who achieved their identified growth targets.</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr height="100">
+              <td><b>Evaluator:</b> Explain how the number or percentage of students who their identified growth
+targets translates into an appropriate teacher rating.</td>
+              <td><input type="text"></td>
+            </tr>
+          </table>
+		  <button onClick="submitElement4()">Submit</button>
+        </div>
+      <div id="tab6" class="tab">
+               <table  style="width:1000px;">
+            <tr height="100">
+               <td>Unsatisfactory</td><td>Needs Improvement</td><td>Proficient</td><td>Excellent</td>
+              
+            </tr>
+			<tr>
+			<td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+			</tr>
+          </table>
+		  <button onClick="submitElement5()">Submit</button>
+        </div>
+		 <div id="tab7" class="tab">
+		 <h3>General Information</h3>
+               <table  style="width:1000px;">
+            <tr height="100">
+               <td>Academic Year</td>
+              <td id="acYear"></td>
+            </tr>
+			<tr height="100">
+               <td>Educator Name</td>
+              <td id="edName"></td>
+            </tr>
+			<tr height="100">
+               <td>Subject</td>
+              <td id="selSub"></td>
+            </tr>
+			<tr height="100">
+               <td>Course</td>
+              <td id="selCor"></td>
+            </tr>
+			<tr height="100">
+               <td>Grade</td>
+              <td id="selGra"></td>
+            </tr>
+			<tr height="100">
+               <td>Interval of instruction</td>
+              <td id="selInt"></td>
+            </tr>
+          </table>
+		  <h3>Learning Goal</h3>
+		   <table  style="width:1000px;">
+            <tr height="100">
+               <td>Describe the learning goal.</td>
+              <td id="lg"></td>
+            </tr>
+			<tr height="100">
+               <td>Identify the content standards associated with the learning goal.</td>
+              <td id="selStan"></td>
+            </tr>
+			<tr height="100">
+               <td>Describe the student population with attention to diverse learners.</td>
+              <td id="selPop"></td>
+            </tr>
+			<tr height="100">
+               <td>Methods of instruction.</td>
+              <td id="selMet"></td>
+            </tr>
+			
+          </table>
+		  <table>
+		  <h3>Assessment and Evaluation</h3>
+        </div>
+    </div>
+</div>
+
+
+<!-- End your code here -->
+</body>
+</html>
