@@ -6,6 +6,8 @@
 
 
 .lw { font-size: 65px; }
+
+.td {width:500px;}
 /*-----http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery---*/
 /*----- Tabs -----*/
 .tabs {
@@ -70,6 +72,11 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
  <script type="text/javascript" src="libraries/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
  <script type="text/javascript" src="submit.js"></script>
+ <script type="text/javascript" src="standards.js"></script>
+ <script type="text/javascript" src="exportWord/FileSaver.js"></script>
+ <script type="text/javascript" src="exportWord/jquery.wordexport.js"></script>
+
+
 <script>
 /* Write JavaScript here */
 /*-----http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery---*/
@@ -125,6 +132,7 @@ jQuery(document).ready(function() {
                     <option value="History">History</option>
                     <option value="Science">Science</option>
                     <option value="CSC316">Introduction to Data Structures and Algorithims</option>
+					<option value="Fl">Foreign Language</option>
                 </select></td>
             </tr>
 			<tr height="100">
@@ -148,9 +156,9 @@ jQuery(document).ready(function() {
                <td>Interval of instruction</td>
               <td><select class="easyui-combobox" id="interval" style="width:500px;">
 			        <option disabled selected>Choose or type in interval</option>
-					<option value="PK">Quarterly</option>
-                    <option value="1">Semester</option>
-                    <option value="2">Yearly</option>
+					<option value="4">Quarterly</option>
+                    <option value="2">Semester</option>
+                    <option value="1">Yearly</option>
 			  <select></td>
             </tr>
           </table>
@@ -167,14 +175,23 @@ jQuery(document).ready(function() {
             </tr>
             <tr>
               <td>Identify the content standards associated with the learning goal.</td>
-              <td><select class="easyui-combobox" id="standard" data-options="multiple:true,multiline:true" style="width:500px;height:50px;">
-                    <option disabled selected>Choose or type in standard(s)</option>
+              <td><select id="standardlinks" class="links" style="width:500px;height:50px">
+			        <option disabled selected>Choose a standard link</option>
+                    <!--<id="standard" data-options="multiple:true,multiline:true" style="width:500px;height:50px;">
+                    <!--<option disabled selected>Choose or type in standard(s)</option>
+					<option disabled selected>Choose or type in standard(s)</option>
 					<option value="Math">1.1 Students will learn math</option>
                     <option value="Reading">1.2 Students will learn reading</option>
                     <option value="History">1.3 Students will learn history</option>
                     <option value="Science">1.4 students will learn science</option>
                     <option value="CSC316">1.5 students will be able to implement stacks,linked lists, queues and determine time complexity as well as traverse through trees</option>
+					-->
                 </select></td>
+				<td><a href="#" id="link" target="_blank">Got to standards site</a></td>
+				</tr>
+				<tr>
+				<td>Enter standards here</td>
+				<td><textarea  id="standard" value="" cols="50" rows="1"></textarea></td>
             </tr>
             <tr height="100">
                <td>Describe the student population with attention to diverse learners.</td>
@@ -263,6 +280,7 @@ targets translates into an appropriate teacher rating.</td>
 		  <button onClick="submitElement5()">Submit</button>
         </div>
 		 <div id="tab7" class="tab">
+		 <div id="page-content">
 		 <h3>General Information</h3>
                <table  style="width:1000px;">
             <tr height="100">
@@ -321,7 +339,26 @@ targets translates into an appropriate teacher rating.</td>
 needs of all students described in the student population.</td>
               <td id="a2"></td>
             </tr>
+			</table>
+			<input type="button" value="Print" onclick="window.print()" />
+			</div>
+			<a class="word-export" href="javascript:void(0)"> Export as .doc </a>
+			<script type="text/javascript">
+
+				jQuery(document).ready(function($) {
+
+					$("a.word-export").click(function(event) {
+
+					$("#page-content").wordExport();
+
+					});
+
+				});
+
+</script>
+
         </div>
+		
     </div>
 </div>
 

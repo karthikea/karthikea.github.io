@@ -27,8 +27,8 @@ function getGoal(){
 	document.getElementById("lg").innerHTML=x;
 }
 function getStandards(){
-    var val=$('#standard').combobox('getText');
-	document.getElementById("selStan").innerHTML=val;
+    var x=document.getElementById("standard").value;
+	document.getElementById("selStan").innerHTML=x;
 }
 function getPop(){
     var x=document.getElementById("pop").value;
@@ -53,6 +53,8 @@ function submitElement0(){
 	getCourse();
 	getGrade();
 	getInterval();
+	getStandardsLinks();
+	
 	
 	
  
