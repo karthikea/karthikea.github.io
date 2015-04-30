@@ -73,6 +73,7 @@
  <script type="text/javascript" src="libraries/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
  <script type="text/javascript" src="submit.js"></script>
  <script type="text/javascript" src="standards.js"></script>
+ <script type="text/javascript" src="checkIn.js"></script>
  <script type="text/javascript" src="exportWord/FileSaver.js"></script>
  <script type="text/javascript" src="exportWord/jquery.wordexport.js"></script>
 
@@ -103,17 +104,25 @@ jQuery(document).ready(function() {
   </body>
 <div class="tabs">
     <ul class="tab-links">
-        <li class="active" id="t1"><a href="#tab1">General Information</a></li>
+	<li class="active" id="t9" ><a href="#tab9" >Introduction</a></li>
+        <li  id="t1"><a href="#tab1">General Information</a></li>
       <li id="t2"><a href="#tab2">Learning Goal</a></li>
       <li id="t3"><a href="#tab3">Assessment and Evaluation</a></li>
         <li id="t4"><a href="#tab4">Growth Targets</a></li>
         <li id="t5"><a href="#tab5">Outcomes</a></li>
         <li id="t6"><a href="#tab6">Rating</a></li>
 		<li id="t7"><a href="#tab7">Summary</a></li>
+		<li id="t8" ><a href="#tab8">Help</a></li>
+		
     </ul>
  
     <div class="tab-content">
-        <div id="tab1" class="tab active">
+		<div id="tab9" class="tab active">
+			<p>Welcome to the SLO Tool</p>
+			<p>Instructions go here</p>
+		</div>
+		
+        <div id="tab1" class="tab">
           <table  style="width:1000px;">
             <tr height="100">
                <td>Academic year</td>
@@ -129,10 +138,12 @@ jQuery(document).ready(function() {
 			        <option disabled selected>--Choose or type in subject--</option>
                     <option value="Math">Math</option>
                     <option value="Reading">Reading</option>
+					<option value="LA">Language Arts</option>
                     <option value="History">History</option>
                     <option value="Science">Science</option>
-                    <option value="CSC316">Introduction to Data Structures and Algorithims</option>
+                    <option value="Art">Art</option>
 					<option value="Fl">Foreign Language</option>
+					<option value="PE">Physical education</option>
                 </select></td>
             </tr>
 			<tr height="100">
@@ -192,6 +203,7 @@ jQuery(document).ready(function() {
 				<tr>
 				<td>Enter standards here</td>
 				<td><textarea  id="standard" value="" cols="50" rows="1"></textarea></td>
+				<td><button onClick="clear()" href="#">Clear list</button></td>
             </tr>
             <tr height="100">
                <td>Describe the student population with attention to diverse learners.</td>
@@ -227,7 +239,7 @@ needs of all students described in the student population.</td>
 		  <button onClick="submitElement2()">Submit</button>
         </div>
         <div id="tab4" class="tab">
-               <table  style="width:1000px;">
+               <table  id="growth" style="width:1000px;">
             <tr height="100">
                <td>Document baseline data collected.</td>
               <td><input type="text"></td>
@@ -358,7 +370,9 @@ needs of all students described in the student population.</td>
 </script>
 
         </div>
-		
+		<div id="tab8" class="tab">
+			<p>Help goes here</p>
+		</div>
     </div>
 </div>
 

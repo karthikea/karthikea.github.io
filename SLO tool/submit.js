@@ -54,6 +54,7 @@ function submitElement0(){
 	getGrade();
 	getInterval();
 	getStandardsLinks();
+	//getCheckIns();
 	
 	
 	

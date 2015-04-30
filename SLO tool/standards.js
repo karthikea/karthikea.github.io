@@ -1,16 +1,6 @@
 var mlinks=[
               {"name":"Math Common Core","link":"http://www.corestandards.org/Math/Content/2/introduction/"},
-			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
-];
-  
-var hlinks=[
-              {"name":"UCLA History","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
-			  {"name":"Illinois State Board Standards","link":"http://www.isbe.net/ils/"},
-			  {"name":"C3 Framework for Social Studies","link":"http://www.socialstudies.org/system/files/c3/C3-Framework-for-Social-Studies.pdf"}
-];
-
-var fllinks=[
-              {"name":"ACTFL","link":"http://www.actfl.org/about-the-american-council-the-teaching-foreign-languages/resources"},
+			  {"name":"Achieve the core","link":"http://achievethecore.org/"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
@@ -23,6 +13,23 @@ var slinks=[
               {"name":"NGSS","link":"http://www.nextgenscience.org/next-generation-science-standards"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
+
+var lalinks=[
+              {"name":"Dynamic learning links","link":"http://dynamiclearningmaps.org/sites/default/files/documents/ELA_EEs/DLM%20E"},
+			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
+];
+
+var alinks=[
+              {"name":"National Arts Standards","link":"http://www.nationalartsstandards.org"},
+			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
+];
+
+var commonlinks=[
+	{"name":"Achieve the core","link":"http://achievethecore.org/"},
+	{"name":"Common Core","link":"http://www.corestandards.org/"},
+	{"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
+];
+
 
 
 
@@ -47,6 +54,10 @@ function getStandardsLinks(){
 	
 		createList(slinks);
 	}
+	if(subject=="Language Arts"){
+	
+		createList(slinks);
+	}
 	/**
 	if(subject==="http://www.corestandards.org/Math/Content/2/introduction/"){
 	    va
@@ -58,10 +69,19 @@ function getStandardsLinks(){
 	**/
 }
 
-function createList(object){
 
-	for(i=0;i<object.length;i++){
-		var select = document.getElementById("standardlinks"); 
+function createList(object){
+    
+    var select = document.getElementById("standardlinks"); 
+	
+	for(i=0;i<=select.length;i++){
+		select.remove(1);
+		
+	}
+	
+
+	for(i=0;i<object.length;i++){select
+		//var select = document.getElementById("standardlinks"); 
 		var option = document.createElement("option");
 		option.text = object[i].name;
 		option.value=object[i].link;
