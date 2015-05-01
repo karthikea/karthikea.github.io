@@ -46,6 +46,15 @@ function getAssess2(){
     var x=document.getElementById("assess2").value;
 	document.getElementById("a2").innerHTML=x;
 }
+
+function next(){
+	jQuery("#tab9").hide();//.hide()
+	jQuery("#tab1").show();//attr('class','tab active');
+		
+	jQuery("#t1").addClass('active');
+	jQuery("#t9").removeClass('active');
+}
+
 function submitElement0(){
     getYear();
 	getName();
@@ -60,8 +69,8 @@ function submitElement0(){
 	
  
         // Change tab 
-        jQuery("#tab1").attr('class','tab');
-		jQuery("#tab2").attr('class','tab active');
+        jQuery("#tab1").hide();
+		jQuery("#tab2").show();
 		
 		jQuery("#t2").addClass('active');
 		jQuery("#t1").removeClass('active');
@@ -75,8 +84,8 @@ function submitElement1(){
 	getMethod();
 	
 	// Change tab 
-        jQuery("#tab2").attr('class','tab');
-		jQuery("#tab3").attr('class','tab active');
+        jQuery("#tab2").hide();
+		jQuery("#tab3").show();
 		
 		jQuery("#t3").addClass('active');
 		jQuery("#t2").removeClass('active');
@@ -87,8 +96,8 @@ function submitElement2(){
 	getAssess2();
 	
 	// Change tab 
-        jQuery("#tab3").attr('class','tab');
-		jQuery("#tab4").attr('class','tab active');
+        jQuery("#tab3").hide();
+		jQuery("#tab4").show();
 		
 		jQuery("#t4").addClass('active');
 		jQuery("#t3").removeClass('active');
@@ -96,8 +105,8 @@ function submitElement2(){
 function submitElement3(){
 
 	// Change tab 
-        jQuery("#tab4").attr('class','tab');
-		jQuery("#tab5").attr('class','tab active');
+        jQuery("#tab4").hide();
+		jQuery("#tab5").show();
 		
 		jQuery("#t5").addClass('active');
 		jQuery("#t4").removeClass('active');
@@ -106,8 +115,8 @@ function submitElement3(){
 function submitElement4(){
 
 	// Change tab 
-        jQuery("#tab5").attr('class','tab');
-		jQuery("#tab6").attr('class','tab active');
+        jQuery("#tab5").hide();
+		jQuery("#tab6").show();
 		
 		jQuery("#t6").addClass('active');
 		jQuery("#t5").removeClass('active');
@@ -115,8 +124,8 @@ function submitElement4(){
 }
 function submitElement5(){
 	// Change tab 
-        jQuery("#tab6").attr('class','tab');
-		jQuery("#tab7").attr('class','tab active');
+        jQuery("#tab6").hide();
+		jQuery("#tab7").show();
 		
 		jQuery("#t7").addClass('active');
 		jQuery("#t6").removeClass('active');

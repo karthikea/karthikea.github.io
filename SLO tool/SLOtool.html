@@ -4,6 +4,21 @@
  <meta charset="UTF-8">
 <style>
 
+td{
+	font-size: 20px;
+}
+a{
+  font-size: 20px;
+}
+p{
+  font-size: 20px;
+}
+b{
+  font-size: 20px;
+}
+h3{
+  font-size: 25px;
+}
 
 .lw { font-size: 65px; }
 
@@ -56,6 +71,10 @@
         border-radius:10px;
         box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
         background:#fff;
+		font-family: "Times New Roman", Times, serif;
+	 
+
+		
     }
  
         .tab {
@@ -112,7 +131,7 @@ jQuery(document).ready(function() {
         <li id="t5"><a href="#tab5">Outcomes</a></li>
         <li id="t6"><a href="#tab6">Rating</a></li>
 		<li id="t7"><a href="#tab7">Summary</a></li>
-		<li id="t8" ><a href="#tab8">Help</a></li>
+		
 		
     </ul>
  
@@ -120,17 +139,19 @@ jQuery(document).ready(function() {
 		<div id="tab9" class="tab active">
 			<p>Welcome to the SLO Tool</p>
 			<p>Instructions go here</p>
+			
+			<button onClick="next()" href="#">Next</button>
 		</div>
 		
         <div id="tab1" class="tab">
           <table  style="width:1000px;">
             <tr height="100">
                <td>Academic year</td>
-              <td><input type="text" id="year" value=" "></td>
+              <td><input type="text" id="year" value=" "></input></td>
             </tr>
             <tr height="100">
                <td>Educator name</td>
-              <td><input type="text" id="name" value=" "></td>
+              <td><input type="text" id="name" value=" "></input></td>
             </tr>
             <tr height="100">
               <td>Subject</td>
@@ -207,7 +228,7 @@ jQuery(document).ready(function() {
             </tr>
             <tr height="100">
                <td>Describe the student population with attention to diverse learners.</td>
-              <td><input id="pop" type="text" value=""></td>
+              <td><textarea id="pop" type="text" value=""></textarea></td>
             </tr>
             <tr height="100">
               <td>Methods of instruction.</td>
@@ -228,12 +249,12 @@ jQuery(document).ready(function() {
              <table  style="width:1000px;">
             <tr height="100">
                <td>Describe the assessments and evaluation procedures that measure student's understanding of the learning goal.</td>
-              <td><input type="text" id="assess1"></td>
+              <td><textarea type="text" id="assess1"></textarea></td>
             </tr>
             <tr height="100">
                <td>Describe how the assessments and evaluation procedures may be differentiated to meet the
 needs of all students described in the student population.</td>
-              <td><input type="text" id="assess2"></td>
+              <td><textarea type="text" id="assess2"></textarea></td>
             </tr>
           </table>
 		  <button onClick="submitElement2()">Submit</button>
@@ -242,7 +263,7 @@ needs of all students described in the student population.</td>
                <table  id="growth" style="width:1000px;">
             <tr height="100">
                <td>Document baseline data collected.</td>
-              <td><input type="text"></td>
+              <td><textarea type="text"></textarea></td>
             </tr>
 			<tr>
 			   <td>Will there be a midpoint check-in?</td>
@@ -255,12 +276,12 @@ needs of all students described in the student population.</td>
 			
 			<tr>
 			<td>If you answered "Yes" to the previous question please describe the midpoint check in?</td>
-			<td><input type="text" id="midresp"></input></td>
+			<td><textarea type="text" id="midresp"></textarea></td>
 			</tr>
 			
             <tr height="100">
                <td>Using baseline data identify growth targets for your student population.</td>
-              <td><input type="text"></td>
+              <td><textarea type="text"></textarea></td>
             </tr>
           </table>
 		  <button onClick="submitElement3()">Submit</button>
@@ -269,12 +290,12 @@ needs of all students described in the student population.</td>
                <table  style="width:1000px;">
             <tr height="100">
                <td>Document the number or percentage of students who achieved their identified growth targets.</td>
-              <td><input type="text"></td>
+              <td><textarea type="text"></textarea></td>
             </tr>
             <tr height="100">
               <td><b>Evaluator:</b> Explain how the number or percentage of students who their identified growth
 targets translates into an appropriate teacher rating.</td>
-              <td><input type="text"></td>
+              <td><textarea type="text"></textarea></td>
             </tr>
           </table>
 		  <button onClick="submitElement4()">Submit</button>
@@ -286,7 +307,7 @@ targets translates into an appropriate teacher rating.</td>
               
             </tr>
 			<tr>
-			<td><input type="text"></td><td><input type="text"></td><td><input type="text"></td><td><input type="text"></td>
+			<td><textarea type="text"></textarea></td><td><textarea type="text"></textarea></td><td><textarea type="text"></textarea></td><td><textarea type="text"></textarea></td>
 			</tr>
           </table>
 		  <button onClick="submitElement5()">Submit</button>
