@@ -34,7 +34,7 @@ var commonlinks=[
 
 
 function getStandardsLinks(){
-	var subject=$('#subject').combobox('getText');
+	var subject=$('#subject').combobox('getValue');
 	
 	
 
@@ -46,7 +46,7 @@ function getStandardsLinks(){
 	
 		createList(hlinks);
 	}
-	if(subject=="Foreign Language"){
+	if(subject=="FL"){
 	
 		createList(fllinks);
 	}
@@ -54,10 +54,13 @@ function getStandardsLinks(){
 	
 		createList(slinks);
 	}
-	if(subject=="Language Arts"){
+	if(subject=="LA"){
 	
-		createList(slinks);
+		createList(lalinks);
 	}
+	if(subject=="Art")[
+		createList(alinks);
+		}
 	/**
 	if(subject==="http://www.corestandards.org/Math/Content/2/introduction/"){
 	    va

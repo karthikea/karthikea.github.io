@@ -157,14 +157,14 @@ jQuery(document).ready(function() {
               <td>Subject</td>
               <td ><select id="subject" class="easyui-combobox"  style="width:500px;">
 			        <option disabled selected>--Choose or type in subject--</option>
-                    <option value="Math">Math</option>
-                    <option value="Reading">Reading</option>
+                    <option value="Math">Mathematics</option>
 					<option value="LA">Language Arts</option>
-                    <option value="History">History</option>
-                    <option value="Science">Science</option>
-                    <option value="Art">Art</option>
+                    <option value="History">Social Studies and History</option>
+                    <option value="Science">Life and Physical Sciences</option>
+                    <option value="Art">Fine and Performing Art</option>
 					<option value="Fl">Foreign Language</option>
-					<option value="PE">Physical education</option>
+					<option value="PE">Physical, Health, and Safety Education</option>
+					<option value="VP">Vocational Programs</option>
                 </select></td>
             </tr>
 			<tr height="100">
@@ -188,9 +188,10 @@ jQuery(document).ready(function() {
                <td>Interval of instruction</td>
               <td><select class="easyui-combobox" id="interval" style="width:500px;">
 			        <option disabled selected>Choose or type in interval</option>
-					<option value="4">Quarterly</option>
+					<option value="4">One year</option>
                     <option value="2">Semester</option>
-                    <option value="1">Yearly</option>
+                    <option value="1">Unit</option>
+					<option value="1">One quarter</option>
 			  <select></td>
             </tr>
           </table>
@@ -224,7 +225,6 @@ jQuery(document).ready(function() {
 				<tr>
 				<td>Enter standards here</td>
 				<td><textarea  id="standard" value="" cols="50" rows="1"></textarea></td>
-				<td><button onClick="clear()" href="#">Clear list</button></td>
             </tr>
             <tr height="100">
                <td>Describe the student population with attention to diverse learners.</td>
@@ -247,6 +247,17 @@ jQuery(document).ready(function() {
  
         <div id="tab3" class="tab">
              <table  style="width:1000px;">
+			 <tr height="100">
+		    <td> Assessment type</td>
+		    <td><select class="easyui-combobox" id="assessment"  style="width:500px;height:50px">
+			        <option disabled selected>Choose or type in assessment type(s)</option>
+                    <option value="Lecture">Exam</option>p
+                    <option value="Discussion">Essay</option>
+                    <option value="Laboratory">Project</option>
+                    <option value="Workshop">Presentation</option>
+                </select>
+				</td> 
+			 </tr>
             <tr height="100">
                <td>Describe the assessments and evaluation procedures that measure student's understanding of the learning goal.</td>
               <td><textarea type="text" id="assess1"></textarea></td>
