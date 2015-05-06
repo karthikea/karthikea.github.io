@@ -23,7 +23,10 @@ var alinks=[
               {"name":"National Arts Standards","link":"http://www.nationalartsstandards.org"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
-
+var pelinks=[
+              {"name":"National PE Standards, dev. by Shape ","link":"http://www.shapeamerica.org/standards/pe/index.cfm"},
+			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
+];
 var commonlinks=[
 	{"name":"Achieve the core","link":"http://achievethecore.org/"},
 	{"name":"Common Core","link":"http://www.corestandards.org/"},
@@ -58,8 +61,11 @@ function getStandardsLinks(){
 	
 		createList(lalinks);
 	}
-	if(subject=="Art")[
+	if(subject=="Art"){
 		createList(alinks);
+		}
+	if(subject=="PE"){
+		createList(pelinks);
 		}
 	/**
 	if(subject==="http://www.corestandards.org/Math/Content/2/introduction/"){
