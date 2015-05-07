@@ -88,8 +88,11 @@ h3{
     <link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/demo/demo.css">
+	<link rel="stylesheet" href="libraries/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
  <script type="text/javascript" src="libraries/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+  <script type="text/javascript" src="libraries/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="submit.js"></script>
  <script type="text/javascript" src="standards.js"></script>
  <script type="text/javascript" src="checkIn.js"></script>
@@ -185,7 +188,7 @@ jQuery(document).ready(function() {
                 </select></td>
             </tr>
            <tr height="100">
-               <td>Interval of instruction</td>
+               <td><a title="Identify a clear timeline within which students will reach an academic goal. The interval of instruction refers to the length of time the teacher will spend teaching the content and skills addressed in the SLO.Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">Interval of instruction</td>
               <td><select class="easyui-combobox" id="interval" style="width:500px;">
 			        <option disabled selected>Choose or type in interval</option>
 					<option value="4">One year</option>
@@ -197,13 +200,13 @@ jQuery(document).ready(function() {
           </table>
 		  
 		  <button onClick="submitElement0()">Submit</button>
-            
+          
         </div>
  
         <div id="tab2" class="tab">
               <table  style="width:1000px;">
             <tr height="100">
-               <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info" class="easyui-tooltip" href="http://www.cnn.com/" target="_blank">learning goal.</a></td>
+               <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">learning goal.</a></td>
               <td><textarea id="lgoal" cols="50" rows="1" value=" "></textarea></td>
             </tr>
             <tr>
@@ -243,6 +246,7 @@ jQuery(document).ready(function() {
             </tr>
           </table>
 		  <button onClick="submitElement1()" href="#">Submit</button>
+		  <a href="learningGoalHelp.html" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</a>
         </div>
  
         <div id="tab3" class="tab">
@@ -326,7 +330,7 @@ targets translates into an appropriate teacher rating.</td>
 		 <div id="tab7" class="tab">
 		 <div id="page-content">
 		 <h3>General Information</h3>
-               <table  style="width:1000px;">
+               <table  style="width:500px;">
             <tr height="100">
                <td>Academic Year</td>
               <td id="acYear"></td>
@@ -353,7 +357,7 @@ targets translates into an appropriate teacher rating.</td>
             </tr>
           </table>
 		  <h3>Learning Goal</h3>
-		   <table  style="width:1000px;">
+		   <table  style="width:500px;">
             <tr height="100">
                <td>Describe the learning goal.</td>
               <td id="lg"></td>
@@ -372,13 +376,13 @@ targets translates into an appropriate teacher rating.</td>
             </tr>
 			
           </table>
-		  <table>
 		  <h3>Assessment and Evaluation</h3>
-		  <tr height="100">
+		   <table style="width:600px;">
+		  <tr height="200">
                <td>Describe the assessments and evaluation procedures that measure student's understanding of the learning goal.</td>
               <td id="a1"></td>
             </tr>
-			<tr height="100">
+			<tr height="200">
                <td>Describe how the assessments and evaluation procedures may be differentiated to meet the
 needs of all students described in the student population.</td>
               <td id="a2"></td>

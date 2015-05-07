@@ -4,8 +4,8 @@ var mlinks=[
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
-var slinks=[
-              {"name":"NGSS","link":"http://www.nextgenscience.org/next-generation-science-standards"},
+var hlinks=[
+              {"name":"UCLA","link":"http://www.nextgenscience.org/next-generation-science-standards"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
