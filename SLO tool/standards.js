@@ -5,7 +5,8 @@ var mlinks=[
 ];
 
 var hlinks=[
-              {"name":"UCLA","link":"http://www.nextgenscience.org/next-generation-science-standards"},
+              {"name":"UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
+			  {"name":"C3 Framework for Social Studies","link":"http://www.socialstudies.org/system/files/c3/C3-Framework-for-Social-Studies.pdf"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
@@ -25,7 +26,7 @@ var alinks=[
 ];
 var pelinks=[
               {"name":"National PE Standards, dev. by Shape ","link":"http://www.shapeamerica.org/standards/pe/index.cfm"},
-			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
+			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/pdh/standards.htm#goals"}
 ];
 var commonlinks=[
 	{"name":"Achieve the core","link":"http://achievethecore.org/"},
