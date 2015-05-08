@@ -20,6 +20,7 @@ h3{
   font-size: 25px;
 }
 
+
 .lw { font-size: 65px; }
 
 .td {width:500px;}
@@ -115,7 +116,7 @@ jQuery(document).ready(function() {
  
         e.preventDefault();
     });
-});ddg
+});
 </script>
 <title>SLO Tool</title>
 </head>
@@ -147,6 +148,9 @@ jQuery(document).ready(function() {
 		</div>
 		
         <div id="tab1" class="tab">
+		
+		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		
           <table  style="width:1000px;">
             <tr height="100">
                <td>Academic year</td>
@@ -197,14 +201,17 @@ jQuery(document).ready(function() {
 					<option value="1">One quarter</option>
 			  <select></td>
             </tr>
-          </table>
-		  
+			<tr><td></td><td>Start date:<input class="easyui-datebox"></input></td><td>End date:<input class="easyui-datebox"></input></td></tr>
+			</table>
 		  <button onClick="submitElement0()">Submit</button>
           
         </div>
  
         <div id="tab2" class="tab">
-              <table  style="width:1000px;">
+		
+		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+            
+		<table  style="width:1000px;">
             <tr height="100">
                <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">learning goal.</a></td>
               <td><textarea id="lgoal" cols="50" rows="1" value=" "></textarea></td>
@@ -246,10 +253,12 @@ jQuery(document).ready(function() {
             </tr>
           </table>
 		  <button onClick="submitElement1()" href="#">Submit</button>
-		  <a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</a>
         </div>
  
         <div id="tab3" class="tab">
+		
+		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		
              <table  style="width:1000px;">
 			 <tr height="100">
 		    <td> Assessment type</td>
@@ -275,6 +284,10 @@ needs of all students described in the student population.</td>
 		  <button onClick="submitElement2()">Submit</button>
         </div>
         <div id="tab4" class="tab">
+		
+		
+		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		
                <table  id="growth" style="width:1000px;">
             <tr height="100">
                <td>Document baseline data collected.</td>
@@ -302,6 +315,9 @@ needs of all students described in the student population.</td>
 		  <button onClick="submitElement3()">Submit</button>
         </div>
        <div id="tab5" class="tab">
+	   
+		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		
                <table  style="width:1000px;">
             <tr height="100">
                <td>Document the number or percentage of students who achieved their identified growth targets.</td>
@@ -316,6 +332,9 @@ targets translates into an appropriate teacher rating.</td>
 		  <button onClick="submitElement4()">Submit</button>
         </div>
       <div id="tab6" class="tab">
+	  
+		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		
                <table  style="width:1000px;">
             <tr height="100">
                <td>Unsatisfactory</td><td>Needs Improvement</td><td>Proficient</td><td>Excellent</td>
