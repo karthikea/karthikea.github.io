@@ -19,7 +19,9 @@ b{
 h3{
   font-size: 25px;
 }
-
+i{
+  font-size: 20px;
+}
 
 .lw { font-size: 65px; }
 
@@ -85,6 +87,11 @@ h3{
         .tab.active {
             display:block;
         }
+	
+	#instructions{
+		width: 1000px;
+		margins:auto;
+	}
 </style>
     <link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/icon.css">
@@ -141,8 +148,44 @@ jQuery(document).ready(function() {
  
     <div class="tab-content">
 		<div id="tab9" class="tab active">
-			<p>Welcome to the SLO Tool</p>
-			<p>Instructions go here</p>
+		
+			<div id="instructions">
+			<p><img src="iea-logo.jpg" height="84" width="129" align="right"></p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			<p>Welcome to the IEA/NEA Student Learning Objective Interactive Template.  The purpose of the SLO template is to help you, as an educator, organize the ideas you will need to meet the requirements of the student growth portion of your Illinois performance evaluation. 
+			This template is the result of a cooperative process involving active practitioners and Illinois Stakeholders who work in the area of student growth assessment.  
+			We hope you find it helpful.</p>
+			
+			<p>The SLO Interactive template does not replace meeting with your evaluator to determine the elements you will use to measure student growth, 
+			but it does provide a step-by-step process for organizing those elements and saving them as a paper copy.</p>
+			
+			<p>The template does not provide choices for assessments.  Your district PERA joint committee must provide criteria, guidelines or must make decisions on which assessments you will use and, if you are developing your own.  
+			Please contact your district PERA joint committee for further guidance.  For the completion of the template, you will need to type in a description of that assessment being used for your student growth measure.
+			</p>
+			
+			<p><b>Key Features:</b></p>
+			
+			<p><i>Drop-down menus.</i>  Throughout the template is an opportunity to offer responses for you to select.  
+			These are only suggestions.  You may also, for any of the elements, type in a response if the drop-down list does not offer the response you need.
+            </p>
+			
+			<p><i>Help and Support.</i>  The template provides help on the elements for the student learning objective process.   Simply roll the cursor over any of the highlighted text in the template and you’ll find definitions and links to websites offering help in understanding and using the element. 
+			The training hyperlinks provide more information on the elements and will aid you as you complete the SLO Interactive Template.</p>
+			
+			<p><i>Saving Content.</i>  The template content has the option of being saved on your computer as a word or pdf document.  We encourage the user to print the summary of the content upon completion. <p>
+			
+			<p>We also recommend reviewing the summary document with your evaluator for input, feedback or approval.  Once the evaluator approves the student growth measurement plan, both of you should sign and date the document.  The plan includes a progress monitoring schedule.  
+			Please keep the document as a reminder of the timeline and a record of your student growth performance evaluation agreement. 
+			</p>
+			
+			<p>If you have questions or comments about the template, please contact us at <a href="http:\\cei.feedback@gmail.com">cei.feedback@gmail.com</a>.  We appreciate your feedback.</p>
+			
+			</div>
 			
 			<button onClick="next()" href="#">Next</button>
 		</div>
@@ -348,7 +391,7 @@ targets translates into an appropriate teacher rating.</td>
         </div>
 		 <div id="tab7" class="tab">
 		 <div id="page-content">
-		 <h3>General Information</h3>
+		 <h3 style="font-weight:bold">General Information</h3>
                <table  style="width:500px;">
             <tr height="100">
                <td>Academic Year</td>
@@ -375,7 +418,7 @@ targets translates into an appropriate teacher rating.</td>
               <td id="selInt"></td>
             </tr>
           </table>
-		  <h3>Learning Goal</h3>
+		  <h3 style="font-weight:bold">Learning Goal</h3>
 		   <table  style="width:500px;">
             <tr height="100">
                <td>Describe the learning goal.</td>
@@ -395,7 +438,7 @@ targets translates into an appropriate teacher rating.</td>
             </tr>
 			
           </table>
-		  <h3>Assessment and Evaluation</h3>
+		  <h3 style="font-weight:bold">Assessment and Evaluation</h3>
 		   <table style="width:600px;">
 		  <tr height="200">
                <td>Describe the assessments and evaluation procedures that measure student's understanding of the learning goal.</td>

@@ -1,31 +1,40 @@
 var mlinks=[
               {"name":"Math Common Core","link":"http://www.corestandards.org/Math/Content/2/introduction/"},
 			  {"name":"Achieve the core","link":"http://achievethecore.org/"},
+			   {"name":"Dynamic learning maps-Mathematics","link":"http://dynamiclearningmaps.org/sites/default/files/documents/Math_EEs/DLM%20Essential%20Elements%20Math%20%282013%29%20v4.pdf"},
+			   {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
 var hlinks=[
               {"name":"UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
 			  {"name":"C3 Framework for Social Studies","link":"http://www.socialstudies.org/system/files/c3/C3-Framework-for-Social-Studies.pdf"},
+			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
 var slinks=[
               {"name":"NGSS","link":"http://www.nextgenscience.org/next-generation-science-standards"},
+			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
 var lalinks=[
               {"name":"Dynamic learning links","link":"http://dynamiclearningmaps.org/sites/default/files/documents/ELA_EEs/DLM%20E"},
+			   {"name":"Reading Common Core","link":"http://www.corestandards.org/Math/Content/2/introduction/"},
+			   {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
 
 var alinks=[
               {"name":"National Arts Standards","link":"http://www.nationalartsstandards.org"},
-			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
+			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"},
+			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
+			  {"name":"National Association for Music Education","link":"http://www.nafme.org/my-classroom/standards/"}
 ];
 var pelinks=[
               {"name":"National PE Standards, dev. by Shape ","link":"http://www.shapeamerica.org/standards/pe/index.cfm"},
+			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/pdh/standards.htm#goals"}
 ];
 var commonlinks=[
