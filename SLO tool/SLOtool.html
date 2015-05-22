@@ -124,6 +124,27 @@ jQuery(document).ready(function() {
         e.preventDefault();
     });
 });
+/*Present warning for exiting page. Code modified from http://stackoverflow.com/questions/1119289/how-to-show-the-are-you-sure-you-want-to-navigate-away-from-this-page-when-ch*/
+var confirmOnPageExit = function (e) 
+{
+    // If we haven't been passed the event get the window.event
+    e = e || window.event;
+
+    var message = 'If you leave the SLO Tool then all your work will be lost';
+
+    // For IE6-8 and Firefox prior to version 4
+    if (e) 
+    {
+        e.returnValue = message;
+    }
+
+    // For Chrome, Safari, IE8+ and Opera 12+
+    return message;
+};
+
+// Turn it on - assign the function that returns the string
+window.onbeforeunload = confirmOnPageExit;
+
 </script>
 <title>SLO Tool</title>
 </head>
@@ -452,13 +473,13 @@ needs of all students described in the student population.</td>
 			</table>
 			<table border="1">
 				<tr>
-					<td>Date of approval</td><td width="500px"></td>
-				</tr>
-				<tr>
 					<td>Educator signature</td> <td width="500px"></td>
 				</tr>
 				<tr>
 					<td>Evaluator signature</td> <td width="500px"></td>
+				</tr>
+				<tr>
+					<td>Date of approval</td><td width="500px"></td>
 				</tr>
 			</table>
 			<input type="button" value="Print" onclick="window.print()" />
