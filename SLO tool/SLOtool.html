@@ -4,6 +4,13 @@
  <meta charset="UTF-8">
 <style>
 
+body{
+background: url("iea_watermark.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center; 
+}
+
 td{
 	font-size: 20px;
 }
@@ -73,7 +80,10 @@ i{
         padding:25px;
         border-radius:10px;
         box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
-        background:#fff;
+        background: url("iea_watermark.png");
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: center; 
 		font-family: "Times New Roman", Times, serif;
 	 
 
@@ -156,7 +166,8 @@ window.onbeforeunload = confirmOnPageExit;
 <div class="tabs">
     <ul class="tab-links">
 	<li class="active" id="t9" ><a href="#tab9" >Introduction</a></li>
-        <li  id="t1"><a href="#tab1">General Information</a></li>
+	<li  id="t8" ><a href="#tab8" >Instructions</a></li>
+        <li  id="t1"><a href="#tab1">Educator Inforamation</a></li>
       <li id="t2"><a href="#tab2">Learning Goal</a></li>
       <li id="t3"><a href="#tab3">Assessment and Evaluation</a></li>
         <li id="t4"><a href="#tab4">Growth Targets</a></li>
@@ -214,7 +225,7 @@ window.onbeforeunload = confirmOnPageExit;
         <div id="tab1" class="tab">
 		
 		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
-		
+		  <h3 style="font-weight:bold">Educator Information</h3>
           <table  style="width:1000px;">
             <tr height="100">
                <td>Academic year</td>
@@ -223,6 +234,927 @@ window.onbeforeunload = confirmOnPageExit;
             <tr height="100">
                <td>Educator name</td>
               <td><input type="text" id="name" value=" "></input></td>
+            </tr>
+			<tr height="100">
+               <td>District name</td>
+               <td ><select id="district" class="easyui-combobox"  style="width:500px;">
+			        <option disabled selected>--Choose or type in subject--</option>   
+					
+					<option value="010010010">Payson CUSD 1</option>
+					<option value="010010020">Liberty CUSD 2</option>
+					<option value="010010030">Central CUSD 3</option>
+					<option value="010010040">CUSD 4</option>
+					<option value="010011720">Quincy SD 172</option>
+					<option value="010750030">Pleasant Hill CUSD 3</option>
+					<option value="010750040">Griggsville-Perry CUSD 4</option>
+					<option value="010750100">Pikeland CUSD 10</option>
+					<option value="010750120">Western CUSD 12</option>
+					<option value="020020010">Cairo USD 1</option>
+					<option value="020020050">Egyptian CUSD 5</option>
+					<option value="020440010">Goreville CUD 1</option>
+					<option value="020440320">New Simpson Hill SD 32</option>
+					<option value="020440430">Buncombe Cons SD 43</option>
+					<option value="020440550">Vienna SD 55</option>
+					<option value="020440640">Cypress SD 64</option>
+					<option value="020441330">Vienna HSD 133</option>
+					<option value="020610010">Massac UD 1</option>
+					<option value="020610380">Joppa-Maple Grove UD 38</option>
+					<option value="020771000">Century CUSD 100</option>
+					<option value="020771010">Meridian CUSD 101</option>
+					<option value="020778010">Jamp Spec Educ Services</option>
+					<option value="020910160">Lick Creek CCSD 16</option>
+					<option value="020910170">Cobden SUD 17</option>
+					<option value="020910370">Anna CCSD 37</option>
+					<option value="020910430">Jonesboro CCSD 43</option>
+					<option value="020910660">Dongola USD 66</option>
+					<option value="020910810">Anna Jonesboro CHSD 81</option>
+					<option value="020910840">Shawnee CUSD 84</option>
+					<option value="030030010">Mulberry Grove CUSD 1</option>
+					<option value="030030020">Bond County CUSD 2</option>
+					<option value="030250100">Altamont CUSD 10</option>
+					<option value="030250200">Beecher City CUSD 20</option>
+					<option value="030250300">Dieterich CUSD 30</option>
+					<option value="030250400">Effingham CUSD 40</option>
+					<option value="030250500">Teutopolis CUSD 50</option>
+					<option value="030262010">Brownstown CUSD 201</option>
+					<option value="030262020">St Elmo CUSD 202</option>
+					<option value="030262030">Vandalia CUSD 203</option>
+					<option value="030262040">Ramsey CUSD 204</option>
+					<option value="040041000">Belvidere CUSD 100</option>
+					<option value="040042000">North Boone CUSD 200</option>
+					<option value="041011220">Harlem UD 122</option>
+					<option value="041011310">Kinnikinnick CCSD 131</option>
+					<option value="041011330">Prairie Hill CCSD 133</option>
+					<option value="041011340">Shirland CCSD 134</option>
+					<option value="041011400">Rockton SD 140</option>
+					<option value="041012050">Rockford SD 205</option>
+					<option value="041012070">Hononegah CHD 207</option>
+					<option value="041013200">County of Winnebago SD 320</option>
+					<option value="041013210">Pecatonica CUSD 321</option>
+					<option value="041013220">Durand CUSD 322</option>
+					<option value="041013230">Winnebago CUSD 323</option>
+					<option value="050160150">Palatine CCSD 15</option>
+					<option value="050160210">Wheeling CCSD 21</option>
+					<option value="050160230">Prospect Heights SD 23</option>
+					<option value="050160250">Arlington Heights SD 25</option>
+					<option value="050160260">River Trails SD 26</option>
+					<option value="050160270">Northbrook ESD 27</option>
+					<option value="050160280">Northbrook SD 28</option>
+					<option value="050160290">Sunset Ridge SD 29</option>
+					<option value="050160300">Northbrook/Glenview SD 30</option>
+					<option value="050160310">West Northfield SD 31</option>
+					<option value="050160340">Glenview CCSD 34</option>
+					<option value="050160350">Glencoe SD 35</option>
+					<option value="050160360">Winnetka SD 36</option>
+					<option value="050160370">Avoca SD 37</option>
+					<option value="050160380">Kenilworth SD 38</option>
+					<option value="050160390">Wilmette SD 39</option>
+					<option value="050160540">Schaumburg CCSD 54</option>
+					<option value="050160570">Mount Prospect SD 57</option>
+					<option value="050160590">Comm Cons SD 59</option>
+					<option value="050160620">CCSD 62</option>
+					<option value="050160630">East Maine SD 63</option>
+					<option value="050160640">Park Ridge CCSD 64</option>
+					<option value="050160650">Evanston CCSD 65</option>
+					<option value="050160670">Golf ESD 67</option>
+					<option value="050160680">Skokie SD 68</option>
+					<option value="050160690">Skokie SD 69</option>
+					<option value="050160700">Morton Grove SD 70</option>
+					<option value="050160710">Niles ESD 71</option>
+					<option value="050160720">Fairview SD 72</option>
+					<option value="050160730">East Prairie SD 73</option>
+					<option value="050160735">Skokie SD 73-5</option>
+					<option value="050160740">Lincolnwood SD 74</option>
+					<option value="050162020">Evanston Twp HSD 202</option>
+					<option value="050162030">New Trier Twp HSD 203</option>
+					<option value="050162070">Maine Township HSD 207</option>
+					<option value="050162110">Township HSD 211</option>
+					<option value="050162140">Township HSD 214</option>
+					<option value="050162190">Niles Twp CHSD 219</option>
+					<option value="050162250">Northfield Twp HSD 225</option>
+					<option value="050168050">NW Suburban Spec Educ Org</option>
+					<option value="050168070">Niles Twp District for Spec Educ</option>
+					<option value="060160780">Rosemont ESD 78</option>
+					<option value="060160790">Pennoyer SD 79</option>
+					<option value="060160800">Norridge SD 80</option>
+					<option value="060160810">Schiller Park SD 81</option>
+					<option value="060160830">Mannheim SD 83</option>
+					<option value="060160840">Franklin Park SD 84</option>
+					<option value="060160845">Rhodes SD 84-5</option>
+					<option value="060160855">River Grove SD 85-5</option>
+					<option value="060160860">Union Ridge SD 86</option>
+					<option value="060160870">Berkeley SD 87</option>
+					<option value="060160880">Bellwood SD 88</option>
+					<option value="060160890">Maywood-Melrose Park-Broadview 89</option>
+					<option value="060160900">River Forest SD 90</option>
+					<option value="060160910">Forest Park SD 91</option>
+					<option value="060160920">Lindop SD 92</option>
+					<option value="060160925">Westchester SD 92-5</option>
+					<option value="060160930">Hillside SD 93</option>
+					<option value="060160940">Komarek SD 94</option>
+					<option value="060160950">Brookfield Lagrange Park SD 95</option>
+					<option value="060160960">Riverside SD 96</option>
+					<option value="060160970">Oak Park ESD 97</option>
+					<option value="060160980">Berwyn North SD 98</option>
+					<option value="060160990">Cicero SD 99</option>
+					<option value="060161000">Berwyn South SD 100</option>
+					<option value="060161010">Western Springs SD 101</option>
+					<option value="060161020">La Grange SD 102</option>
+					<option value="060161030">Lyons SD 103</option>
+					<option value="060161050">La Grange SD 105 South</option>
+					<option value="060161060">LaGrange Highlands SD 106</option>
+					<option value="060161070">Pleasantdale SD 107</option>
+					<option value="060162000">Oak Park - River Forest SD 200</option>
+					<option value="060162010">J S Morton HSD 201</option>
+					<option value="060162040">Lyons Twp HSD 204</option>
+					<option value="060162080">Riverside-Brookfield Twp SD 208</option>
+					<option value="060162090">Proviso Twp HSD 209</option>
+					<option value="060162120">Leyden CHSD 212</option>
+					<option value="060162340">Ridgewood CHSD 234</option>
+					<option value="060164010">Elmwood Park CUSD 401</option>
+					<option value="060168030">Proviso Area Exceptional Child</option>
+					<option value="070161040">Summit SD 104</option>
+					<option value="070161080">Willow Springs SD 108</option>
+					<option value="070161090">Indian Springs SD 109</option>
+					<option value="070161100">Central Stickney SD 110</option>
+					<option value="070161110">Burbank SD 111</option>
+					<option value="07016113A">Lemont-Bromberek CSD 113A</option>
+					<option value="070161170">North Palos SD 117</option>
+					<option value="070161180">Palos CCSD 118</option>
+					<option value="070161220">Ridgeland SD 122</option>
+					<option value="070161230">Oak Lawn-Hometown SD 123</option>
+					<option value="070161240">Evergreen Park ESD 124</option>
+					<option value="070161250">Atwood Heights SD 125</option>
+					<option value="070161260">Alsip-Hazlgrn-Oaklwn SD 126</option>
+					<option value="070161270">Worth SD 127</option>
+					<option value="070161275">Chicago Ridge SD 127-5</option>
+					<option value="070161280">Palos Heights SD 128</option>
+					<option value="070161300">Cook County SD 130</option>
+					<option value="070161320">Calumet Public SD 132</option>
+					<option value="070161330">Gen George Patton SD 133</option>
+					<option value="070161350">Orland SD 135</option>
+					<option value="070161400">Kirby SD 140</option>
+					<option value="070161420">Forest Ridge SD 142</option>
+					<option value="070161430">Midlothian SD 143</option>
+					<option value="070161435">Posen-Robbins ESD 143-5</option>
+					<option value="070161440">Prairie-Hills ESD 144</option>
+					<option value="070161450">Arbor Park SD 145</option>
+					<option value="070161460">Tinley Park CCSD 146</option>
+					<option value="070161470">W Harvey-Dixmoor PSD 147</option>
+					<option value="070161480">Dolton SD 148</option>
+					<option value="070161490">Dolton SD 149</option>
+					<option value="070161500">South Holland SD 150</option>
+					<option value="070161510">South Holland SD 151</option>
+					<option value="070161520">Harvey SD 152</option>
+					<option value="070161525">Hazel Crest SD 152-5</option>
+					<option value="070161530">Homewood SD 153</option>
+					<option value="070161540">Thornton SD 154</option>
+					<option value="070161545">Burnham SD 154-5</option>
+					<option value="070161550">Calumet City SD 155</option>
+					<option value="070161560">Lincoln ESD 156</option>
+					<option value="070161570">Hoover-Schrum Memorial SD 157</option>
+					<option value="070161580">Lansing SD 158</option>
+					<option value="070161590">ESD 159</option>
+					<option value="070161600">Country Club Hills SD 160</option>
+					<option value="070161610">Flossmoor SD 161</option>
+					<option value="070161620">Matteson ESD 162</option>
+					<option value="070161630">Park Forest SD 163</option>
+					<option value="070161670">Brookwood SD 167</option>
+					<option value="070161680">CCSD 168</option>
+					<option value="070161690">Ford Heights SD 169</option>
+					<option value="070161700">Chicago Heights SD 170</option>
+					<option value="070161710">Sunnybrook SD 171</option>
+					<option value="070161720">Sandridge SD 172</option>
+					<option value="070161940">Steger SD 194</option>
+					<option value="070162050">Thornton Twp HSD 205</option>
+					<option value="070162060">Bloom Twp HSD 206</option>
+					<option value="070162100">Lemont Twp HSD 210</option>
+					<option value="070162150">Thornton Fractional Twp HSD 215</option>
+					<option value="070162170">Argo CHSD 217</option>
+					<option value="070162180">CHSD 218</option>
+					<option value="070162200">Reavis Twp HSD 220</option>
+					<option value="070162270">Rich Twp HSD 227</option>
+					<option value="070162280">Bremen CHSD 228</option>
+					<option value="070162290">Oak Lawn CHSD 229</option>
+					<option value="070162300">Cons HSD 230</option>
+					<option value="070162310">Evergreen Park CHSD 231</option>
+					<option value="070162330">Homewood Flossmoor CHSD 233</option>
+					<option value="070168020">Speed SEJA #802</option>
+					<option value="070168060">A E R O  Spec Educ Coop</option>
+					<option value="070169010">Southland College Prep</option>
+					<option value="080083080">Eastland CUSD 308</option>
+					<option value="080083140">West Carroll CUSD 314</option>
+					<option value="080083990">Chadwick-Milledgeville CUSD 399</option>
+					<option value="080431190">East Dubuque USD 119</option>
+					<option value="080431200">Galena USD 120</option>
+					<option value="080432050">Warren CUSD 205</option>
+					<option value="080432060">Stockton CUSD 206</option>
+					<option value="080432100">River Ridge CUSD 210</option>
+					<option value="080432110">Scales Mound CUSD 211</option>
+					<option value="080891450">Freeport SD 145</option>
+					<option value="080892000">Pearl City CUSD 200</option>
+					<option value="080892010">Dakota CUSD 201</option>
+					<option value="080892020">Lena Winslow CUSD 202</option>
+					<option value="080892030">Orangeville CUSD 203</option>
+					<option value="090100000">Rural Champaign Co Spec Ed Coop</option>
+					<option value="090100010">Fisher CUSD 1</option>
+					<option value="090100030">Mahomet-Seymour CUSD 3</option>
+					<option value="090100040">Champaign CUSD 4</option>
+					<option value="090100070">Tolono CUSD 7</option>
+					<option value="090100080">Heritage CUSD 8</option>
+					<option value="090101160">Urbana SD 116</option>
+					<option value="090101300">Thomasboro CCSD 130</option>
+					<option value="090101370">Rantoul City SD 137</option>
+					<option value="090101420">Ludlow CCSD 142</option>
+					<option value="090101690">St Joseph CCSD 169</option>
+					<option value="090101880">Gifford CCSD 188</option>
+					<option value="090101930">Rantoul Township HSD 193</option>
+					<option value="090101970">Prairieview-Ogden CCSD 197</option>
+					<option value="090103050">St Joseph Ogden CHSD 305</option>
+					<option value="090270050">Gibson City-Melvin-Sibley CUSD 5</option>
+					<option value="090270100">Paxton-Buckley-Loda CUD 10</option>
+					<option value="100110010">Morrisonville CUSD 1</option>
+					<option value="100110030">Taylorville CUSD 3</option>
+					<option value="100110040">Edinburg CUSD 4</option>
+					<option value="100110080">Pana CUSD 8</option>
+					<option value="100110140">South Fork SD 14</option>
+					<option value="100118010">Mid-State Spec Educ Jnt Agr</option>
+					<option value="100680020">Panhandle CUSD 2</option>
+					<option value="100680030">Hillsboro CUSD 3</option>
+					<option value="100680120">Litchfield CUSD 12</option>
+					<option value="100680220">Nokomis CUSD 22</option>
+					<option value="11012002C">Marshall CUSD 2C</option>
+					<option value="11012003C">Martinsville CUSD 3C</option>
+					<option value="11012004C">Casey-Westfield CUSD 4C</option>
+					<option value="110150010">Charleston CUSD 1</option>
+					<option value="110150020">Mattoon CUSD 2</option>
+					<option value="110150050">Oakland CUSD 5</option>
+					<option value="110158010">Eastern IL Area of Spec Educ</option>
+					<option value="110180030">Neoga CUSD 3</option>
+					<option value="110180770">Cumberland CUSD 77</option>
+					<option value="110213010">Tuscola CUSD 301</option>
+					<option value="110213020">Villa Grove CUSD 302</option>
+					<option value="110213050">Arthur CUSD 305</option>
+					<option value="110213060">Arcola CUSD 306</option>
+					<option value="110230010">Shiloh CUSD 1</option>
+					<option value="110230030">Kansas CUSD 3</option>
+					<option value="110230040">Paris CUSD 4</option>
+					<option value="110230060">Edgar County CUD 6</option>
+					<option value="110230950">Paris-Union SD 95</option>
+					<option value="110703000">Sullivan CUSD 300</option>
+					<option value="110703020">Okaw Valley CUSD 302</option>
+					<option value="110703030">Lovington CUSD 303</option>
+					<option value="110870010">Windsor CUSD 1</option>
+					<option value="11087003A">Cowden-Herrick CUSD 3A</option>
+					<option value="110870040">Shelbyville CUSD 4</option>
+					<option value="11087005A">Stewardson-Strasburg CUD 5A</option>
+					<option value="110870210">Central A & M CUD 21</option>
+					<option value="120130100">Clay City CUSD 10</option>
+					<option value="120130250">North Clay CUSD 25</option>
+					<option value="120130350">Flora CUSD 35</option>
+					<option value="120170010">Hutsonville CUSD 1</option>
+					<option value="120170020">Robinson CUSD 2</option>
+					<option value="120170030">Palestine CUSD 3</option>
+					<option value="120170040">Oblong CUSD 4</option>
+					<option value="120178010">South Eastern Sp Ed Program</option>
+					<option value="120400010">Jasper County CUD 1</option>
+					<option value="120510100">Red Hill CUSD 10</option>
+					<option value="120510200">Lawrence County CUD 20</option>
+					<option value="120800010">East Richland CUSD 1</option>
+					<option value="120800020">West Richland CUSD 2</option>
+					<option value="130140010">Carlyle CUSD 1</option>
+					<option value="130140030">Wesclin CUSD 3</option>
+					<option value="130140120">Breese SD 12</option>
+					<option value="130140210">Aviston SD 21</option>
+					<option value="130140460">Willow Grove SD 46</option>
+					<option value="130140570">Bartelso SD 57</option>
+					<option value="130140600">Germantown SD 60</option>
+					<option value="130140620">Damiansville SD 62</option>
+					<option value="130140630">Albers SD 63</option>
+					<option value="130140710">Central CHSD 71</option>
+					<option value="130141415">St Rose SD 14-15</option>
+					<option value="130141860">North Wamac SD 186</option>
+					<option value="130580010">Raccoon Cons SD 1</option>
+					<option value="130580020">Kell Cons SD 2</option>
+					<option value="130580070">Iuka CCSD 7</option>
+					<option value="130580100">Selmaville CCSD 10</option>
+					<option value="130581000">Patoka CUSD 100</option>
+					<option value="130581110">Salem SD 111</option>
+					<option value="130581220">Odin SD 122</option>
+					<option value="130581330">Central City SD 133</option>
+					<option value="130581350">Centralia SD 135</option>
+					<option value="130582000">Centralia HSD 200</option>
+					<option value="130584010">South Central CUD 401</option>
+					<option value="130585010">Sandoval CUSD 501</option>
+					<option value="130586000">Salem CHSD 600</option>
+					<option value="130587000">Odin CHSD 700</option>
+					<option value="130588010">Kaskaskia Spec Educ District</option>
+					<option value="130950010">Oakdale CCSD 1</option>
+					<option value="130950100">West Washington Co CUD 10</option>
+					<option value="130950110">Irvington CCSD 11</option>
+					<option value="130950150">Ashley CCSD 15</option>
+					<option value="130950290">Hoyleton Cons SD 29</option>
+					<option value="130950490">Nashville CCSD 49</option>
+					<option value="130950990">Nashville CHSD 99</option>
+					<option value="150162990">City of Chicago SD 299</option>
+					<option value="160194240">Genoa Kingston CUSD 424</option>
+					<option value="160194250">Indian Creek CUSD 425</option>
+					<option value="160194260">Hiawatha CUSD 426</option>
+					<option value="160194270">Sycamore CUSD 427</option>
+					<option value="160194280">DeKalb CUSD 428</option>
+					<option value="160194290">Hinckley Big Rock CUSD 429</option>
+					<option value="160194300">Sandwich CUSD 430</option>
+					<option value="160194320">Somonauk CUSD 432</option>
+					<option value="170200150">Clinton CUSD 15</option>
+					<option value="170200180">Blue Ridge CUSD 18</option>
+					<option value="170530000">Livingston Co Spec Services Unit</option>
+					<option value="170530050">Woodland CUSD 5</option>
+					<option value="17053006J">Tri Point CUSD 6-J</option>
+					<option value="170530080">Prairie Central CUSD 8</option>
+					<option value="170530740">Flanagan-Cornell Dist 74</option>
+					<option value="170530900">Pontiac Twp HSD 90</option>
+					<option value="170532300">Dwight Twp HSD 230</option>
+					<option value="170532320">Dwight Common SD 232</option>
+					<option value="170534250">Rooks Creek CCSD 425</option>
+					<option value="170534260">Cornell CCSD 426</option>
+					<option value="170534290">Pontiac CCSD 429</option>
+					<option value="170534350">Odell CCSD 435</option>
+					<option value="170534380">Saunemin CCSD 438</option>
+					<option value="170640000">Heart of IL Low Incidence  Hilia</option>
+					<option value="170640020">LeRoy CUSD 2</option>
+					<option value="170640030">Tri Valley CUSD 3</option>
+					<option value="170640040">Heyworth CUSD 4</option>
+					<option value="170640050">McLean County USD 5</option>
+					<option value="170640070">Lexington CUSD 7</option>
+					<option value="170640160">Olympia CUSD 16</option>
+					<option value="170640190">Ridgeview CUSD 19</option>
+					<option value="170640870">Bloomington SD 87</option>
+					<option value="190220020">Bensenville SD 2</option>
+					<option value="190220040">Addison SD 4</option>
+					<option value="190220070">Wood Dale SD 7</option>
+					<option value="190220100">Itasca SD 10</option>
+					<option value="190220110">Medinah SD 11</option>
+					<option value="190220120">Roselle SD 12</option>
+					<option value="190220130">Bloomingdale SD 13</option>
+					<option value="190220150">Marquardt SD 15</option>
+					<option value="190220160">Queen Bee SD 16</option>
+					<option value="190220200">Keeneyville SD 20</option>
+					<option value="190220250">Benjamin SD 25</option>
+					<option value="190220330">West Chicago ESD 33</option>
+					<option value="190220340">Winfield SD 34</option>
+					<option value="190220410">Glen Ellyn SD 41</option>
+					<option value="190220440">Lombard SD 44</option>
+					<option value="190220450">SD 45 DuPage County</option>
+					<option value="190220480">Salt Creek SD 48</option>
+					<option value="190220530">Butler SD 53</option>
+					<option value="190220580">Downers Grove GSD 58</option>
+					<option value="190220600">Maercker SD 60</option>
+					<option value="190220610">Darien SD 61</option>
+					<option value="190220620">Gower SD 62</option>
+					<option value="190220630">Cass SD 63</option>
+					<option value="190220660">Center Cass SD 66</option>
+					<option value="190220680">Woodridge SD 68</option>
+					<option value="190220860">Hinsdale Twp HSD 86</option>
+					<option value="190220870">Glenbard Twp HSD 87</option>
+					<option value="190220880">DuPage HSD 88</option>
+					<option value="190220890">CCSD 89</option>
+					<option value="190220930">CCSD 93</option>
+					<option value="190220940">CHSD 94</option>
+					<option value="190220990">CHSD 99</option>
+					<option value="190221000">Fenton CHSD 100</option>
+					<option value="190221080">Lake Park CHSD 108</option>
+					<option value="190221800">CCSD 180</option>
+					<option value="190221810">Hinsdale CCSD 181</option>
+					<option value="190222000">CUSD 200</option>
+					<option value="190222010">CUSD 201</option>
+					<option value="190222020">Lisle CUSD 202</option>
+					<option value="190222030">Naperville CUSD 203</option>
+					<option value="190222040">Indian Prairie CUSD 204</option>
+					<option value="190222050">Elmhurst SD 205</option>
+					<option value="190228020">North DuPage Sp Ed Cooperative</option>
+					<option value="200240010">Edwards County CUSD 1</option>
+					<option value="200300070">Gallatin CUSD 7</option>
+					<option value="200350010">Hardin County CUSD 1</option>
+					<option value="200760010">Pope Co CUD 1</option>
+					<option value="200830010">Galatia CUSD 1</option>
+					<option value="200830020">Carrier Mills-Stonefort CUSD 2</option>
+					<option value="200830030">Harrisburg CUSD 3</option>
+					<option value="200830040">Eldorado CUSD 4</option>
+					<option value="200930170">Allendale CCSD 17</option>
+					<option value="200933480">Wabash CUSD 348</option>
+					<option value="200960060">New Hope CCSD 6</option>
+					<option value="200960140">Geff CCSD 14</option>
+					<option value="200960170">Jasper CCSD 17</option>
+					<option value="200961000">Wayne City CUSD 100</option>
+					<option value="200961120">Fairfield PSD 112</option>
+					<option value="200962000">North Wayne CUSD 200</option>
+					<option value="200962250">Fairfield Comm H S Dist 225</option>
+					<option value="200970010">Grayville CUSD 1</option>
+					<option value="200970030">Norris City-Omaha-Enfield CUSD 3</option>
+					<option value="200970050">Carmi-White County CUSD 5</option>
+					<option value="200978010">Wabash & Ohio Valley Sp Ed Dist</option>
+					<option value="210280470">Benton CCSD 47</option>
+					<option value="210280910">Akin CCSD 91</option>
+					<option value="210280990">Christopher USD 99</option>
+					<option value="210281030">Benton Cons HSD 103</option>
+					<option value="210281150">Ewing Northern CCSD 115</option>
+					<option value="210281680">Frankfort CUSD 168</option>
+					<option value="210281740">Thompsonville CUSD 174</option>
+					<option value="210281880">Zeigler-Royalton CUSD 188</option>
+					<option value="210281960">Sesser-Valier CUSD 196</option>
+					<option value="211000010">Johnston City CUSD 1</option>
+					<option value="211000020">Marion CUSD 2</option>
+					<option value="211000030">Crab Orchard CUSD 3</option>
+					<option value="211000040">Herrin CUSD 4</option>
+					<option value="211000050">Carterville CUSD 5</option>
+					<option value="211008010">Williamson Co Spec Educ District</option>
+					<option value="220290010">Astoria CUSD 1</option>
+					<option value="220290020">V I T CUSD 2</option>
+					<option value="220290030">CUSD 3 Fulton County</option>
+					<option value="220290040">Spoon River Valley CUSD 4</option>
+					<option value="220290660">Canton Union SD 66</option>
+					<option value="220290970">Lewistown CUSD 97</option>
+					<option value="220291760">Avon CUSD 176</option>
+					<option value="220850050">Schuyler-Industry CUSD 5</option>
+					<option value="240320010">Coal City CUSD 1</option>
+					<option value="24032002C">Mazon-Verona-Kinsman ESD 2C</option>
+					<option value="24032024C">Nettle Creek CCSD 24C</option>
+					<option value="240320540">Morris SD 54</option>
+					<option value="24032060C">Saratoga CCSD 60C</option>
+					<option value="24032072C">Gardner CCSD 72C</option>
+					<option value="240320730">Gardner S Wilmington Twp HSD 73</option>
+					<option value="240320740">South Wilmington CCSD 74</option>
+					<option value="240320750">Braceville SD 75</option>
+					<option value="240321010">Morris CHSD 101</option>
+					<option value="240321110">Minooka CHSD 111</option>
+					<option value="240322010">Minooka CCSD 201</option>
+					<option value="240470000">Kendall Co Spec Educ Coop</option>
+					<option value="240470180">Newark CHSD 18</option>
+					<option value="240470660">Newark CCSD 66</option>
+					<option value="240470880">Plano CUSD 88</option>
+					<option value="240470900">Lisbon CCSD 90</option>
+					<option value="240471150">Yorkville CUSD 115</option>
+					<option value="240473080">Oswego CUSD 308</option>
+					<option value="250330100">Hamilton Co CUSD 10</option>
+					<option value="250410010">Waltonville CUSD 1</option>
+					<option value="250410020">Rome CCSD 2</option>
+					<option value="250410030">Field CCSD 3</option>
+					<option value="250410040">Woodlawn CCSD 4</option>
+					<option value="250410050">Opdyke-Belle-Rive CCSD 5</option>
+					<option value="250410060">Grand Prairie CCSD 6</option>
+					<option value="250410070">Dodds CCSD 7</option>
+					<option value="250410080">Ina CCSD 8</option>
+					<option value="250410120">McClellan CCSD 12</option>
+					<option value="250410790">Summersville SD 79</option>
+					<option value="250410800">Mount Vernon SD 80</option>
+					<option value="250410820">Bethel SD 82</option>
+					<option value="250410990">Farrington CCSD 99</option>
+					<option value="250411140">Bluford CCSD 114</option>
+					<option value="250412010">Mt Vernon Twp HSD 201</option>
+					<option value="250412040">Webber Twp HSD 204</option>
+					<option value="250412050">Woodlawn CHSD 205</option>
+					<option value="250418010">Franklin-Jefferson Co Sp Ed Dist</option>
+					<option value="260343070">Illini West H S Dist 307</option>
+					<option value="260343160">Warsaw CUSD 316</option>
+					<option value="260343170">Carthage ESD 317</option>
+					<option value="260343250">Nauvoo-Colusa CUSD 325</option>
+					<option value="260343270">Dallas ESD 327</option>
+					<option value="260343280">Hamilton CCSD 328</option>
+					<option value="260343370">Southeastern CUSD 337</option>
+					<option value="260343470">La Harpe CSD 347</option>
+					<option value="260620000">West Central IL Spec Educ Coop</option>
+					<option value="260621030">West Prairie CUSD 103</option>
+					<option value="260621700">Bushnell Prairie City CUSD 170</option>
+					<option value="260621850">Macomb CUSD 185</option>
+					<option value="270362350">West Central CUSD 235</option>
+					<option value="270664040">Mercer County School District 404</option>
+					<option value="270942380">Monmouth-Roseville CUSD 238</option>
+					<option value="270943040">United CUSD 304</option>
+					<option value="280060170">Ohio CCSD 17</option>
+					<option value="280060840">Malden CCSD 84</option>
+					<option value="280060920">Cherry SD 92</option>
+					<option value="280060940">Ladd CCSD 94</option>
+					<option value="280060980">Dalzell SD 98</option>
+					<option value="280060990">Spring Valley CCSD 99</option>
+					<option value="280061030">DePue USD 103</option>
+					<option value="280061150">Princeton ESD 115</option>
+					<option value="280061750">Leepertown CCSD 175</option>
+					<option value="280063030">La Moille CUSD 303</option>
+					<option value="280063070">Neponset CCSD 307</option>
+					<option value="280063400">Bureau Valley CUSD 340</option>
+					<option value="280065000">Princeton HSD 500</option>
+					<option value="280065020">Hall HSD 502</option>
+					<option value="280065050">Ohio CHSD 505</option>
+					<option value="280371900">Colona SD 190</option>
+					<option value="280372230">Orion CUSD 223</option>
+					<option value="280372240">Galva CUSD 224</option>
+					<option value="280372250">AlWood CUSD 225</option>
+					<option value="280372260">Annawan CUSD 226</option>
+					<option value="280372270">Cambridge CUSD 227</option>
+					<option value="280372280">Geneseo CUSD 228</option>
+					<option value="280372290">Kewanee CUSD 229</option>
+					<option value="280372300">Wethersfield CUSD 230</option>
+					<option value="280378010">Henry-Stark County Spec Ed Dist</option>
+					<option value="280880010">Bradford CUSD 1</option>
+					<option value="280881000">Stark County CUSD 100</option>
+					<option value="300390860">DeSoto Cons SD 86</option>
+					<option value="300390950">Carbondale ESD 95</option>
+					<option value="300391300">Giant City CCSD 130</option>
+					<option value="300391400">Unity Point CCSD 140</option>
+					<option value="300391650">Carbondale CHSD 165</option>
+					<option value="300391760">Trico CUSD 176</option>
+					<option value="300391860">Murphysboro CUSD 186</option>
+					<option value="300391960">Elverado CUSD 196</option>
+					<option value="300730050">Tamaroa School Dist 5</option>
+					<option value="300730500">Pinckneyville SD 50</option>
+					<option value="300731010">Pinckneyville CHSD 101</option>
+					<option value="300732040">CCSD 204</option>
+					<option value="300733000">Duquoin CUSD 300</option>
+					<option value="310450460">SD U-46</option>
+					<option value="310451010">Batavia USD 101</option>
+					<option value="310451290">Aurora West USD 129</option>
+					<option value="310451310">Aurora East USD 131</option>
+					<option value="310453000">CUSD 300</option>
+					<option value="310453010">Central CUSD 301</option>
+					<option value="310453020">Kaneland CUSD 302</option>
+					<option value="310453030">St Charles CUSD 303</option>
+					<option value="310453040">Geneva CUSD 304</option>
+					<option value="320380030">Donovan CUSD 3</option>
+					<option value="320380040">Central CUSD 4</option>
+					<option value="320380060">Cissna Park CUSD 6</option>
+					<option value="320380090">Iroquois County CUSD 9</option>
+					<option value="320380100">Iroquois West CUSD 10</option>
+					<option value="320382330">Milford Twp HSD 233</option>
+					<option value="320382490">Crescent Iroquois CUSD 249</option>
+					<option value="320382800">Milford CCSD 280</option>
+					<option value="320388010">Iroquois Special Education</option>
+					<option value="320460010">Momence CUSD 1</option>
+					<option value="320460020">Herscher CUSD 2</option>
+					<option value="320460050">Manteno CUSD 5</option>
+					<option value="320460060">Grant Park CUSD 6</option>
+					<option value="320460530">Bourbonnais SD 53</option>
+					<option value="320460610">Bradley SD 61</option>
+					<option value="320461110">Kankakee SD 111</option>
+					<option value="320462560">St Anne CCSD 256</option>
+					<option value="320462580">St George CCSD 258</option>
+					<option value="320462590">Pembroke CCSD 259</option>
+					<option value="320463020">St Anne CHSD 302</option>
+					<option value="320463070">Bradley Bourbonnais CHSD 307</option>
+					<option value="320468500">Kankakee Area Spec Educ Coop</option>
+					<option value="330482020">Knoxville CUSD 202</option>
+					<option value="330482050">Galesburg CUSD 205</option>
+					<option value="330482080">R O W V A CUSD 208</option>
+					<option value="330482100">Williamsfield CUSD 210</option>
+					<option value="330482170">Abingdon CUSD 217</option>
+					<option value="340490010">Winthrop Harbor SD 1</option>
+					<option value="340490030">Beach Park CCSD 3</option>
+					<option value="340490060">Zion ESD 6</option>
+					<option value="340490240">Millburn CCSD 24</option>
+					<option value="340490330">Emmons SD 33</option>
+					<option value="340490340">Antioch CCSD 34</option>
+					<option value="340490360">Grass Lake SD 36</option>
+					<option value="340490370">Gavin SD 37</option>
+					<option value="340490380">Big Hollow SD 38</option>
+					<option value="340490410">Lake Villa CCSD 41</option>
+					<option value="340490460">Grayslake CCSD 46</option>
+					<option value="340490500">Woodland CCSD 50</option>
+					<option value="340490560">Gurnee SD 56</option>
+					<option value="340490600">Waukegan CUSD 60</option>
+					<option value="340490650">Lake Bluff ESD 65</option>
+					<option value="340490670">Lake Forest SD 67</option>
+					<option value="340490680">Oak Grove SD 68</option>
+					<option value="340490700">Libertyville SD 70</option>
+					<option value="340490720">Rondout SD 72</option>
+					<option value="340490730">Hawthorn CCSD 73</option>
+					<option value="340490750">Mundelein ESD 75</option>
+					<option value="340490760">Diamond Lake SD 76</option>
+					<option value="340490790">Fremont SD 79</option>
+					<option value="340490950">Lake Zurich CUSD 95</option>
+					<option value="340490960">Kildeer Countryside CCSD 96</option>
+					<option value="340491020">Aptakisic-Tripp CCSD 102</option>
+					<option value="340491030">Lincolnshire-Prairieview SD 103</option>
+					<option value="340491060">Bannockburn SD 106</option>
+					<option value="340491090">Deerfield SD 109</option>
+					<option value="340491120">North Shore SD 112</option>
+					<option value="340491130">Twp HSD 113</option>
+					<option value="340491140">Fox Lake GSD 114</option>
+					<option value="340491150">Lake Forest CHSD 115</option>
+					<option value="340491160">Round Lake CUSD 116</option>
+					<option value="340491170">CHSD 117</option>
+					<option value="340491180">Wauconda CUSD 118</option>
+					<option value="340491200">Mundelein Cons HSD 120</option>
+					<option value="340491210">Warren Twp HSD 121</option>
+					<option value="340491240">Grant CHSD 124</option>
+					<option value="340491250">Adlai E Stevenson HSD 125</option>
+					<option value="340491260">Zion-Benton Twp HSD 126</option>
+					<option value="340491270">Grayslake CHSD 127</option>
+					<option value="340491280">CHSD 128</option>
+					<option value="340491870">North Chicago SD 187</option>
+					<option value="340492200">Barrington CUSD 220</option>
+					<option value="340498040T60">Northern Suburban Spec Ed Dist</option>
+					<option value="340498040T61">Low Incidence Coop Agreement</option>
+					<option value="340498250">Spec Educ Dist Lake County/Sedol</option>
+					<option value="340499000">Prairie Crossing Charter School</option>
+					<option value="350500000">LaSalle Putnam Alliance</option>
+					<option value="350500010">Leland CUSD 1</option>
+					<option value="350500020">Serena CUSD 2</option>
+					<option value="350500090">Earlville CUSD 9</option>
+					<option value="350500400">Streator Twp HSD 40</option>
+					<option value="350500440">Streator ESD 44</option>
+					<option value="350500650">Allen-Otter Creek CCSD 65</option>
+					<option value="350500790">Tonica CCSD 79</option>
+					<option value="350500820">Deer Park CCSD 82</option>
+					<option value="350500950">Grand Ridge CCSD 95</option>
+					<option value="350501200">La Salle-Peru Twp HSD 120</option>
+					<option value="350501220">La Salle ESD 122</option>
+					<option value="350501240">Peru ESD 124</option>
+					<option value="350501250">Oglesby ESD 125</option>
+					<option value="350501400">Ottawa Twp HSD 140</option>
+					<option value="350501410">Ottawa ESD 141</option>
+					<option value="350501500">Marseilles ESD 150</option>
+					<option value="350501600">Seneca Twp HSD 160</option>
+					<option value="350501700">Seneca CCSD 170</option>
+					<option value="350501750">Dimmick CCSD 175</option>
+					<option value="350501850">Waltham CCSD 185</option>
+					<option value="350501950">Wallace CCSD 195</option>
+					<option value="350502100">Miller Twp CCSD 210</option>
+					<option value="350502300">Rutland CCSD 230</option>
+					<option value="350502800">Mendota Twp HSD 280</option>
+					<option value="350502890">Mendota CCSD 289</option>
+					<option value="350504250">Lostant CUSD 425</option>
+					<option value="380540210">Hartsburg Emden CUSD 21</option>
+					<option value="380540230">Mt Pulaski CUSD 23</option>
+					<option value="380540270">Lincoln ESD 27</option>
+					<option value="380540610">Chester-East Lincoln CCSD 61</option>
+					<option value="380540880">New Holland-Middletown Ed 88</option>
+					<option value="380540920">West Lincoln-Broadwell ESD 92</option>
+					<option value="380544040">Lincoln CHSD 404</option>
+					<option value="380601260">Havana CUSD 126</option>
+					<option value="380601890">Illini Central CUSD 189</option>
+					<option value="380601910">Midwest Central CUSD 191</option>
+					<option value="380652000">Greenview CUSD 200</option>
+					<option value="380652020">Porta CUSD 202</option>
+					<option value="380652130">Athens CUSD 213</option>
+					<option value="390550010">Argenta-Oreana CUSD 1</option>
+					<option value="390550020">Maroa Forsyth CUSD 2</option>
+					<option value="390550030">Mt Zion CUSD 3</option>
+					<option value="390550090">Sangamon Valley CUSD 9</option>
+					<option value="390550110">Warrensburg-Latham CUSD 11</option>
+					<option value="390550150">Meridian CUSD 15</option>
+					<option value="390550610">Decatur SD 61</option>
+					<option value="390740050">Bement CUSD 5</option>
+					<option value="390740250">Monticello CUSD 25</option>
+					<option value="390740390">Atwood Hammond CUSD 39</option>
+					<option value="390740570">Deland-Weldon CUSD 57</option>
+					<option value="390741000">Cerro Gordo CUSD 100</option>
+					<option value="400070400">Calhoun CUSD 40</option>
+					<option value="400070420">Brussels CUSD 42</option>
+					<option value="400310010">Carrollton CUSD 1</option>
+					<option value="400310030">North Greene CUSD 3</option>
+					<option value="400310100">Greenfield CUSD 10</option>
+					<option value="400421000">Jersey CUSD 100</option>
+					<option value="400560010">Carlinville CUSD 1</option>
+					<option value="400560020">Northwestern CUSD 2</option>
+					<option value="400560050">Mount Olive CUSD 5</option>
+					<option value="400560060">Staunton CUSD 6</option>
+					<option value="400560070">Gillespie CUSD 7</option>
+					<option value="400560080">Bunker Hill CUSD 8</option>
+					<option value="400560090">Southwestern CUSD 9</option>
+					<option value="400560340">North Mac CUSD 34</option>
+					<option value="410570000">Madison County Voc Adj Counseling</option>
+					<option value="410570010">Roxana CUSD 1</option>
+					<option value="410570020">Triad CUSD 2</option>
+					<option value="410570030">Venice CUSD 3</option>
+					<option value="410570050">Highland CUSD 5</option>
+					<option value="410570070">Edwardsville CUSD 7</option>
+					<option value="410570080">Bethalto CUSD 8</option>
+					<option value="410570090">Granite City CUSD 9</option>
+					<option value="410570100">Collinsville CUSD 10</option>
+					<option value="410570110">Alton CUSD 11</option>
+					<option value="410570120">Madison CUSD 12</option>
+					<option value="410570130">East Alton SD 13</option>
+					<option value="410570140">East Alton-Wood River CHSD 14</option>
+					<option value="410570150">Wood River-Hartford ESD 15</option>
+					<option value="410578010">Region III Spec Ed Coop</option>
+					<option value="430590050">Henry-Senachwine CUSD 5</option>
+					<option value="430590070">Midland CUSD 7</option>
+					<option value="430785350">Putnam County CUSD 535</option>
+					<option value="431020010">Metamora CCSD 1</option>
+					<option value="431020020">Riverview CCSD 2</option>
+					<option value="431020060">Fieldcrest CUSD 6</option>
+					<option value="431020110">El Paso-Gridley CUSD 11</option>
+					<option value="431020210">Lowpoint-Washburn CUSD 21</option>
+					<option value="431020600">Roanoke Benson CUSD 60</option>
+					<option value="431020690">Germantown Hills SD 69</option>
+					<option value="431021220">County of Woodford School</option>
+					<option value="431021400">Eureka CUD 140</option>
+					<option value="440630020">Nippersink SD 2</option>
+					<option value="440630030">Fox River Grove Cons SD 3</option>
+					<option value="440630120">Johnsburg CUSD 12</option>
+					<option value="440630150">McHenry CCSD 15</option>
+					<option value="440630180">Riley CCSD 18</option>
+					<option value="440630190">Alden Hebron SD 19</option>
+					<option value="440630260">Cary CCSD 26</option>
+					<option value="440630360">Harrison SD 36</option>
+					<option value="440630460">Prairie Grove CSD 46</option>
+					<option value="440630470">Crystal Lake CCSD 47</option>
+					<option value="440630500">Harvard CUSD 50</option>
+					<option value="440631540">Marengo CHSD 154</option>
+					<option value="440631550">CHSD 155</option>
+					<option value="440631560">McHenry CHSD 156</option>
+					<option value="440631570">Richmond-Burton CHSD 157</option>
+					<option value="440631580">Cons SD 158</option>
+					<option value="440631650">Marengo-Union E Cons D 165</option>
+					<option value="440632000">Woodstock CUSD 200</option>
+					<option value="440638010">Spec Ed Dist of McHenry Co-Sedom</option>
+					<option value="450670030">Valmeyer CUSD 3</option>
+					<option value="450670040">Columbia CUSD 4</option>
+					<option value="450670050">Waterloo CUSD 5</option>
+					<option value="450790010">Coulterville USD 1</option>
+					<option value="450791220">Chester N HSD 122</option>
+					<option value="450791320">Red Bud CUSD 132</option>
+					<option value="450791340">Prairie Du Rocher CCSD 134</option>
+					<option value="450791380">Steeleville CUSD 138</option>
+					<option value="450791390">Chester CUSD 139</option>
+					<option value="450791400">Sparta CUSD 140</option>
+					<option value="460050010">Brown County CUSD 1</option>
+					<option value="460090150">Beardstown CUSD 15</option>
+					<option value="460090640">Virginia CUSD 64</option>
+					<option value="460092620">A-C Central CUSD 262</option>
+					<option value="460690010">Franklin CUSD 1</option>
+					<option value="460690060">Waverly CUSD 6</option>
+					<option value="460690110">Meredosia-Chambersburg CUSD 11</option>
+					<option value="460690270">Triopia CUSD 27</option>
+					<option value="460691170">Jacksonville SD 117</option>
+					<option value="460698010">Four Rivers Spec Educ Dist</option>
+					<option value="460860010">Winchester CUSD 1</option>
+					<option value="460860020">Scott-Morgan CUSD 2</option>
+					<option value="470520080">Nelson Public SD No 8</option>
+					<option value="470521700">Dixon USD 170</option>
+					<option value="470522200">Steward ESD 220</option>
+					<option value="470522710">Paw Paw CUSD 271</option>
+					<option value="470522720">Amboy CUSD 272</option>
+					<option value="470522750">Ashton-Franklin Center CUSD 275</option>
+					<option value="470711440">Kings Cons SD 144</option>
+					<option value="470711610">Creston CCSD 161</option>
+					<option value="470712120">Rochelle Twp HSD 212</option>
+					<option value="470712200">Oregon CUSD 220</option>
+					<option value="470712210">Forrestville Valley CUSD 221</option>
+					<option value="470712220">Polo CUSD 222</option>
+					<option value="470712230">Meridian CUSD 223</option>
+					<option value="470712260">Byron CUSD 226</option>
+					<option value="470712310">Rochelle CCSD 231</option>
+					<option value="470712690">Eswood CCSD 269</option>
+					<option value="470718010">Ogle Co Education Cooperative</option>
+					<option value="480720000">Spec Educ Assoc of Peoria County</option>
+					<option value="480720620">Pleasant Valley SD 62</option>
+					<option value="480720630">Norwood ESD 63</option>
+					<option value="480720660">Bartonville SD 66</option>
+					<option value="480720680">Oak Grove SD 68</option>
+					<option value="480720690">Pleasant Hill SD 69</option>
+					<option value="480720700">Monroe SD 70</option>
+					<option value="480721500">Peoria SD 150</option>
+					<option value="480722650">Farmington Central CUSD 265</option>
+					<option value="480723090">Brimfield CUSD 309</option>
+					<option value="480723100">Limestone CHSD 310</option>
+					<option value="480723160">Limestone Walters CCSD 316</option>
+					<option value="480723210">Il Valley Central USD 321</option>
+					<option value="480723220">Elmwood CUSD 322</option>
+					<option value="480723230">Dunlap CUSD 323</option>
+					<option value="480723250">Peoria Heights CUSD 325</option>
+					<option value="480723260">Princeville CUSD 326</option>
+					<option value="480723270">Illini Bluffs CUSD 327</option>
+					<option value="480723280">Hollis Cons SD 328</option>
+					<option value="490810290">Hampton SD 29</option>
+					<option value="490810300">United Twp HSD 30</option>
+					<option value="490810340">Silvis SD 34</option>
+					<option value="490810360">Carbon Cliff-Barstow SD 36</option>
+					<option value="490810370">East Moline SD 37</option>
+					<option value="490810400">Moline USD 40</option>
+					<option value="490810410">Rock Island SD 41</option>
+					<option value="490811000">Riverdale CUSD 100</option>
+					<option value="490812000">Sherrard CUSD 200</option>
+					<option value="490813000">Rockridge CUSD 300</option>
+					<option value="490818650">Black Hawk Area Sp Ed District</option>
+					<option value="500820000">St Clair ROE Special Education</option>
+					<option value="500820090">Lebanon CUSD 9</option>
+					<option value="500820190">Mascoutah CUD 19</option>
+					<option value="500820300">St Libory Cons SD 30</option>
+					<option value="500820400">Marissa CUSD 40</option>
+					<option value="500820600">New Athens CUSD 60</option>
+					<option value="500820700">Freeburg CCSD 70</option>
+					<option value="500820770">Freeburg CHSD 77</option>
+					<option value="500820850">Shiloh Village SD 85</option>
+					<option value="500820900">O Fallon CCSD 90</option>
+					<option value="500821040">Central SD 104</option>
+					<option value="500821050">Pontiac-W Holliday SD 105</option>
+					<option value="500821100">Grant CCSD 110</option>
+					<option value="500821130">Wolf Branch SD 113</option>
+					<option value="500821150">Whiteside SD 115</option>
+					<option value="500821160">High Mount SD 116</option>
+					<option value="500821180">Belleville SD 118</option>
+					<option value="500821190">Belle Valley SD 119</option>
+					<option value="500821300">Smithton CCSD 130</option>
+					<option value="500821600">Millstadt CCSD 160</option>
+					<option value="500821750">Harmony Emge SD 175</option>
+					<option value="500821810">Signal Hill SD 181</option>
+					<option value="500821870">Cahokia CUSD 187</option>
+					<option value="500821880">Brooklyn UD 188</option>
+					<option value="500821890">East St Louis SD 189</option>
+					<option value="500821960">Dupo CUSD 196</option>
+					<option value="500822010">Belleville Twp HSD 201</option>
+					<option value="500822030">O Fallon Twp HSD 203</option>
+					<option value="500828010">Belleville Area Special Services</option>
+					<option value="510840010">Tri City CUSD 1</option>
+					<option value="51084003A">Rochester CUSD 3A</option>
+					<option value="510840050">Ball Chatham CUSD 5</option>
+					<option value="510840080">Pleasant Plains CUSD 8</option>
+					<option value="510840100">Auburn CUSD 10</option>
+					<option value="510840110">Pawnee CUSD 11</option>
+					<option value="510840140">Riverton CUSD 14</option>
+					<option value="510840150">Williamsville CUSD 15</option>
+					<option value="510840160">New Berlin CUSD 16</option>
+					<option value="510841860">Springfield SD 186</option>
+					<option value="530900500">District 50 Schools</option>
+					<option value="530900510">Central SD 51</option>
+					<option value="530900520">Washington SD 52</option>
+					<option value="530900760">Creve Coeur SD 76</option>
+					<option value="530900850">Robein SD 85</option>
+					<option value="530900860">East Peoria SD 86</option>
+					<option value="530900980">Rankin CSD 98</option>
+					<option value="530901020">N Pekin & Marquette Hght SD 102</option>
+					<option value="530901080">Pekin PSD 108</option>
+					<option value="530901370">South Pekin SD 137</option>
+					<option value="530903030">Pekin CSD 303</option>
+					<option value="530903080">Washington CHSD 308</option>
+					<option value="530903090">East Peoria CHSD 309</option>
+					<option value="530906060">Spring Lake CCSD 606</option>
+					<option value="530907010">Deer Creek-Mackinaw CUSD 701</option>
+					<option value="530907020">Tremont CUSD 702</option>
+					<option value="530907030">Delavan CUSD 703</option>
+					<option value="530907090">Morton CUSD 709</option>
+					<option value="540920010">Bismarck Henning CUSD</option>
+					<option value="540920020">Westville CUSD 2</option>
+					<option value="540920040">Georgetown-Ridge Farm CUD 4</option>
+					<option value="540920050">Catlin CUSD 5</option>
+					<option value="540920070">Rossville-Alvin CUSD 7</option>
+					<option value="540920100">Potomac CUSD 10</option>
+					<option value="540920110">Hoopeston Area CUSD 11</option>
+					<option value="540920120">Jamaica CUSD 12</option>
+					<option value="540920610">Armstrong-Ellis Cons SD 61</option>
+					<option value="540920760">Oakwood CUSD 76</option>
+					<option value="540921180">Danville CCSD 118</option>
+					<option value="540922250">Armstrong Twp HSD 225</option>
+					<option value="540928010">Vermilion Assoc for Spec Educ</option>
+					<option value="550980000">Bi-County Special Educ Coop</option>
+					<option value="550980010">Erie CUSD 1</option>
+					<option value="550980020">River Bend CUSD 2</option>
+					<option value="550980030">Prophetstown-Lyndon-Tampico CUSD3</option>
+					<option value="550980050">Sterling CUSD 5</option>
+					<option value="550980060">Morrison CUSD 6</option>
+					<option value="550980120">East Coloma SD 12</option>
+					<option value="550980130">Rock Falls ESD 13</option>
+					<option value="550980140">Riverdale SD 14</option>
+					<option value="550981450">Montmorency CCSD 145</option>
+					<option value="550983010">Rock Falls Twp HSD 301</option>
+					<option value="560990170">Channahon SD 17</option>
+					<option value="56099030C">Troy CCSD 30C</option>
+					<option value="56099033C">Homer CCSD 33C</option>
+					<option value="56099070C">Laraway CCSD 70C</option>
+					<option value="560990810">Union SD 81</option>
+					<option value="560990840">Rockdale SD 84</option>
+					<option value="560990860">Joliet PSD 86</option>
+					<option value="560990880">Chaney-Monge SD 88</option>
+					<option value="56099088A">Richland GSD 88A</option>
+					<option value="560990890">Fairmont SD 89</option>
+					<option value="560990900">Taft SD 90</option>
+					<option value="560990910">Lockport SD 91</option>
+					<option value="560990920">Will County SD 92</option>
+					<option value="560991140">Manhattan SD 114</option>
+					<option value="560991220">New Lenox SD 122</option>
+					<option value="56099157C">Frankfort CCSD 157C</option>
+					<option value="560991590">Mokena SD 159</option>
+					<option value="560991610">Summit Hill SD 161</option>
+					<option value="56099200U">Beecher CUSD 200U</option>
+					<option value="56099201U">Crete Monee CUSD 201U</option>
+					<option value="560992020">Plainfield SD 202</option>
+					<option value="560992030">Elwood CCSD 203</option>
+					<option value="560992040">Joliet Twp HSD 204</option>
+					<option value="560992050">Lockport Twp HSD 205</option>
+					<option value="56099207U">Peotone CUSD 207U</option>
+					<option value="56099209U">Wilmington CUSD 209U</option>
+					<option value="560992100">Lincoln Way CHSD 210</option>
+					<option value="56099255U">Reed Custer CUSD 255U</option>
+					<option value="56099365U">Valley View CUSD 365U</option>
+					<option value="560998430">Lincoln-Way Area Spec Ed JA Dist</option>
+					<option value="601054280">IDJJ Sch Dist 428</option>
+
+
+                </select></td>
+            </tr>
+			<tr height="100">
+               <td>School Building</td>
+              <td><input type="text" id="school" value=" "></input></td>
             </tr>
             <tr height="100">
               <td>Subject</td>
@@ -263,7 +1195,7 @@ window.onbeforeunload = confirmOnPageExit;
                     <option value="2">Semester</option>
                     <option value="1">Unit</option>
 					<option value="1">One quarter</option>
-			  <select></td>
+			  </select></td>
             </tr>
 			<tr><td></td><td>Start date:<input class="easyui-datebox"></input></td><td>End date:<input class="easyui-datebox"></input></td></tr>
 			</table>
@@ -274,14 +1206,16 @@ window.onbeforeunload = confirmOnPageExit;
         <div id="tab2" class="tab">
 		
 		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
-            
+        
+		<h3 style="font-weight:bold">Learning Goal</h3>    
+		
 		<table  style="width:1000px;">
             <tr height="100">
                <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">learning goal.</a></td>
               <td><textarea id="lgoal" cols="50" rows="1" value=" "></textarea></td>
             </tr>
             <tr>
-              <td>Identify the content standards associated with the learning goal.</td>
+              <td>Identify the <a title="Standards of content" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">content standards</a> associated with the learning goal.</td>
               <td><select id="standardlinks" class="links" style="width:500px;height:50px">
 			        <option disabled selected>Choose a standard link</option>
                     <!--<id="standard" data-options="multiple:true,multiline:true" style="width:500px;height:50px;">
@@ -301,18 +1235,18 @@ window.onbeforeunload = confirmOnPageExit;
 				<td><textarea  id="standard" value="" cols="50" rows="1"></textarea></td>
             </tr>
             <tr height="100">
-               <td>Describe the student population with attention to diverse learners.</td>
+               <td>Describe the <a title="The population of students" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">student population</a> with attention to diverse learners.</td>
               <td><textarea id="pop" type="text" value=""></textarea></td>
             </tr>
             <tr height="100">
               <td>Methods of instruction.</td>
                  <td><select class="easyui-combobox" id="method" data-options="multiple:true,multiline:true" style="width:500px;height:50px">
 			        <option disabled selected>Choose or type in method(s)</option>
-                    <option value="Lecture">Lecture</option>
-                    <option value="Discussion">Class Discussion</option>
-                    <option value="Laboratory">Laboratory</option>
-                    <option value="Workshop">Workshop</option>
-                    <option value="CSC316">Flash Cards</option>
+                    <option value="Lecture">Lecture Practices</option>
+                    <option value="Discussion">Group Discussion</option>
+                    <option value="Laboratory">Active Learning Strategies</option>
+                    <option value="Workshop">Cooperative Group Assignments</option>
+                    <option value="CSC316">Foster Learning Self-Responsibility</option>
                 </select></td>
             </tr>
           </table>
@@ -321,11 +1255,13 @@ window.onbeforeunload = confirmOnPageExit;
  
         <div id="tab3" class="tab">
 		
+		<h3 style="font-weight:bold">Assessment and Evaluation</h3>
+		
 		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
              <table  style="width:1000px;">
 			 <tr height="100">
-		    <td> Assessment type</td>
+		    <td> Select the <a title="A test or something. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">Assessment</a></td>
 		    <td><select class="easyui-combobox" id="assessment"  style="width:500px;height:50px">
 			        <option disabled selected>Choose or type in assessment type(s)</option>
                     <option value="Lecture">Exam</option>p
@@ -336,66 +1272,75 @@ window.onbeforeunload = confirmOnPageExit;
 				</td> 
 			 </tr>
             <tr height="100">
-               <td>Describe the assessments and evaluation procedures that measure student's understanding of the learning goal.</td>
+               <td>Describe the assessments</td>
               <td><textarea type="text" id="assess1"></textarea></td>
             </tr>
-            <tr height="100">
-               <td>Describe how the assessments and evaluation procedures may be differentiated to meet the
-needs of all students described in the student population.</td>
+			 <tr height="100">
+               <td>Describe the <a title="Procedures to evaluate. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">evaluation procedures</a></td>
               <td><textarea type="text" id="assess2"></textarea></td>
+            </tr>
+            <tr height="100">
+               <td>Describe how the assessments and evaluation procedures may be <a title="Different. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">differentiated</a> to meet the
+needs of all students described in the student population.</td>
+              <td><textarea type="text" id="assess3"></textarea></td>
             </tr>
           </table>
 		  <button onClick="submitElement2()">Submit</button>
         </div>
         <div id="tab4" class="tab">
 		
+		<h3 style="font-weight:bold">Growth Targets</h3>
 		
 		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
                <table  id="growth" style="width:1000px;">
             <tr height="100">
                <td>Document baseline data collected.</td>
-              <td><textarea type="text"></textarea></td>
+              <td><textarea type="text" id="base"></textarea></td>
             </tr>
 			<tr>
 			   <td>Will there be a midpoint check-in?</td>
 			   <td><select id="mid">
-			       <option value=1>Yes</option>
+			       <option>Yes</option>
 				   <option>No</option>
 				   </select>
 			   </td>
 			</tr>
 			
 			<tr>
-			<td>If you answered "Yes" to the previous question please describe the midpoint check in?</td>
+			<td>If you answered "Yes" to the previous question, please describe the midpoint check in?</td>
 			<td><textarea type="text" id="midresp"></textarea></td>
 			</tr>
 			
             <tr height="100">
-               <td>Using baseline data identify growth targets for your student population.</td>
-              <td><textarea type="text"></textarea></td>
+               <td>Using <a title="First data. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">baseline data</a>, identify growth targets for your student population.</td>
+              <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
 		  <button onClick="submitElement3()">Submit</button>
         </div>
        <div id="tab5" class="tab">
 	   
+	   <h3 style="font-weight:bold">Outcomes</h3>
+	   
 		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
                <table  style="width:1000px;">
             <tr height="100">
                <td>Document the number or percentage of students who achieved their identified growth targets.</td>
-              <td><textarea type="text"></textarea></td>
+              <td><textarea type="text"id="eval1" ></textarea></td>
             </tr>
             <tr height="100">
-              <td><b>Evaluator:</b> Explain how the number or percentage of students who their identified growth
+              <td><b>Evaluator:</b> Explain how the number or percentage of students who achieved their identified growth
 targets translates into an appropriate teacher rating.</td>
-              <td><textarea type="text"></textarea></td>
+              <td><textarea type="text" id="eval2"></textarea></td>
             </tr>
           </table>
 		  <button onClick="submitElement4()">Submit</button>
         </div>
       <div id="tab6" class="tab">
+	  
+	  <h3 style="font-weight:bold">Rating</h3>
 	  
 		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
@@ -405,14 +1350,14 @@ targets translates into an appropriate teacher rating.</td>
               
             </tr>
 			<tr>
-			<td><textarea type="text"></textarea></td><td><textarea type="text"></textarea></td><td><textarea type="text"></textarea></td><td><textarea type="text"></textarea></td>
+			<td><textarea type="text" id="U"></textarea></td><td><textarea type="text" id="NI"></textarea></td><td><textarea type="text" id="P"></textarea></td><td><textarea type="text" id="E"></textarea></td>
 			</tr>
           </table>
 		  <button onClick="submitElement5()">Submit</button>
         </div>
 		 <div id="tab7" class="tab">
 		 <div id="page-content">
-		 <h3 style="font-weight:bold">General Information</h3>
+		 <h3 style="font-weight:bold">Educator Information</h3>
                <table  style="width:500px;">
             <tr height="100">
                <td>Academic Year</td>
@@ -421,6 +1366,14 @@ targets translates into an appropriate teacher rating.</td>
 			<tr height="100">
                <td>Educator Name</td>
               <td id="edName"></td>
+            </tr>
+			<tr height="100">
+               <td>District name</td>
+              <td id="selDistrict"></td>
+            </tr>
+			<tr height="100">
+               <td>School building </td>
+              <td id="selSchool"></td>
             </tr>
 			<tr height="100">
                <td>Subject</td>
@@ -461,25 +1414,74 @@ targets translates into an appropriate teacher rating.</td>
           </table>
 		  <h3 style="font-weight:bold">Assessment and Evaluation</h3>
 		   <table style="width:600px;">
+		   <tr height="200">
+               <td>Select the Assessment</td>
+              <td id="a"></td>
+            </tr>
 		  <tr height="200">
-               <td>Describe the assessments and evaluation procedures that measure student's understanding of the learning goal.</td>
+               <td>Describe the Assessments</td>
               <td id="a1"></td>
             </tr>
 			<tr height="200">
+				<td>Describe the Evaluation Procedures</td>
+				<td id="a2"></td>
+			</tr>
+			<tr height="200">
                <td>Describe how the assessments and evaluation procedures may be differentiated to meet the
 needs of all students described in the student population.</td>
-              <td id="a2"></td>
+              <td id="a3"></td>
             </tr>
 			</table>
-			<table border="1">
+			  <h3 style="font-weight:bold">Growth Targets</h3>
+		   <table style="width:600px;">
+		   <tr height="200">
+				<td>Document baseline data collected.</td>
+				<td id="g1"></td>
+			</tr>
+			<tr height="200">
+			    <td>Will there be a midpoint check-in?</td>
+				<td id="g2"></td>
+			</tr>
+			<tr height="200">
+			    <td>If you answered "Yes" to the previous question, please describe the midpoint check in?</td>
+				<td id="g3"></td>
+			</tr>
+			<tr height="200">
+			    <td>Using baseline data, identify growth targets for your student population.</td>
+				<td id="g4"></td>
+			</tr>
+			</table>
+			<h3 style="font-weight:bold">Outcomes</h3>
+			<table style="width:600px;">
+				<tr height="200">
+					<td>Document the number or percentage of students who achieved their identified growth targets.</td>
+					<td id="e1"></td>
+				</tr>
+				<tr height="200">
+					<td>Explain how the number or percentage of students who achieved their identified growth
+targets translates into an appropriate teacher rating.</td>
+					<td id="e2"></td>
+				</tr>
+			</table>
+			<h3 style="font-weight:bold">Rating</h3>
+			<table style="width:1000px;">
+				<tr height="200">
+					<td>Unsatisfactory</td><td>Needs Improvement</td><td>Proficient</td><td>Excellent</td>
+				</tr>
+				<tr height="200">
+					<td id="r1"></td><td id="r2"></td><td id="r3"></td><td id="r4"></td>
+				</tr>
+				
+					
+			<table>
 				<tr>
-					<td>Educator signature</td> <td width="500px"></td>
+					<td>Educator signature:</td> <td>_____________________</td><td> Date:</td><td>____________</td>
 				</tr>
 				<tr>
-					<td>Evaluator signature</td> <td width="500px"></td>
+					<td>Evaluator signature:</td><td>_____________________</td><td> Date:</td><td>____________</td>
 				</tr>
 				<tr>
-					<td>Date of approval</td><td width="500px"></td>
+					<td>Date of approval:</td><td >____________</td>
 				</tr>
 			</table>
 			<input type="button" value="Print" onclick="window.print()" />

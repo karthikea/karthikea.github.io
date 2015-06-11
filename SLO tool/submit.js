@@ -6,6 +6,14 @@ function getName(){
     var x=document.getElementById("name").value;
 	document.getElementById("edName").innerHTML=x;
 }
+function getDistrict(){
+    var val=$('#district').combobox('getText');
+	document.getElementById("selDistrict").innerHTML=val;
+}
+function getSchool(){
+     var x=document.getElementById("school").value;
+	document.getElementById("selSchool").innerHTML=x;
+}
 function getSubject(){
     var val=$('#subject').combobox('getText');
 	document.getElementById("selSub").innerHTML=val;
@@ -38,6 +46,10 @@ function getMethod(){
     var val=$('#method').combobox('getText');
 	document.getElementById("selMet").innerHTML=val;
 }
+function getAssess(){
+    var x=$('#assessment').combobox('getText');
+	document.getElementById("a").innerHTML=x;
+}
 function getAssess1(){
     var x=document.getElementById("assess1").value;
 	document.getElementById("a1").innerHTML=x;
@@ -46,7 +58,28 @@ function getAssess2(){
     var x=document.getElementById("assess2").value;
 	document.getElementById("a2").innerHTML=x;
 }
-
+function getAssess3(){
+    var x=document.getElementById("assess3").value;
+	document.getElementById("a3").innerHTML=x;
+}
+function getGrowth1(){
+	 var x=document.getElementById("base").value;
+	 document.getElementById("g1").innerHTML=x;
+}
+function getGrowth2(){
+	 var x=document.getElementById("mid").value;
+	 document.getElementById("g2").innerHTML=x;
+}
+function getGrowth3(){
+	 var x=document.getElementById("midresp").value;
+	 document.getElementById("g3").innerHTML=x;
+}
+function getGrowth4(){
+	 var x=document.getElementById("middes").value;
+	 document.getElementById("g4").innerHTML=x;
+}
+	
+	
 function next(){
 	jQuery("#tab9").hide();//.hide()
 	jQuery("#tab1").show();//attr('class','tab active');
@@ -63,6 +96,8 @@ function submitElement0(){
 	getGrade();
 	getInterval();
 	getStandardsLinks();
+	getDistrict();
+	getSchool();
 	//getCheckIns();
 	
 	
@@ -92,8 +127,10 @@ function submitElement1(){
 	
 }
 function submitElement2(){
+    getAssess();
     getAssess1();
 	getAssess2();
+	getAssess3();
 	
 	// Change tab 
         jQuery("#tab3").hide();
@@ -103,7 +140,10 @@ function submitElement2(){
 		jQuery("#t3").removeClass('active');
 }
 function submitElement3(){
-
+    getGrowth1();
+	getGrowth2();
+	getGrowth3();
+	getGrowth4();
 	// Change tab 
         jQuery("#tab4").hide();
 		jQuery("#tab5").show();
