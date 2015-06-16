@@ -1215,7 +1215,8 @@ window.onbeforeunload = confirmOnPageExit;
               <td><textarea id="lgoal" cols="50" rows="1" value=" "></textarea></td>
             </tr>
             <tr>
-              <td>Identify the <a title="Standards of content" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">content standards</a> associated with the learning goal.</td>
+              <td>Identify the <a title="The content, skills, and specific standards to which the SLO
+is aligned." class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">content standards</a> associated with the learning goal.</td>
               <td><select id="standardlinks" class="links" style="width:500px;height:50px">
 			        <option disabled selected>Choose a standard link</option>
                     <!--<id="standard" data-options="multiple:true,multiline:true" style="width:500px;height:50px;">
@@ -1235,7 +1236,7 @@ window.onbeforeunload = confirmOnPageExit;
 				<td><textarea  id="standard" value="" cols="50" rows="1"></textarea></td>
             </tr>
             <tr height="100">
-               <td>Describe the <a title="The population of students" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">student population</a> with attention to diverse learners.</td>
+               <td>Describe the <a title="A description of the students, course, grade level, and number of students." class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">student population</a> with attention to diverse learners.</td>
               <td><textarea id="pop" type="text" value=""></textarea></td>
             </tr>
             <tr height="100">
@@ -1261,7 +1262,7 @@ window.onbeforeunload = confirmOnPageExit;
 		
              <table  style="width:1000px;">
 			 <tr height="100">
-		    <td> Select the <a title="A test or something. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">Assessment</a></td>
+		    <td> Select the <a title="The pocedure that will be used to measure student growth for the objective. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">Assessment</a></td>
 		    <td><select class="easyui-combobox" id="assessment"  style="width:500px;height:50px">
 			        <option disabled selected>Choose or type in assessment type(s)</option>
                     <option value="Lecture">Exam</option>p
@@ -1289,13 +1290,14 @@ needs of all students described in the student population.</td>
         </div>
         <div id="tab4" class="tab">
 		
-		<h3 style="font-weight:bold">Growth Targets</h3>
+		<h3 style="font-weight:bold"><a title=" Target for student growth that should reflect high expectations for student achievement that are developmentally
+appropriate. The targets should be rigorous yet attainable. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">Growth Targets</a></h3>
 		
 		<a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
                <table  id="growth" style="width:1000px;">
             <tr height="100">
-               <td>Document baseline data collected.</td>
+               <td>Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">baseline data</a> collected.</td>
               <td><textarea type="text" id="base"></textarea></td>
             </tr>
 			<tr>
@@ -1313,7 +1315,7 @@ needs of all students described in the student population.</td>
 			</tr>
 			
             <tr height="100">
-               <td>Using <a title="First data. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">baseline data</a>, identify growth targets for your student population.</td>
+               <td>Using baseline data, identify growth targets for your student population.</td>
               <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
@@ -1350,7 +1352,7 @@ targets translates into an appropriate teacher rating.</td>
               
             </tr>
 			<tr>
-			<td><textarea type="text" id="U"></textarea></td><td><textarea type="text" id="NI"></textarea></td><td><textarea type="text" id="P"></textarea></td><td><textarea type="text" id="E"></textarea></td>
+			<td><textarea type="text" id="U">Less than 25% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="NI">25% - 50% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="P">51% - 75% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="E">76% - 100% of Students Met the Indicated Growth Target(s)</textarea></td>
 			</tr>
           </table>
 		  <button onClick="submitElement5()">Submit</button>

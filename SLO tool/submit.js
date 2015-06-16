@@ -78,7 +78,36 @@ function getGrowth4(){
 	 var x=document.getElementById("middes").value;
 	 document.getElementById("g4").innerHTML=x;
 }
-	
+
+function getEval1(){
+    var x=document.getElementById("eval1").value;
+	document.getElementById("e1").innerHTML=x;
+}
+
+function getEval2(){
+    var x=document.getElementById("eval2").value;
+	document.getElementById("e2").innerHTML=x;
+}
+
+function getRating1(){
+	var x=document.getElementById("U").value;
+	document.getElementById("r1").innerHTML=x;
+}
+
+function getRating2(){
+	var x=document.getElementById("NI").value;
+	document.getElementById("r2").innerHTML=x;
+}
+
+function getRating3(){
+	var x=document.getElementById("P").value;
+	document.getElementById("r3").innerHTML=x;
+}
+
+function getRating4(){
+	var x=document.getElementById("E").value;
+	document.getElementById("r4").innerHTML=x;
+}
 	
 function next(){
 	jQuery("#tab9").hide();//.hide()
@@ -154,6 +183,10 @@ function submitElement3(){
 }
 function submitElement4(){
 
+	getEval1();
+	getEval2();
+
+
 	// Change tab 
         jQuery("#tab5").hide();
 		jQuery("#tab6").show();
@@ -163,6 +196,13 @@ function submitElement4(){
 
 }
 function submitElement5(){
+
+	getRating1();
+	getRating2();
+	getRating3();
+	getRating4();
+	
+	
 	// Change tab 
         jQuery("#tab6").hide();
 		jQuery("#tab7").show();
