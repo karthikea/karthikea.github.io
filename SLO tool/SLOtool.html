@@ -107,6 +107,7 @@ i{
 		width: 1000px;
 		margins:auto;
 	}
+	
 </style>
     <link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/default/easyui.css">
 	<link rel="stylesheet" type="text/css" href="libraries/jquery-easyui-1.4.2/themes/icon.css">
@@ -1353,9 +1354,11 @@ targets translates into an appropriate teacher rating.</td>
         </div>
 		 <div id="tab7" class="tab">
 		 <h3 style="text-align:center;font-weight:bold">Student Learning Objective</h3>
-		 <p style="text-align:center">Proofread, save and print your summary document.</p>
-         <p style="text-align:center">Please review the summary document with your evaluator for input, feedback or approval.</p>
-         <p style="text-align:center">Both you and your evaluator should sign and date the document. Keep a copy for yourself for progress monitoring.</p>
+		 <p>Proofread, save and print your summary document.</p>
+         <p>Please review the summary document with your evaluator for input, feedback or approval.</p>
+         <p>Both you and your evaluator should sign and date the document. Keep a copy for yourself for progress monitoring.</p>
+		 <br>
+		 <br>
 		 <div id="page-content">
 		 <h3 style="font-weight:bold">Educator Information</h3>
                <table  style="width:500px;">
@@ -1488,7 +1491,14 @@ targets translates into an appropriate teacher rating.</td>
 					<td>Date of approval:</td><td >____________</td>
 				</tr>
 			</table>
-			<input type="button" value="Print" onclick="window.print()" />
+			<input type="button" value="Print" onclick="printSum()" />
+			<script>
+					function printSum() {
+						var newWindow = window.open();
+						newWindow.document.write(document.getElementById("page-content").innerHTML);
+						newWindow.print();
+					}
+			</script>
 			</div>
 			<a class="word-export" href="javascript:void(0)"> Export as .doc </a>
 			<script type="text/javascript">
