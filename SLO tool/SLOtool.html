@@ -89,7 +89,7 @@ i{
 		background-attachment: fixed;
 		background-position: center; 
 		font-family: "Times New Roman", Times, serif;
-		width:auto;
+		width:1500px;
 	 
 
 		
@@ -202,7 +202,7 @@ window.onbeforeunload = confirmOnPageExit;
 			
 			</div>
 			
-			<button onClick="next()" href="#">Next</button>
+			<button onClick="next1()" href="#">Next</button>
 		</div>
 		
         <div id="tab1" class="tab">
@@ -1352,7 +1352,10 @@ targets translates into an appropriate teacher rating.</td>
 		  <button onClick="submitElement5()">Submit</button>
         </div>
 		 <div id="tab7" class="tab">
-		 <h3 style="text-align:center">Student Learning Objective</h3>
+		 <h3 style="text-align:center;font-weight:bold">Student Learning Objective</h3>
+		 <p style="text-align:center">Proofread, save and print your summary document.</p>
+         <p style="text-align:center">Please review the summary document with your evaluator for input, feedback or approval.</p>
+         <p style="text-align:center">Both you and your evaluator should sign and date the document. Keep a copy for yourself for progress monitoring.</p>
 		 <div id="page-content">
 		 <h3 style="font-weight:bold">Educator Information</h3>
                <table  style="width:500px;">
@@ -1431,6 +1434,10 @@ needs of all students described in the student population.</td>
 			</table>
 			  <h3 style="font-weight:bold">Growth Targets</h3>
 		   <table style="width:600px;">
+		   <tr height="200">
+				<td>Describe the growth targets.</td>
+				<td id="g5"></td>
+			</tr>
 		   <tr height="200">
 				<td>Document baseline data collected.</td>
 				<td id="g1"></td>
@@ -1527,6 +1534,7 @@ targets translates into an appropriate teacher rating.</td>
                     <option>Option 3</option>
                 </select>
 			<p>When you see text in blue <a href="learningGoalHelp.html" title="and a definition will pop up" class="easyui-tooltip" target="_blank">like this hover over with our mouse</a></p>
+			<button onClick="next2()" href="#">Next</button>
 		</div>
     </div>
 </div>

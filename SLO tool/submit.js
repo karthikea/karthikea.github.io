@@ -79,6 +79,11 @@ function getGrowth4(){
 	 document.getElementById("g4").innerHTML=x;
 }
 
+function getGrowth5(){
+	 var x=document.getElementById("gr5").value;
+	 document.getElementById("g5").innerHTML=x;
+}
+
 function getEval1(){
     var x=document.getElementById("eval1").value;
 	document.getElementById("e1").innerHTML=x;
@@ -109,12 +114,20 @@ function getRating4(){
 	document.getElementById("r4").innerHTML=x;
 }
 	
-function next(){
+function next1(){
 	jQuery("#tab9").hide();//.hide()
+	jQuery("#tab8").show();//attr('class','tab active');
+		
+	jQuery("#t8").addClass('active');
+	jQuery("#t9").removeClass('active');
+}
+
+function next2(){
+	jQuery("#tab8").hide();//.hide()
 	jQuery("#tab1").show();//attr('class','tab active');
 		
 	jQuery("#t1").addClass('active');
-	jQuery("#t9").removeClass('active');
+	jQuery("#t8").removeClass('active');
 }
 
 function submitElement0(){
@@ -173,6 +186,7 @@ function submitElement3(){
 	getGrowth2();
 	getGrowth3();
 	getGrowth4();
+	getGrowth5();
 	// Change tab 
         jQuery("#tab4").hide();
 		jQuery("#tab5").show();
