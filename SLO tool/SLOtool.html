@@ -119,10 +119,11 @@ i{
   <script type="text/javascript" src="libraries/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
  <script type="text/javascript" src="submit.js"></script>
  <script type="text/javascript" src="standards.js"></script>
+ <script type="text/javascript" src="export-import.js"></script>
  <script type="text/javascript" src="checkIn.js"></script>
  <script type="text/javascript" src="exportWord/FileSaver.js"></script>
  <script type="text/javascript" src="exportWord/jquery.wordexport.js"></script>
-
+ <script lang="javascript" src="dist/xlsx.core.min.js"></script>
 
 <script>
 /* Write JavaScript here */
@@ -200,6 +201,50 @@ window.onbeforeunload = confirmOnPageExit;
 			<p>The template does not provide choices for assessments. Your district PERA joint committee will provide criteria and/or guidelines on which assessments you will use.  If you are developing your own assessment, the district PERA joint committee should provide assessment criteria. .  
 			Please contact your district PERA joint committee for further guidance.  
 			</p>
+			
+			<input type='file' accept='text/plain' onchange='openFile(event)'><br>
+<img id='output'>
+<script>
+  var openFile = function(event) {
+    var input = event.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+      var text = reader.result;
+      var array=text.split(",");
+	  document.getElementById("acYear").innerHTML=array[0];
+	  document.getElementById("edName").innerHTML=array[1];
+	  document.getElementById("selDistrict").innerHTML=array[2];
+	  document.getElementById("selSchool").innerHTML=array[3];
+	  document.getElementById("selSub").innerHTML=array[4];
+	  document.getElementById("selCor").innerHTML=array[5];
+	  document.getElementById("selGra").innerHTML=array[6];
+	  document.getElementById("selInt").innerHTML=array[7];
+	  document.getElementById("lg").innerHTML=array[8];
+	  document.getElementById("selStan").innerHTML=array[9];
+	  document.getElementById("selPop").innerHTML=array[10];
+	  document.getElementById("selMet").innerHTML=array[11];
+	  document.getElementById("a").innerHTML=array[12];
+	  document.getElementById("a1").innerHTML=array[13];
+      document.getElementById("a2").innerHTML=array[14];
+	  document.getElementById("a3").innerHTML=array[15];
+	  document.getElementById("g1").innerHTML=array[16];
+	  document.getElementById("g2").innerHTML=array[17];
+	  document.getElementById("g3").innerHTML=array[18];
+	  document.getElementById("g4").innerHTML=array[19];
+	  document.getElementById("g5").innerHTML=array[20];
+	  document.getElementById("e1").innerHTML=array[21];
+	  document.getElementById("e2").innerHTML=array[22];
+	  document.getElementById("r1").innerHTML=array[23];
+	  document.getElementById("r2").innerHTML=array[24];
+	  document.getElementById("r3").innerHTML=array[25];
+	  document.getElementById("r4").innerHTML=array[26];
+	  
+    };
+    reader.readAsText(input.files[0]);
+  };
+</script>
+
 			
 			</div>
 			
@@ -1181,8 +1226,9 @@ window.onbeforeunload = confirmOnPageExit;
 					<option value="1">One quarter</option>
 			  </select></td>
             </tr>
-			<tr><td></td><td>Start date:<input class="easyui-datebox"></input></td><td>End date:<input class="easyui-datebox"></input></td></tr>
+			<tr><td></td><td>Start date:<input class="easyui-datebox" style="width:200px"></input></td><td>End date:<input class="easyui-datebox" style="width:200px"></input></td></tr>
 			</table>
+			  <button onClick="exp()">Save</button>
 		  <button onClick="submitElement0()">Submit</button>
           
         </div>
@@ -1235,6 +1281,7 @@ is aligned." class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/ba
                 </select></td>
             </tr>
           </table>
+		  <button onClick="exp()">Save</button>
 		  <button onClick="submitElement1()" href="#">Submit</button>
         </div>
  
@@ -1274,6 +1321,7 @@ needs of all students described in the student population.</td>
 			<td style="font-size:13px;">Note: The description should include a timeline or points in time for progress monitoring of student performance.</td>
 			</tr>
           </table>
+		  <button onClick="exp()">Save</button>
 		  <button onClick="submitElement2()">Submit</button>
         </div>
         <div id="tab4" class="tab">
@@ -1311,6 +1359,7 @@ appropriate. The targets should be rigorous yet attainable. Click for more info"
               <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
+		  <button onClick="exp()">Save</button>
 		  <button onClick="submitElement3()">Submit</button>
         </div>
        <div id="tab5" class="tab">
@@ -1331,6 +1380,7 @@ targets translates into an appropriate teacher rating.</td>
               <td><textarea type="text" id="eval2"></textarea></td>
             </tr>
           </table>
+		  <button onClick="exp()">Save</button>
 		  <button onClick="submitElement4()">Submit</button>
         </div>
       <div id="tab6" class="tab">
@@ -1350,6 +1400,7 @@ targets translates into an appropriate teacher rating.</td>
 			<td><textarea type="text" id="U" style="width:300px;">Less than 25% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="NI" style="width:300px;">25% - 50% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="P" style="width:300px;">51% - 75% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="E" style="width:300px;">76% - 100% of Students Met the Indicated Growth Target(s)</textarea></td>
 			</tr>
           </table>
+		  <button onClick="exp()">Save</button>
 		  <button onClick="submitElement5()">Submit</button>
         </div>
 		 <div id="tab7" class="tab">
