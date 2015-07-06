@@ -172,14 +172,13 @@ window.onbeforeunload = confirmOnPageExit;
   </body>
 <div class="tabs">
     <ul class="tab-links">
-	<li class="active" id="t9" ><a href="#tab9" >Introduction</a></li>
+	<li class="active" id="t9" ><a href="#tab9" >Welcome</a></li>
 	<li  id="t8" ><a href="#tab8" >Instructions</a></li>
         <li  id="t1"><a href="#tab1">Educator Information</a></li>
       <li id="t2"><a href="#tab2">Learning Goal</a></li>
       <li id="t3"><a href="#tab3">Assessment and Evaluation</a></li>
         <li id="t4"><a href="#tab4">Growth Targets</a></li>
         <li id="t5"><a href="#tab5">Outcomes</a></li>
-        <li id="t6"><a href="#tab6">Rating</a></li>
 		<li id="t7"><a href="#tab7">Summary</a></li>
 		
 		
@@ -1334,9 +1333,6 @@ needs of all students described in the student population.</td>
 		    
                <table  id="growth" style="width:1000px;">
 			       <tr>
-			<td>Describe the <a title=" Target for student growth that should reflect high expectations for student achievement that are developmentally
-appropriate. The targets should be rigorous yet attainable. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">growth targets</a></td>
-			<td><textarea type="text" id="gr5"></textarea></td>
 			</tr>
             <tr height="100">
                <td>Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">baseline data</a> collected.</td>
@@ -1355,9 +1351,18 @@ appropriate. The targets should be rigorous yet attainable. Click for more info"
 			<td>If you answered "Yes" to the previous question, please describe the midpoint check in?</td>
 			<td><textarea type="text" id="midresp"></textarea></td>
 			</tr>
+				<td style="font-size:13px;">Note: You may not have baseline data yet. If you do not skip the next two questions </td>
+			<tr>
+			   <td>Do you have baseline data?</td>
+			   <td><select id="mid">
+			       <option>Yes</option>
+				   <option>No</option>
+				   </select>
+			   </td>
 			
             <tr height="100">
-               <td>Using baseline data, identify growth targets for your student population.</td>
+               <td>If you answered "Yes" to the previous question, using baseline data, identify <a title=" Target for student growth that should reflect high expectations for student achievement that are developmentally
+appropriate. The targets should be rigorous yet attainable. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">growth targets</a> for your student population.</td>
               <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
@@ -1370,7 +1375,7 @@ appropriate. The targets should be rigorous yet attainable. Click for more info"
 	   
 	   <h3 style="font-weight:bold">Outcomes</h3>
 	   
-		
+		<!--
                <table  style="width:1000px;">
             <tr height="100">
                <td>Document the number or percentage of students who achieved their identified growth targets.</td>
@@ -1382,14 +1387,8 @@ targets translates into an appropriate teacher rating.</td>
               <td><textarea type="text" id="eval2"></textarea></td>
             </tr>
           </table>
-		  <button onClick="exp()">Save</button>
-		  <button onClick="submitElement4()">Submit</button>
-        </div>
-      <div id="tab6" class="tab">
 	  
-	  <a href="learningGoalHelp.html" title="Click here if you are experiencing technical difficulties" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
-	  
-	  <h3 style="font-weight:bold">Rating</h3>
+	  <h3 style="font-weight:bold">Rating</h3>-->
 	  
 		    <p>Note:  You may choose the default State ratings or delete and add your district rating.</p>
 		
@@ -1402,6 +1401,30 @@ targets translates into an appropriate teacher rating.</td>
 			<td><textarea type="text" id="U" style="width:300px;">Less than 25% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="NI" style="width:300px;">25% - 50% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="P" style="width:300px;">51% - 75% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="E" style="width:300px;">76% - 100% of Students Met the Indicated Growth Target(s)</textarea></td>
 			</tr>
           </table>
+		  <table>
+		  <tr>
+		  <td>Number of students in class:
+  <input type="number" name="quantity" min="1" id="total" >
+          </td>
+		  <td>Number that achieved growth target:
+  <input type="number" name="quantity" min="1" id="achieved">
+          </td>
+		  <td>
+		   <button onClick="calculate()">Calculate</button>
+		  </tr>
+		  </table>
+		  <br>
+		  <table>
+		  <tr>
+		     <td style="width:100px">Rating:</td><td id="rating"></td><
+		  </tr>
+		  </table>
+		  <br>
+		  <table>
+		  <tr>
+		   <td>Percent who achieved growth target:</td><td id="percent"></td>
+		  </tr>
+		  </table>
 		  <button onClick="exp()">Save</button>
 		  <button onClick="submitElement5()">Submit</button>
         </div>
@@ -1491,10 +1514,6 @@ needs of all students described in the student population.</td>
 			  <h3 style="font-weight:bold">Growth Targets</h3>
 		   <table style="width:600px;">
 		   <tr height="200">
-				<td>Describe the growth targets.</td>
-				<td id="g5"></td>
-			</tr>
-		   <tr height="200">
 				<td>Document baseline data collected.</td>
 				<td id="g1"></td>
 			</tr>
@@ -1544,6 +1563,16 @@ targets translates into an appropriate teacher rating.</td>
 					<td>Date of approval:</td><td >____________</td>
 				</tr>
 			</table>
+			<br>
+			<p> Addendum 1:</p>
+			<br>
+			<br>
+			<br>
+			<p> Addendum 2:</p>
+			<br>
+			<br>
+			<br>
+			
 			<input type="button" value="Print" onclick="printSum()" />
 			<script>
 					function printSum() {

@@ -195,6 +195,7 @@ function submitElement3(){
 		jQuery("#t4").removeClass('active');
 
 }
+/**
 function submitElement4(){
 
 	getEval1();
@@ -203,14 +204,17 @@ function submitElement4(){
 
 	// Change tab 
         jQuery("#tab5").hide();
-		jQuery("#tab6").show();
+		jQuery("#tab").show();
 		
 		jQuery("#t6").addClass('active');
 		jQuery("#t5").removeClass('active');
 
 }
+**/
 function submitElement5(){
-
+    
+	getEval1();
+	getEval2();
 	getRating1();
 	getRating2();
 	getRating3();
@@ -218,10 +222,35 @@ function submitElement5(){
 	
 	
 	// Change tab 
-        jQuery("#tab6").hide();
+        jQuery("#tab5").hide();
 		jQuery("#tab7").show();
 		
 		jQuery("#t7").addClass('active');
-		jQuery("#t6").removeClass('active');
+		jQuery("#t5").removeClass('active');
 
 }
+
+function calculate(){
+	 var total=$("#total").val();
+	 var achieved=$("#achieved").val();
+	 
+	 var x=achieved/total;
+	 
+	 if (x<.25){
+	      document.getElementById("rating").innerHTML="Unsatisfactory ";
+	 }
+	 if(x>=.25&&x<=.5){
+	  document.getElementById("rating").innerHTML="Needs Improvement ";
+	 }
+	 if(x>.5&&x<=.75){
+	  document.getElementById("rating").innerHTML="Proficient ";
+	  }
+	  if(x>.75){
+		document.getElementById("rating").innerHTML="Excellent ";
+	  }
+	  
+	  var percent=x*100;
+	  document.getElementById("percent").innerHTML=percent+"%"
+ }
+
+	 

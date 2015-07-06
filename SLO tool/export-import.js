@@ -20,7 +20,6 @@ function exp(){
 	var g2=document.getElementById("g2").innerHTML;
 	var g3=document.getElementById("g3").innerHTML;
 	var g4=document.getElementById("g4").innerHTML;
-	var g5=document.getElementById("g5").innerHTML;
 	var e1=document.getElementById("e1").innerHTML;
 	var e2=document.getElementById("e2").innerHTML;
 	var r1=document.getElementById("r1").innerHTML;
