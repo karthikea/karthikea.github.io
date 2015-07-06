@@ -214,22 +214,40 @@ window.onbeforeunload = confirmOnPageExit;
       var text = reader.result;
       var array=text.split(",");
 	  document.getElementById("acYear").innerHTML=array[0];
+	  document.getElementById("year").value=array[0];
 	  document.getElementById("edName").innerHTML=array[1];
+	  document.getElementById("name").value=array[1];
 	  document.getElementById("selDistrict").innerHTML=array[2];
+	  $('#district').combobox('setText',array[2]);
 	  document.getElementById("selSchool").innerHTML=array[3];
+	  document.getElementById("school").value=array[3]
 	  document.getElementById("selSub").innerHTML=array[4];
+	  $('#subject').combobox('setText',array[4]);
 	  document.getElementById("selCor").innerHTML=array[5];
+	  document.getElementById("course").value=array[5];
 	  document.getElementById("selGra").innerHTML=array[6];
+	  $('#grade').combobox('setText',array[6]);
 	  document.getElementById("selInt").innerHTML=array[7];
+	  $('#interval').combobox('setText',array[7])
 	  document.getElementById("lg").innerHTML=array[8];
+	  document.getElementById("lgoal").value=array[8]
 	  document.getElementById("selStan").innerHTML=array[9];
+	  document.getElementById("standard").value=array[9];
 	  document.getElementById("selPop").innerHTML=array[10];
+	  document.getElementById("pop").value=array[10];
+	  $('#method').combobox('setText',array[10]);
 	  document.getElementById("selMet").innerHTML=array[11];
+	  $('#method').combobox('setText',array[11])
 	  document.getElementById("a").innerHTML=array[12];
+	  $('#assessment').combobox('setText',array[12])
 	  document.getElementById("a1").innerHTML=array[13];
+	  document.getElementById("assess1").value=array[13];
       document.getElementById("a2").innerHTML=array[14];
+	  document.getElementById("assess2").value=array[14];
 	  document.getElementById("a3").innerHTML=array[15];
+	  document.getElementById("assess3").value=array[15];
 	  document.getElementById("g1").innerHTML=array[16];
+	  document.getElementById("base").value=array[16];
 	  document.getElementById("g2").innerHTML=array[17];
 	  document.getElementById("g3").innerHTML=array[18];
 	  document.getElementById("g4").innerHTML=array[19];
