@@ -85,12 +85,12 @@ function getGrowth5(){
 }
 
 function getEval1(){
-    var x=document.getElementById("eval1").value;
+    var x=document.getElementById("rating").text;
 	document.getElementById("e1").innerHTML=x;
 }
 
 function getEval2(){
-    var x=document.getElementById("eval2").value;
+    var x= document.getElementById("percent").text;
 	document.getElementById("e2").innerHTML=x;
 }
 
@@ -186,7 +186,7 @@ function submitElement3(){
 	getGrowth2();
 	getGrowth3();
 	getGrowth4();
-	getGrowth5();
+	//getGrowth5();
 	// Change tab 
         jQuery("#tab4").hide();
 		jQuery("#tab5").show();
@@ -250,7 +250,8 @@ function calculate(){
 	  }
 	  
 	  var percent=x*100;
-	  document.getElementById("percent").innerHTML=percent+"%"
+	  document.getElementById("percent").innerHTML=percent+"%";
+	  document.getElementById("e2").innerHTML=percent+"%";
  }
 
 	 
