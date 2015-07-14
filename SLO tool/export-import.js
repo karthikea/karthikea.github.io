@@ -60,6 +60,6 @@ a.href = "data:text/plain;base64," + btoa(sampletext);
 }else{
 a.href = "data:text/plain;base64," +  jQuery.base64.encode(msg.data);
 }
-a.innerHTML = "download example text";
+a.click();
 
 }
