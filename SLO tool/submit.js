@@ -229,23 +229,55 @@ function submitElement5(){
 		jQuery("#t5").removeClass('active');
 
 }
+function pubChange(){
+    var pub=$("#Pub").val();
+	var elb=parseInt(pub)+1;
+	$("#Elb").val(elb);
+}
+
+function uubChange(){
+    var uub=$("#Uub").val();
+	var nilb=parseInt(uub);
+	$("#NIlb").val(nilb);
+	$("#NIub").attr("min",nilb+1);
+}
+
+function niubChange(){
+    var niub=$("#NIub").val();
+	var plb=parseInt(niub)+1;
+	$("#Plb").val(plb);
+	$("#Pub").attr("min",plb+1);
+}
 
 function calculate(){
 	 var total=$("#total").val();
 	 var achieved=$("#achieved").val();
-	 
+	 var uub=$("#Uub").val();
+	 var pub=$("#Pub").val();
+	 var niub=$("#NIub").val();
+	 var plb=$("#Plb").val();
+	 var nilb=$("#NIlb").val();
+	 var total=$("#total").val();
+	 var achieved=$("#achieved").val();
 	 var x=achieved/total;
 	 
-	 if (x<.25){
+	 
+	 
+	 
+	 var FirstQ=parseInt(uub)/100;
+	 var SecondQ=parseInt(niub)/100;
+	 var ThridQ=parseInt(pub)/100;
+	 
+	 if (x<FirstQ){
 	      document.getElementById("rating").innerHTML="Unsatisfactory ";
-	 }
-	 if(x>=.25&&x<=.5){
+	 }else
+	 if(x>=FirstQ&&x<=SecondQ){
 	  document.getElementById("rating").innerHTML="Needs Improvement ";
-	 }
-	 if(x>.5&&x<=.75){
+	 }else
+	 if(x>SecondQ&&x<=ThirdQ){
 	  document.getElementById("rating").innerHTML="Proficient ";
-	  }
-	  if(x>.75){
+	  }else
+	  if(x>ThirdQ){
 		document.getElementById("rating").innerHTML="Excellent ";
 	  }
 	  

@@ -1247,8 +1247,8 @@ window.onbeforeunload = confirmOnPageExit;
             </tr>
 			<tr><td></td><td>Start date:<input class="easyui-datebox" style="width:200px"></input></td><td>End date:<input class="easyui-datebox" style="width:200px"></input></td></tr>
 			</table>
-			  <button onClick="exp()">Save</button>
-		  <button onClick="submitElement0()">Submit</button><img src="iea-logo.jpg" height="42" width="60">
+			  <button onClick="exp()">Export</button>
+		  <button onClick="submitElement0()">Next</button><img src="iea-logo.jpg" height="42" width="60">
           
         </div>
  
@@ -1260,7 +1260,7 @@ window.onbeforeunload = confirmOnPageExit;
 		
 		<table  style="width:1000px;">
             <tr height="100">
-               <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards." class="easyui-tooltip" href="learningGoal.html" target="_blank">learning goal.</a></td>
+               <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info." class="easyui-tooltip" href="learningGoal.html" target="_blank">learning goal.</a></td>
               <td><textarea id="lgoal" cols="50" rows="1" value=" "></textarea></td>
             </tr>
             <tr>
@@ -1300,8 +1300,8 @@ is aligned." class="easyui-tooltip">content standards</a> associated with the le
                 </select></td>
             </tr>
           </table>
-		  <button onClick="exp()">Save</button>
-		  <button onClick="submitElement1()" href="#">Submit</button><img src="iea-logo.jpg" height="42" width="60">
+		  <button onClick="exp()">Export</button>
+		  <button onClick="submitElement1()" href="#">Next</button><img src="iea-logo.jpg" height="42" width="60">
         </div>
  
         <div id="tab3" class="tab">
@@ -1353,7 +1353,7 @@ needs of all students described in the student population.</td>
 			       <tr>
 			</tr>
             <tr height="100">
-               <td>Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments." class="easyui-tooltip">baseline data</a> collected.</td>
+               <td>Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments." class="easyui-tooltip">baseline data</a> collected, or to be collected.</td>
               <td><textarea type="text" id="base"></textarea></td>
             </tr>
 			<tr>
@@ -1366,10 +1366,10 @@ needs of all students described in the student population.</td>
 			</tr>
 			
 			<tr>
-			<td>If you answered "Yes" to the previous question, please describe the midpoint check in?</td>
+			<td>If you answered "Yes" to the previous question, please describe the midpoint check in.</td>
 			<td><textarea type="text" id="midresp"></textarea></td>
 			</tr>
-				<td style="font-size:13px;">Note: You may not have baseline data yet. If you do not skip the next two questions </td>
+				<td style="font-size:13px;"><b>Note: You may not yet have baseline data. If you this is the case you will use Addendum 1 in Summary Word file to add Growth Targets at a later date.</b></td>
 			<tr>
 			   <td>Do you have baseline data?</td>
 			   <td><select id="mid">
@@ -1384,8 +1384,8 @@ appropriate. The targets should be rigorous yet attainable. Click for more info"
               <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
-		  <button onClick="exp()">Save</button>
-		  <button onClick="submitElement3()">Submit</button><img src="iea-logo.jpg" height="42" width="60">
+		  <button onClick="exp()">Export</button>
+		  <button onClick="submitElement3()">Next</button><img src="iea-logo.jpg" height="42" width="60">
         </div>
        <div id="tab5" class="tab">
 	   
@@ -1408,7 +1408,7 @@ targets translates into an appropriate teacher rating.</td>
 	  
 	  <h3 style="font-weight:bold">Rating</h3>-->
 	  
-		    <p>Note:  You may choose the default State Ratings or delete and add your district rating.</p>
+		    <p>Note: You may choose the default State Ratings or delete and add your district ratings as determined by your district's PERA Joint Committee.</p>
 		
                <table  style="width:1000px;">
             <tr height="100">
@@ -1416,9 +1416,10 @@ targets translates into an appropriate teacher rating.</td>
               
             </tr>
 			<tr>
-			<td><textarea type="text" id="U" style="width:300px;">Less than 25% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="NI" style="width:300px;">25% - 50% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="P" style="width:300px;">51% - 75% of Students Met the Indicated Growth Target(s)</textarea></td><td><textarea type="text" id="E" style="width:300px;">76% - 100% of Students Met the Indicated Growth Target(s)</textarea></td>
+			<td id="U">Less than <input type="number" name="quantity" min="1" max="95" id="Uub" value="25" onchange="uubChange()" style="width:50px;">% of Students Met the Indicated Growth Target(s)</td><td id="NI"><input type="number" name="quantity" min="1" id="NIlb" value="25" style="width:50px;" readonly>% - <input type="number" name="quantity" min="1" max="96" id="NIub" value="50" onchange="niubChange()" style="width:50px;">% of Students Met the Indicated Growth Target(s)</td><td id="P"><input type="number" name="quantity" min="1" id="Plb" value="51" style="width:50px;" readonly>% - <input type="number" name="quantity" min="1" id="Pub" value="75"  max="98" onchange="pubChange()" style="width:50px;">% of Students Met the Indicated Growth Target(s)</td><td id="E"><input type="number" name="quantity" min="1" id="Elb" value="76" style="width:50px;" readonly>% - 100% of Students Met the Indicated Growth Target(s)</td>
 			</tr>
           </table>
+		  <br>
 		  <table>
 		  <tr>
 		  <td>Number of students in SLO:
@@ -1434,7 +1435,7 @@ targets translates into an appropriate teacher rating.</td>
 		  <br>
 		  <table>
 		  <tr>
-		     <td style="width:100px">Rating:</td><td id="rating"></td><
+		     <td style="width:100px">Rating:</td><td id="rating"></td>
 		  </tr>
 		  </table>
 		  <br>
@@ -1442,9 +1443,12 @@ targets translates into an appropriate teacher rating.</td>
 		  <tr>
 		   <td>Percent who achieved growth target:</td><td id="percent"></td>
 		  </tr>
+		  <tr>
+		  <td style="font-size:13px;">Note: All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</td>
+		  </tr>
 		  </table>
-		  <button onClick="exp()">Save</button>
-		  <button onClick="submitElement5()">Submit</button><img src="iea-logo.jpg" height="42" width="60">
+		  <button onClick="exp()">Export</button>
+		  <button onClick="submitElement5()">Next</button><img src="iea-logo.jpg" height="42" width="60">
         </div>
 		 <div id="tab7" class="tab">
 		 <h3 style="text-align:center;font-weight:bold">Student Learning Objective</h3>
