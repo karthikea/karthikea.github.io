@@ -170,6 +170,7 @@ window.onbeforeunload = confirmOnPageExit;
 <!-- Start your code here -->
  <!-----http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery--->
   </body>
+  <img src="iea-logo.jpg" height="42" width="60">
 <div class="tabs">
     <ul class="tab-links">
 	<li class="active" id="t9" ><a href="#tab9" >Welcome</a></li>
@@ -267,7 +268,7 @@ window.onbeforeunload = confirmOnPageExit;
 			
 			</div>
 			
-			<button onClick="next1()" href="#">Next</button><img src="iea-logo.jpg" height="42" width="60">
+			<button onClick="next1()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
 		</div>
 		
         <div id="tab1" class="tab">
@@ -1247,8 +1248,9 @@ window.onbeforeunload = confirmOnPageExit;
             </tr>
 			<tr><td></td><td>Start date:<input class="easyui-datebox" style="width:200px"></input></td><td>End date:<input class="easyui-datebox" style="width:200px"></input></td></tr>
 			</table>
-			  <button onClick="exp()">Export</button>
-		  <button onClick="submitElement0()">Next</button><img src="iea-logo.jpg" height="42" width="60">
+			<br>
+			  <button  style="width:90px;height:30px;font-size:20px;"onClick="exp()" >Export</button>
+		  <button style="width:90px;height:30px;font-size:20px;" onClick="submitElement0()">Next</button>
           
         </div>
  
@@ -1300,8 +1302,8 @@ is aligned." class="easyui-tooltip">content standards</a> associated with the le
                 </select></td>
             </tr>
           </table>
-		  <button onClick="exp()">Export</button>
-		  <button onClick="submitElement1()" href="#">Next</button><img src="iea-logo.jpg" height="42" width="60">
+		  <button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button>
+		  <button onClick="submitElement1()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
  
         <div id="tab3" class="tab">
@@ -1313,7 +1315,7 @@ is aligned." class="easyui-tooltip">content standards</a> associated with the le
 		
              <table  style="width:1000px;">
 			 <tr height="100">
-		    <td> Select the <a title="The procedure that will be used to measure student growth for the objective. Click for more info" class="easyui-tooltip" href="assessment.html" target="_blank">assessment</a></td>
+		    <td> Select the <a title="The procedure that will be used to measure student growth for the objective. Click for more info" class="easyui-tooltip" href="assessment.html" target="_blank">assessment.</a></td>
 		    <td><select class="easyui-combobox" id="assessment"  style="width:500px;height:50px">
 			        <option disabled selected>Choose or type in assessment type(s)</option>
                     <option value="Lecture">Exam</option>p
@@ -1340,8 +1342,8 @@ needs of all students described in the student population.</td>
 			<td style="font-size:13px;">Note: The description should include a timeline or points in time for progress monitoring of student performance.</td>
 			</tr>
           </table>
-		  <button onClick="exp()">Save</button>
-		  <button onClick="submitElement2()">Submit</button><img src="iea-logo.jpg" height="42" width="60">
+		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
+		  <button onClick="submitElement2()" style="width:90px;height:30px;font-size:20px;" >Submit</button>
         </div>
         <div id="tab4" class="tab">
 		
@@ -1380,12 +1382,12 @@ needs of all students described in the student population.</td>
 			
             <tr height="100">
                <td>If you answered "Yes" to the previous question, using baseline data, identify <a title=" Target for student growth that should reflect high expectations for student achievement that are developmentally
-appropriate. The targets should be rigorous yet attainable. Click for more info" class="easyui-tooltip" href="http://www.isbe.net/assessment/pdfs/bal-asmt/slo-guidance/slo-guidebook.pdf" target="_blank">growth targets</a> for your student population.</td>
+appropriate. The targets should be rigorous yet attainable. Click for more info" class="easyui-tooltip" href="growthTargets.html" target="_blank">growth targets</a> for your student population.</td>
               <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
-		  <button onClick="exp()">Export</button>
-		  <button onClick="submitElement3()">Next</button><img src="iea-logo.jpg" height="42" width="60">
+		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
+		  <button onClick="submitElement3()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
        <div id="tab5" class="tab">
 	   
@@ -1443,16 +1445,14 @@ targets translates into an appropriate teacher rating.</td>
 		  <tr>
 		   <td>Percent who achieved growth target:</td><td id="percent"></td>
 		  </tr>
-		  <tr>
-		  <td style="font-size:13px;">Note: All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</td>
-		  </tr>
 		  </table>
-		  <button onClick="exp()">Export</button>
-		  <button onClick="submitElement5()">Next</button><img src="iea-logo.jpg" height="42" width="60">
+		  <p style="font-size:13px;">Note: All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</p>
+		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
+		  <button onClick="submitElement5()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
 		 <div id="tab7" class="tab">
 		 <h3 style="text-align:center;font-weight:bold">Student Learning Objective</h3>
-		 <p>Proofread, save and print your summary document.</p>
+		 <p>Proofread, save and print your summary SLO document.  Note:  The IEA watermark will not print.</p>
          <p>Please review the summary document with your evaluator for input, feedback or approval.</p>
          <p>Both you and your evaluator should sign and date the document. Keep a copy for yourself for progress monitoring.</p>
 		 <br>
@@ -1602,7 +1602,7 @@ needs of all students described in the student population.</td>
 					}
 			</script>
 			</div>
-			<a class="word-export" href="javascript:void(0)"> Export as .doc </a>
+			<button class="word-export" href="javascript:void(0)"> Export as .doc </button>
 			<script type="text/javascript">
 
 				jQuery(document).ready(function($) {
@@ -1649,8 +1649,7 @@ needs of all students described in the student population.</td>
                     <option>Option 3</option>
                 </select>
 			<p>When you see text in blue <a href="learningGoalHelp.html" title="and a definition will pop up" class="easyui-tooltip" target="_blank">like this hover over with our mouse</a></p>
-			<button onClick="next2()" href="#">Next</button><img src="iea-logo.jpg" height="42" width="60">
-		</div>
+			<button onClick="next2()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
     </div>
 </div>
 

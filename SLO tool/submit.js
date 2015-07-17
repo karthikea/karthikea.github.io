@@ -264,22 +264,24 @@ function calculate(){
 	 
 	 
 	 
-	 var FirstQ=parseInt(uub)/100;
-	 var SecondQ=parseInt(niub)/100;
-	 var ThridQ=parseInt(pub)/100;
+	 var FirstQ=uub/100;
+	 var SecondQ=niub/100;
+	 var ThridQ=pub/100;
 	 
-	 if (x<FirstQ){
+	 
+	
+		if (x<FirstQ){
 	      document.getElementById("rating").innerHTML="Unsatisfactory ";
-	 }else
-	 if(x>=FirstQ&&x<=SecondQ){
-	  document.getElementById("rating").innerHTML="Needs Improvement ";
-	 }else
-	 if(x>SecondQ&&x<=ThirdQ){
-	  document.getElementById("rating").innerHTML="Proficient ";
-	  }else
-	  if(x>ThirdQ){
-		document.getElementById("rating").innerHTML="Excellent ";
-	  }
+		}else
+		if(x>=FirstQ&&x<=SecondQ){
+			document.getElementById("rating").innerHTML="Needs Improvement ";
+		}else
+		if(x>SecondQ&&x<=ThirdQ){
+			document.getElementById("rating").innerHTML="Proficient ";
+		}else
+		if(x>ThirdQ){
+			document.getElementById("rating").innerHTML="Excellent ";
+		}
 	  
 	  var percent=x*100;
 	  document.getElementById("percent").innerHTML=percent+"%";
