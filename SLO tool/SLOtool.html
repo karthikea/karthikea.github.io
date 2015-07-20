@@ -252,7 +252,7 @@ window.onbeforeunload = confirmOnPageExit;
 	  document.getElementById("g2").innerHTML=array[17];
 	  document.getElementById("g3").innerHTML=array[18];
 	  document.getElementById("g4").innerHTML=array[19];
-	  document.getElementById("g5").innerHTML=array[20];
+	  //document.getElementById("g5").innerHTML=array[20];
 	  document.getElementById("e1").innerHTML=array[21];
 	  document.getElementById("e2").innerHTML=array[22];
 	  document.getElementById("r1").innerHTML=array[23];
@@ -1461,95 +1461,116 @@ targets translates into an appropriate teacher rating.</td>
 		 <h3 style="font-weight:bold">Educator Information</h3>
                <table  style="width:500px;">
             <tr height="100">
-               <td>Academic Year</td>
+               <td>Academic Year:</td>
               <td id="acYear"></td>
             </tr>
 			<tr height="100">
-               <td>Educator Name</td>
+               <td>Educator Name:</td>
               <td id="edName"></td>
             </tr>
 			<tr height="100">
-               <td>District name</td>
+               <td>District name:</td>
               <td id="selDistrict"></td>
             </tr>
 			<tr height="100">
-               <td>School building </td>
+               <td>School building: </td>
               <td id="selSchool"></td>
             </tr>
 			<tr height="100">
-               <td>Subject</td>
+               <td>Subject:</td>
               <td id="selSub"></td>
             </tr>
 			<tr height="100">
-               <td>Course</td>
+               <td>Course:</td>
               <td id="selCor"></td>
             </tr>
 			<tr height="100">
-               <td>Grade</td>
+               <td>Grade:</td>
               <td id="selGra"></td>
             </tr>
 			<tr height="100">
-               <td>Interval of instruction</td>
+               <td>Interval of instruction:</td>
               <td id="selInt"></td>
             </tr>
           </table>
 		  <h3 style="font-weight:bold">Learning Goal</h3>
 		   <table  style="width:500px;">
             <tr height="100">
-               <td>Describe the learning goal.</td>
-              <td id="lg"></td>
+               <td>Describe the learning goal:</td>
+			</tr>
+			<tr height="100">
+              <td id="lg" style="font-style:italic;"></td>
             </tr>
 			<tr height="100">
-               <td>Identify the content standards associated with the learning goal.</td>
-              <td id="selStan"></td>
+               <td>Identify the content standards associated with the learning goal:</td>
+			</tr>
+			<tr height="100">
+              <td id="selStan" style="font-style:italic;"></td>
+            </tr>
+			<tr height="100" >
+               <td>Describe the student population with attention to diverse learners:</td>
+			</tr>
+              <td id="selPop" style="font-style:italic;"></td>
             </tr>
 			<tr height="100">
-               <td>Describe the student population with attention to diverse learners.</td>
-              <td id="selPop"></td>
-            </tr>
+               <td>Methods of instruction:</td>
+			</tr>
 			<tr height="100">
-               <td>Methods of instruction.</td>
-              <td id="selMet"></td>
+              <td id="selMet" style="font-style:italic;"></td>
             </tr>
 			
           </table>
 		  <h3 style="font-weight:bold">Assessment and Evaluation</h3>
 		   <table style="width:600px;">
 		   <tr height="200">
-               <td>Select the Assessment</td>
-              <td id="a"></td>
+               <td>Select the Assessment:</td>
+			</tr>
+			<tr height="100">
+              <td id="a" style="font-style:italic;"></td>
             </tr>
 		  <tr height="200">
-               <td>Describe the Assessments</td>
-              <td id="a1"></td>
+               <td>Describe the Assessments:</td>
+		  </tr>
+		  <tr height="100">
+              <td id="a1" style="font-style:italic;"></td>
             </tr>
 			<tr height="200">
-				<td>Describe the Evaluation Procedures</td>
-				<td id="a2"></td>
+				<td>Describe the Evaluation Procedures:</td>
+			</tr>
+			<tr height="100">
+				<td id="a2" style="font-style:italic;"></></td>
 			</tr>
 			<tr height="200">
                <td>Describe how the assessments and evaluation procedures may be differentiated to meet the
-needs of all students described in the student population.</td>
-              <td id="a3"></td>
+needs of all students described in the student population:</td>
+            </tr>
+			<tr height="100">
+              <td id="a3" style="font-style:italic;"></td>
             </tr>
 			</table>
 			  <h3 style="font-weight:bold">Growth Targets</h3>
 		   <table style="width:600px;">
 		   <tr height="200">
-				<td>Document baseline data collected.</td>
-				<td id="g1"></td>
+				<td>Document baseline data collected:</td>
+			</tr>
+			<tr height="100">
+				<td id="g1" style="font-style:italic;"></td>
 			</tr>
 			<tr height="200">
 			    <td>Will there be a midpoint check-in?</td>
 				<td id="g2"></td>
 			</tr>
 			<tr height="200">
-			    <td>If you answered "Yes" to the previous question, please describe the midpoint check in?</td>
-				<td id="g3"></td>
+			    <td>If you answered "Yes" to the previous question, please describe the midpoint check in:</td>
+			</tr>
+			<tr height="100">
+				<td id="g3" style="font-style:italic;"></td>
 			</tr>
 			<tr height="200">
-			    <td>Using baseline data, identify growth targets for your student population.</td>
-				<td id="g4"></td>
+			    <td>Using baseline data, identify growth targets for your student population:</td>
+			</tr>
+			<tr height="100">
+				<td id="g4" style="font-style:italic;"></td>
 			</tr>
 			</table>
 			<table style="width:500px;">
@@ -1602,7 +1623,7 @@ needs of all students described in the student population.</td>
 					}
 			</script>
 			</div>
-			<button class="word-export" href="javascript:void(0)"> Export as .doc </button>
+			<a class="word-export" href="javascript:void(0)"> Export as .doc </a>
 			<script type="text/javascript">
 
 				jQuery(document).ready(function($) {

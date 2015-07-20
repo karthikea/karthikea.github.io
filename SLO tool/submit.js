@@ -85,33 +85,35 @@ function getGrowth5(){
 }
 
 function getEval1(){
-    var x=document.getElementById("rating").text;
+    var x=document.getElementById("rating").innerHTML;
 	document.getElementById("e1").innerHTML=x;
 }
 
 function getEval2(){
-    var x= document.getElementById("percent").text;
+    var x= document.getElementById("percent").innerHTML;
 	document.getElementById("e2").innerHTML=x;
 }
 
 function getRating1(){
-	var x=document.getElementById("U").value;
-	document.getElementById("r1").innerHTML=x;
+	var x=document.getElementById("Uub").value;
+	document.getElementById("r1").innerHTML="0%-"+x+"%";
 }
 
 function getRating2(){
-	var x=document.getElementById("NI").value;
-	document.getElementById("r2").innerHTML=x;
+	var x=document.getElementById("NIlb").value;
+	var y=document.getElementById("NIub").value;
+	document.getElementById("r2").innerHTML=x+"%-"+y+"%";
 }
 
 function getRating3(){
-	var x=document.getElementById("P").value;
-	document.getElementById("r3").innerHTML=x;
+	var x=document.getElementById("Plb").value;
+	var y=document.getElementById("Pub").value;
+	document.getElementById("r3").innerHTML=x+"%-"+y+"%";
 }
 
 function getRating4(){
-	var x=document.getElementById("E").value;
-	document.getElementById("r4").innerHTML=x;
+	var x=document.getElementById("Elb").value;
+	document.getElementById("r4").innerHTML=x+"%-100%";
 }
 	
 function next1(){
