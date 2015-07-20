@@ -261,27 +261,27 @@ function calculate(){
 	 var nilb=$("#NIlb").val();
 	 var total=$("#total").val();
 	 var achieved=$("#achieved").val();
-	 var x=achieved/total;
+	 var x=(achieved/total);
 	 
 	 
 	 
 	 
-	 var FirstQ=uub/100;
-	 var SecondQ=niub/100;
-	 var ThridQ=pub/100;
+	 var FirstQ=parseInt(uub)/100;
+	 var SecondQ=parseInt(niub)/100;
+	 //var ThridQ=parseInt(pub)/100;
 	 
 	 
-	
-		if (x<FirstQ){
+	    
+		if (x<(uub/100)){
 	      document.getElementById("rating").innerHTML="Unsatisfactory ";
-		}else
+		}
 		if(x>=FirstQ&&x<=SecondQ){
 			document.getElementById("rating").innerHTML="Needs Improvement ";
-		}else
-		if(x>SecondQ&&x<=ThirdQ){
-			document.getElementById("rating").innerHTML="Proficient ";
-		}else
-		if(x>ThirdQ){
+		}
+		if(x>SecondQ&&x<=(pub/100)){
+			document.getElementById("rating").innerHTML="Proficient";
+		}
+		if(x>(pub/100)){
 			document.getElementById("rating").innerHTML="Excellent ";
 		}
 	  
