@@ -170,7 +170,7 @@ window.onbeforeunload = confirmOnPageExit;
 <!-- Start your code here -->
  <!-----http://inspirationalpixels.com/tutorials/creating-tabs-with-html-css-and-jquery--->
   </body>
-  <img src="iea-logo.jpg" height="42" width="60">
+  <img src="iea-logo.jpg" height="42" width="60"><h3>Beta version</h3>
 <div class="tabs">
     <ul class="tab-links">
 	<li class="active" id="t9" ><a href="#tab9" >Welcome</a></li>
@@ -250,15 +250,18 @@ window.onbeforeunload = confirmOnPageExit;
 	  document.getElementById("g1").innerHTML=array[16];
 	  document.getElementById("base").value=array[16];
 	  document.getElementById("g2").innerHTML=array[17];
+	  document.getElementById("mid").value=array[17];
 	  document.getElementById("g3").innerHTML=array[18];
+	  document.getElementById("midresp").value=array[18];
 	  document.getElementById("g4").innerHTML=array[19];
+	  document.getElementById("middes").value=array[19];
 	  //document.getElementById("g5").innerHTML=array[20];
-	  document.getElementById("e1").innerHTML=array[21];
-	  document.getElementById("e2").innerHTML=array[22];
-	  document.getElementById("r1").innerHTML=array[23];
-	  document.getElementById("r2").innerHTML=array[24];
-	  document.getElementById("r3").innerHTML=array[25];
-	  document.getElementById("r4").innerHTML=array[26];
+	  document.getElementById("e1").innerHTML=array[20];
+	  document.getElementById("e2").innerHTML=array[21];
+	  document.getElementById("r1").innerHTML=array[22];
+	  document.getElementById("r2").innerHTML=array[23];
+	  document.getElementById("r3").innerHTML=array[24];
+	  document.getElementById("r4").innerHTML=array[25];
 	  
     };
     reader.readAsText(input.files[0]);
@@ -273,7 +276,7 @@ window.onbeforeunload = confirmOnPageExit;
 		
         <div id="tab1" class="tab">
 		
-		<a href="learningGoalHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		<a href="edInfoHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		  <h3 style="font-weight:bold">Educator Information</h3>
           <table  style="width:1000px;">
             <tr height="100">
@@ -1249,6 +1252,8 @@ window.onbeforeunload = confirmOnPageExit;
 			<tr><td></td><td>Start date:<input class="easyui-datebox" style="width:200px"></input></td><td>End date:<input class="easyui-datebox" style="width:200px"></input></td></tr>
 			</table>
 			<br>
+			 <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+			 <br>
 			  <button  style="width:90px;height:30px;font-size:20px;"onClick="exp()" >Export</button>
 		  <button style="width:90px;height:30px;font-size:20px;" onClick="submitElement0()">Next</button>
           
@@ -1302,13 +1307,15 @@ is aligned." class="easyui-tooltip">content standards</a> associated with the le
                 </select></td>
             </tr>
           </table>
+		  <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <br>
 		  <button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement1()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
  
         <div id="tab3" class="tab">
 		
-		<a href="learningGoalHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		<a href="A&EHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
 		<h3 style="font-weight:bold">Assessment and Evaluation</h3>
 		
@@ -1339,15 +1346,18 @@ needs of all students described in the student population.</td>
               <td><textarea type="text" id="assess3"></textarea></td>
             </tr>
 			<tr>
-			<td style="font-size:13px;">Note: The description should include a timeline or points in time for progress monitoring of student performance.</td>
+			<td style="font-size:13px;"><b>Note: The description should include a timeline or points in time for progress monitoring of student performance.</b></td>
 			</tr>
           </table>
+		  <br>
+		  <p style="font-size:13px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <br>
 		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement2()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
         <div id="tab4" class="tab">
 		
-		<a href="learningGoalHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+		<a href="growthTargetsHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
 		<h3 style="font-weight:bold">Growth Targets</h3>
 		    
@@ -1371,7 +1381,7 @@ needs of all students described in the student population.</td>
 			<td>If you answered "Yes" to the previous question, please describe the midpoint check in.</td>
 			<td><textarea type="text" id="midresp"></textarea></td>
 			</tr>
-				<td style="font-size:13px;"><b>Note: You may not yet have baseline data. If you this is the case you will use Addendum 1 in Summary Word file to add Growth Targets at a later date.</b></td>
+				<td style="font-size:13px;"><b>Note: If you do not have baseline data, then you will use Addendum 1 located in the “Summary” tab.  Addendum 1 will allow you to identify and add Growth Targets to your “Exported” saved file.</b></td>
 			<tr>
 			   <td>Do you have baseline data?</td>
 			   <td><select id="mid">
@@ -1386,12 +1396,14 @@ appropriate. The targets should be rigorous yet attainable. Click for more info"
               <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
+		  <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <br>
 		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement3()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
        <div id="tab5" class="tab">
 	   
-	   <a href="learningGoalHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
+	   <a href="outcomeHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 	   
 	   <h3 style="font-weight:bold">Outcomes</h3>
 	   
@@ -1446,13 +1458,16 @@ targets translates into an appropriate teacher rating.</td>
 		   <td>Percent who achieved growth target:</td><td id="percent"></td>
 		  </tr>
 		  </table>
-		  <p style="font-size:13px;">Note: All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</p>
+		  <p style="font-size:13px;"><b>Note: All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</b></p>
+		  <br>
+		  <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <br>
 		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement5()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
 		 <div id="tab7" class="tab">
 		 <h3 style="text-align:center;font-weight:bold">Student Learning Objective</h3>
-		 <p>Proofread, save and print your summary SLO document.  Note:  The IEA watermark will not print.</p>
+		 <p>Proofread, save and print your summary SLO document.  Note:  The IEA watermark and logo will not print.</p>
          <p>Please review the summary document with your evaluator for input, feedback or approval.</p>
          <p>Both you and your evaluator should sign and date the document. Keep a copy for yourself for progress monitoring.</p>
 		 <br>
@@ -1642,26 +1657,11 @@ needs of all students described in the student population:</td>
 		<div id="tab8" class="tab"> 
 		    <p><b>Key Features:</b></p>
 			
-			<p><i>Drop-down menus.</i>  Throughout the template is an opportunity to offer responses for you to select.  
-			These are only suggestions.  You may also, for any of the elements, type in a response if the drop-down list does not offer the response you need.
+			<p><i>Drop-down menus, Textboxes and Hover text.</i></p>
+			
+			<p><i>Drop-down menus.</i>  Throughout the template is an opportunity to offer responses for you to select. These are only suggestions. You may also, for any of the elements, type in a response if the drop-down list does not offer the response you need.
             </p>
 			
-			<p><i>Help and Support.</i>  The template provides help on the elements for the student learning objective process.   Simply roll the cursor over any of the highlighted text in the template and you’ll find definitions and links to websites offering help in understanding and using the element. 
-			The training hyperlinks provide more information on the elements and will aid you as you complete the SLO Interactive Template.</p>
-			
-			<p><i>Saving Content.</i>  The template content has the option of being saved on your computer as a word document or print the document.  We encourage the user to print the summary of the content upon completion. If you need to leave the tool hit the save button to load your answers 
-			into a text file. Then when you return upload the file and continue working. This feature will not work in Internet Explorer 9 and below.<p>
-			
-			<p>We also recommend reviewing the summary document with your evaluator for input, feedback or approval.  Once the evaluator approves the student growth measurement plan, both of you should sign and date the document.  The plan includes a progress monitoring schedule.  
-			Please keep the document as a reminder of the timeline and a record of your student growth performance evaluation agreement. 
-			</p>
-			<br>
-			<p><a href="glossary.html" target="_blank">Link to glossary</a></p>
-			<br>
-			<p>If you have questions or comments about the template, please contact us at <a href="http:\\cei.feedback@gmail.com">cei.feedback@gmail.com</a>.  We appreciate your feedback.</p>
-		    <br><br><br>
-		    <p>Type in information in the text box</p>
-		    <textarea type="text" id="base"></textarea>
 			<p>For a drop down select the best option.If the option does not appear type it in.</p> 
 			<select id="subject" class="easyui-combobox"  style="width:500px;">
 			        <option disabled selected>--Choose or type in an option--</option>
@@ -1669,7 +1669,33 @@ needs of all students described in the student population:</td>
 					<option>Option 2</option>
                     <option>Option 3</option>
                 </select>
-			<p>When you see text in blue <a href="learningGoalHelp.html" title="and a definition will pop up" class="easyui-tooltip" target="_blank">like this hover over with our mouse</a></p>
+			 <br><br><br>
+			<p><i>Textboxes.</i>You may type information into the textbox, or copy and paste text from any existing file. Note the small, shaded area in the lower right of the textbox; click, hold and drag on this shaded area to adjust the size of the textbox.</p>
+			
+			 <p>Type in information in the text box</p>
+		    <textarea type="text" id="base"></textarea>
+			 <br><br><br>
+			<p><i>Hover text.</i> Simply move your pointer over any blue text and a popup with a brief definition will automatically appear. Some of these terms in blue text also serve as links to additional resources. If the blue text becomes underlined when you move your pointer over it, then this is also a link to additional resources. Just click on the link and an additional resources page (relevant to the section of the tool on which you are currently working) will appear in a new tab.
+</p>
+		<p>When you see text in blue <a title="and a definition will pop up" class="easyui-tooltip" target="_blank">like this hover over with our mouse</a></p>
+			 <br><br><br>
+			<p><i>Help and Support.</i>  The template provides help on the elements for the student learning objective process.   Simply roll the cursor over any of the highlighted text in the template and you’ll find definitions and links to websites offering help in understanding and using the element. 
+			The training hyperlinks provide more information on the elements and will aid you as you complete the SLO Interactive Template.</p>
+			 <br><br><br>
+			<p><i>Saving Content.</i>  Saving “Export” Content. If you need to leave the template before completing your work you MUST save your work to your computer. To save your work to an export file click on the "Export" button found at the bottom of each page. When prompted then save the Text file on your computer in a place you can remember. The Export function will not work on Internet Explorer 9. When you re-enter the template you’ll need to “Import” the data that you saved from your previous session. To do this go to the Welcome tab click on “Choose File” button and select your Text file from its location on your computer. The fields that you previously entered information will automatically populate. DO NOT tamper with the contents of the text file as you may end up losing information.<p>
+			
+			<p>We also recommend reviewing the summary document with your evaluator for input, feedback or approval.  Once the evaluator approves the student growth measurement plan, both of you should sign and date the document.  The plan includes a progress monitoring schedule.  
+			Please keep the document as a reminder of the timeline and a record of your student growth performance evaluation agreement. 
+			</p>
+			 <br><br><br>
+			<p><a href="glossary.html" target="_blank">Link to glossary</a></p>
+			 <br><br><br>
+			<p>If you have questions or comments about the template, please contact us at <a href="http:\\cei.feedback@gmail.com">cei.feedback@gmail.com</a> or IEA Connect at <a href="ieaconnect@ieanea.org">ieaconnect@ieanea.org</a>. To call IEA Connect: 888-IEA-1800  We appreciate your feedback.</p>
+		    <br><br><br>
+			<a href="SLO Template Element Tutorial.pdf" target="_blank">SLO Template Element Tutorial</a>
+<p>Users may click on the link above to open (in a new browser tab) a full, step-by-step tutorial for the Template. You may either refer to this browser tab throughout your work, or you might prefer to print the information as a hard copy. Also, you may access information on an individual Template element by clicking on the Help link while you are in that element section. For example if you are in the Learning Goal section, just click on the Help link and then on the Learning Goal Tutorial link that appears as one of the Help options.</p>
+<br><br><br>		    
+			
 			<button onClick="next2()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
     </div>
 </div>

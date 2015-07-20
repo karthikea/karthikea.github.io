@@ -267,7 +267,7 @@ function calculate(){
 	 
 	 
 	 var FirstQ=parseInt(uub)/100;
-	 var SecondQ=parseInt(niub)/100;
+	 var SecondQ=(parseInt(niub)/100);
 	 //var ThridQ=parseInt(pub)/100;
 	 
 	 
@@ -286,7 +286,7 @@ function calculate(){
 		}
 	  
 	  var percent=x*100;
-	  document.getElementById("percent").innerHTML=percent+"%";
+	  document.getElementById("percent").innerHTML=Math.ceil(percent)+"%";
 	  document.getElementById("e2").innerHTML=percent+"%";
  }
 
