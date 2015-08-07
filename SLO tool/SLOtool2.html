@@ -191,16 +191,13 @@ window.onbeforeunload = confirmOnPageExit;
 			<div id="instructions">
 		
 			
-			<p>Welcome to the IEA Student Learning Objective Interactive Template.  The purpose of the SLO template is to help you, as an educator, organize the ideas you will need to meet the requirements of the student growth portion of your Illinois Performance Evaluation. 
-			This template is the result of a cooperative process involving active practitioners and Illinois Stakeholders who work in the area of student growth assessment.  
-			We hope you find it helpful.</p>
+			<p><b>Welcome to the IEA Student Learning Objective (SLO) Interactive Template.</b>  The purpose of the IEA SLO template is to help you, as an educator, organize the ideas you will need to meet the requirements of the student growth portion of your Illinois Performance Evaluation.  The SLO Interactive template project was funded through a grant from the National Education Association (NEA).  The IEA SLO Interactive template is the result of a cooperative process involving active practitioners (50 Illinois National Board Certified Teachers and IEA members from across the State) and Illinois Stakeholders including the Illinois State Board of Education, Center for Assessment and others who work in the area of student growth assessment.  </p>
 			
-			<p>The SLO Interactive template does not replace meeting with your evaluator to determine the elements you will use to measure student growth, 
-			but it does provide a step-by-step process for organizing those elements and saving them as a paper copy.</p>
+			<p>The IEA SLO Interactive template does not replace meeting with your evaluator to determine the elements you will use to measure student growth, but it does provide a step-by-step process for organizing those elements and saving them both as an electronic file and a paper copy.</p>
 			
-			<p>The template does not provide choices for assessments. Your district PERA joint committee will provide criteria and/or guidelines on which assessments you will use.  If you are developing your own assessment, the district PERA joint committee should provide assessment criteria. .  
-			Please contact your district PERA joint committee for further guidance.  
+			<p>The IEA SLO Interactive template does not provide choices for assessments.  Your district PERA joint committee must provide criteria, guidelines or must make decisions on which assessments you will use and, if you are developing your own.  Please contact your district PERA joint committee for further guidance.  
 			</p>
+			<p>While the Illinois Education Association is available to answer questions and provide support for SLO development, SLOs require guidance by the District PERA Joint Committee.  IEA encourages teachers to use existing resources, and channel questions through their District PERA Joint Committee. In the event that a question cannot be answered locally, please feel free to reach out to us.  </p>
 			<br>
 			<p>If you have previously started writing the SLO and wish to continue, input the text file here:</p>
 			<input type='file' accept='text/plain' onchange='openFile(event)'><br>
@@ -281,14 +278,31 @@ window.onbeforeunload = confirmOnPageExit;
           <table  style="width:1000px;">
             <tr height="100">
                <td>Academic year</td>
-              <td><input type="text" id="year" value=" "></input></td>
+              <td><select id="acYear" class="easyui-combobox"  style="width:500px;">
+			        <option disabled selected>--Choose or type in subject--</option>
+                    <option value="Math">2016</option>
+					<option value="LA">2017</option>
+                    <option value="History">2018</option>
+                    <option value="Science">2019</option>
+                    <option value="Art">2020</option>
+					<option value="Fl">2021</option>
+					<option value="PE">2022</option>
+					<option value="VP">2023</option>
+					<option value="VP">2024</option>
+					<option value="VP">2025</option>
+					<option value="VP">2026</option>
+					<option value="VP">2027</option>
+					<option value="VP">2028</option>
+					<option value="VP">2029</option>
+					<option value="VP">2030</option>
+                </select></td>
             </tr>
             <tr height="100">
                <td>Educator name</td>
               <td><input type="text" id="name" value=" "></input></td>
             </tr>
 			<tr height="100">
-               <td>District name</td>
+               <td>District name <p style="font-size:12px;">Note: Please type in district name in the space provided</p></td>
                <td ><select id="district" class="easyui-combobox"  style="width:500px;">
 			        <option disabled selected>--Choose or type in subject--</option>   
 					<option value="070168060">A E R O  Spec Educ Coop</option>
@@ -1223,7 +1237,7 @@ window.onbeforeunload = confirmOnPageExit;
                 </select></td>
             </tr>
 			<tr height="100">
-              <td>Course</td>
+              <td>Course <p style="font-size:12px;">Note: For K-5 Teachers, please list a course i.e.  Mathematics, Language, Reading etc. </p></td>
               <td ><input type="text" id="course"></input></td>
             </tr>
            <tr height="100">
@@ -1272,7 +1286,7 @@ window.onbeforeunload = confirmOnPageExit;
             </tr>
             <tr>
               <td>Identify the <a title="The content, skills, and specific standards to which the SLO
-is aligned." class="easyui-tooltip">content standards</a> associated with the learning goal.</td>
+is aligned." class="easyui-tooltip" style="color:red">content standards</a> associated with the learning goal.</td>
               <td><select id="standardlinks" class="links" style="width:500px;height:50px">
 			        <option disabled selected>Choose a standard link</option>
                     <!--<id="standard" data-options="multiple:true,multiline:true" style="width:500px;height:50px;">
@@ -1292,7 +1306,7 @@ is aligned." class="easyui-tooltip">content standards</a> associated with the le
 				<td><textarea  id="standard" value="" cols="50" rows="1"></textarea></td>
             </tr>
             <tr height="100">
-               <td>Describe the <a title="A description of the students, course, grade level, and number of students." class="easyui-tooltip">student population</a> with attention to diverse learners.</td>
+               <td>Describe the <a title="A description of the students, course, grade level, and number of students." class="easyui-tooltip" style="color:red">student population</a> with attention to diverse learners.</td>
               <td><textarea id="pop" type="text" value=""></textarea></td>
             </tr>
             <tr height="100">
@@ -1303,7 +1317,7 @@ is aligned." class="easyui-tooltip">content standards</a> associated with the le
                     <option value="Discussion">Group Discussion</option>
                     <option value="Laboratory">Active Learning Strategies</option>
                     <option value="Workshop">Cooperative Group Assignments</option>
-                    <option value="CSC316">Foster Learning Self-Responsibility</option>
+                    <option value="CSC316">Independent Work</option>
                 </select></td>
             </tr>
           </table>
@@ -1337,11 +1351,11 @@ is aligned." class="easyui-tooltip">content standards</a> associated with the le
               <td><textarea type="text" id="assess1"></textarea></td>
             </tr>
 			 <tr height="100">
-               <td>Describe the <a title="The process used to gather information about the growth of students through the use of one or more assessment tools and/or strategies." class="easyui-tooltip">evaluation procedures.</a></td>
+               <td>Describe the <a title="The process used to gather information about the growth of students through the use of one or more assessment tools and/or strategies." class="easyui-tooltip" style="color:red">evaluation procedures.</a></td>
               <td><textarea type="text" id="assess2"></textarea></td>
             </tr>
             <tr height="100">
-               <td>Describe how the assessments and evaluation procedures may be <a title="Providing students with alternative methods of assessment and/or evaluation procedure that measures growth for all students regardless of differences in ability." class="easyui-tooltip">differentiated</a> to meet the
+               <td>Describe how the assessments and evaluation procedures may be <a title="Providing students with alternative methods of assessment and/or evaluation procedure that measures growth for all students regardless of differences in ability." class="easyui-tooltip" style="color:red">differentiated</a> to meet the
 needs of all students described in the student population.</td>
               <td><textarea type="text" id="assess3"></textarea></td>
             </tr>
@@ -1365,11 +1379,11 @@ needs of all students described in the student population.</td>
 			       <tr>
 			</tr>
             <tr height="100">
-               <td>Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments." class="easyui-tooltip">baseline data</a> collected, or to be collected.</td>
+               <td>Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments." class="easyui-tooltip" style="color:red">baseline data</a> collected, or to be collected.</td>
               <td><textarea type="text" id="base"></textarea></td>
             </tr>
 			<tr>
-			   <td>Will there be a <a title="The teacher and/or evaluator examines the data collected during the first half of the interval of instruction to determine if students are on track to meet their growth targets, and whether the growth targets need to be adjusted due to over- or underestimation, and/or justifiable circumstances for certain students." class="easyui-tooltip">midpoint check-in?</a></td>
+			   <td>Will there be a <a title="The teacher and/or evaluator examines the data collected during the first half of the interval of instruction to determine if students are on track to meet their growth targets, and whether the growth targets need to be adjusted due to over- or underestimation, and/or justifiable circumstances for certain students." class="easyui-tooltip" style="color:red">midpoint check-in?</a></td>
 			   <td><select id="mid">
 			       <option>Yes</option>
 				   <option>No</option>
