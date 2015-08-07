@@ -259,6 +259,12 @@ window.onbeforeunload = confirmOnPageExit;
 	  document.getElementById("r2").innerHTML=array[23];
 	  document.getElementById("r3").innerHTML=array[24];
 	  document.getElementById("r4").innerHTML=array[25];
+	  document.getElementById("total").value=array[26];
+	  document.getElementById("achieved").value=array[27];
+	  document.getElementById("sd").innerHTML=array[28];
+	  $('#start').datebox('setValue',array[28]);
+	  document.getElementById("ed").innerHTML=array[29];
+	  $('#end').datebox('setValue',array[29]);
 	  
     };
     reader.readAsText(input.files[0]);
@@ -278,7 +284,7 @@ window.onbeforeunload = confirmOnPageExit;
           <table  style="width:1000px;">
             <tr height="100">
                <td>Academic year</td>
-              <td><select id="acYear" class="easyui-combobox"  style="width:500px;">
+              <td><select id="year" class="easyui-combobox"  style="width:500px;">
 			        <option disabled selected>--Choose or type in subject--</option>
                     <option value="Math">2016</option>
 					<option value="LA">2017</option>
@@ -1263,7 +1269,7 @@ window.onbeforeunload = confirmOnPageExit;
 					<option value="3">One quarter</option>
 			  </select></td>
             </tr>
-			<tr><td></td><td>Start date:<input class="easyui-datebox" style="width:200px"></input></td><td>End date:<input class="easyui-datebox" style="width:200px"></input></td></tr>
+			<tr><td></td><td>Start date:<input class="easyui-datebox" style="width:200px" id="start"></input></td><td>End date:<input class="easyui-datebox" style="width:200px" id="end"></input></td></tr>
 			</table>
 			<br>
 			 <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
@@ -1521,6 +1527,9 @@ targets translates into an appropriate teacher rating.</td>
                <td>Interval of instruction:</td>
               <td id="selInt"></td>
             </tr>
+			<tr height="100">
+				<td>Start date:</td><td id="sd"></td>
+				<td>End date:</td><td id="ed"></td>
           </table>
 		  <h3 style="font-weight:bold">Learning Goal</h3>
 		   <table  style="width:500px;">
@@ -1669,7 +1678,25 @@ needs of all students described in the student population:</td>
 
         </div>
 		<div id="tab8" class="tab"> 
-		    <p><b>Key Features:</b></p>
+		<a href="SLO Template Element Tutorial.pdf" target="_blank">SLO Template Element Tutorial</a>
+<p>Users may click on the link above to open (in a new browser tab) a full, step-by-step tutorial for the Template. You may either refer to this browser tab throughout your work, or you might prefer to print the information as a hard copy. Also, you may access information on an individual Template element by clicking on the Help link while you are in that element section. For example if you are in the Learning Goal section, just click on the Help link and then on the Learning Goal Tutorial link that appears as one of the Help options.</p>
+<br><br><br>
+<p><a href="glossary.html" target="_blank">Link to glossary</a></p>
+<p>This glossary provides the user with a set of standard definitions for key terms used throughout the SLO Template Tool. Users can click on this link to open the glossary in a new tab, and refer to this tab as needed during their work on the Tool.</p>
+			 <br><br><br>		
+			 <p><b>Template Technical Information </b></p>
+			 <p><i>Preferred Browser.</i>The SLO Template works best in the Chrome browser – whether you are using a PC or a Mac. You can download Chrome for free by going to the following link, <a href="https://www.google.com/chrome/browser/desktop/"> https://www.google.com/chrome/browser/desktop/</a></p>
+			 <p><i>Font Size.</i> The font style and size used throughout the template is Times New Roman 14.5. If you find the text size too small, you can use your browser to increase the display (Zoom). Please see the instructions below for four major browser programs:<p>
+			 <ul>
+				<li><p><b>Chrome</b>-Click on the Chrome menu<img src="three_lines.png">  on the browser toolbar (upper, right side of your screen), and locate the “Zoom” section (roughly the middle of the popup menu). Click<img src="chrome_plus.png">to make everything on the page larger and click<img src="chrome_minus.png">   to make everything on the page smaller.</p></li>
+				<li><p><b>Firefox</b>-Click on the Firefox menu<img src="three_lines.png">  on the browser toolbar (upper, right side of your screen), and at the top of the popup menu click<img src="chrome_plus.png">   to make everything on the page larger and click<img src="chrome_minus.png">   to make everything on the page smaller.</p></li>
+				<li><p><b>Internet Explorer</b>-Click on the Internet Explorer Tools menu<img src="InternetExplorerToolsCog.jpg">    on the browser toolbar (upper, right side of your screen) and select the “Zoom” option (near the top of the popup menu). Choosing “Zoom in” or “Zoom out” increases or decrease your display by 25%. </p></li>
+				<li><p><b>Safari</b>-Click on the Safari menu<img src="InternetExplorerToolsCog.jpg"> on the browser toolbar (upper, right side of your screen), and from the popup menu select “Customize Toolbar…”.  This will open another popup box, and look for the “Zoom” icon. Left click and hold on the “Zoom” icon and drag it to a desired place on the Safari toolbar – a bit to the left of the<img src="InternetExplorerToolsCog.jpg">    icon would be a good spot. Now click on the large A to “Zoom in” or the smaller A to “Zoom out”. </p></li>
+			</ul>
+             
+			 <p><i>IPAD Support.</i> While future iterations of the SLO Template Tool will support IPADs, this initial version of the Template is not designed for use with an IPAD. You are strongly encouraged to use either a laptop or desktop computer. <p>		
+		    <br><br><br>
+			<p><b>Key Features:</b></p>
 			
 			<p><i>Drop-down menus, Textboxes and Hover text.</i></p>
 			
@@ -1684,10 +1711,11 @@ needs of all students described in the student population:</td>
                     <option>Option 3</option>
                 </select>
 			 <br><br><br>
-			<p><i>Textboxes.</i>You may type information into the textbox, or copy and paste text from any existing file. Note the small, shaded area in the lower right of the textbox; click, hold and drag on this shaded area to adjust the size of the textbox.</p>
+			<p><i>Textboxes.</i>You may type information into the textbox, or copy and paste text from any existing file.</p>
 			
 			 <p>Type in information in the text box</p>
 		    <textarea type="text" id="base"></textarea>
+			<p>Note the small, shaded area in the lower right of the textbox; click, hold and drag on this shaded area to adjust the size of the textbox.</p>
 			 <br><br><br>
 			<p><i>Hover text.</i> Simply move your pointer over any blue text and a popup with a brief definition will automatically appear. Some of these terms in blue text also serve as links to additional resources. If the blue text becomes underlined when you move your pointer over it, then this is also a link to additional resources. Just click on the link and an additional resources page (relevant to the section of the tool on which you are currently working) will appear in a new tab.
 </p>
@@ -1696,20 +1724,16 @@ needs of all students described in the student population:</td>
 			<p><i>Help and Support.</i>  The template provides help on the elements for the student learning objective process.   Simply roll the cursor over any of the highlighted text in the template and you’ll find definitions and links to websites offering help in understanding and using the element. 
 			The training hyperlinks provide more information on the elements and will aid you as you complete the SLO Interactive Template.</p>
 			 <br><br><br>
-			<p><i>Saving Content.</i>  Saving “Export” Content. If you need to leave the template before completing your work you MUST save your work to your computer. To save your work to an export file click on the "Export" button found at the bottom of each page. When prompted then save the Text file on your computer in a place you can remember. The Export function will not work on Internet Explorer 9. When you re-enter the template you’ll need to “Import” the data that you saved from your previous session. To do this go to the Welcome tab click on “Choose File” button and select your Text file from its location on your computer. The fields that you previously entered information will automatically populate. DO NOT tamper with the contents of the text file as you may end up losing information.<p>
+			<p><i>Saving Content.</i>  Saving “Export” Content. If you need to leave the template before completing your work you MUST save your work to your computer. To save your work to an export file click on the "Export" button found at the bottom of each page. When prompted then save the Text file on your computer in a place you can remember.<b> The Export function will not work on Internet Explorer 9</b>. When you re-enter the template you’ll need to “Import” the data that you saved from your previous session. To do this go to the Welcome tab click on “Choose File” button and select your Text file from its location on your computer. The fields that you previously entered information will automatically populate. <b>Please note the Text file you export to your computer to save your work and then import back into the SLO Template Tool to continue your work is a machine language file. It is only meant to communicate with the Template Tool. Please do not alter the contents of this Text file as you may end up losing information.</b></p>
 			
 			<p>We also recommend reviewing the summary document with your evaluator for input, feedback or approval.  Once the evaluator approves the student growth measurement plan, both of you should sign and date the document.  The plan includes a progress monitoring schedule.  
 			Please keep the document as a reminder of the timeline and a record of your student growth performance evaluation agreement. 
 			</p>
 			 <br><br><br>
-			<p><a href="glossary.html" target="_blank">Link to glossary</a></p>
-			 <br><br><br>
-			<p>If you have questions or comments about the template, please contact us at <a href="http:\\cei.feedback@gmail.com">cei.feedback@gmail.com</a> or IEA Connect at <a href="ieaconnect@ieanea.org">ieaconnect@ieanea.org</a>. To call IEA Connect: 888-IEA-1800  We appreciate your feedback.</p>
-		    <br><br><br>
-			<a href="SLO Template Element Tutorial.pdf" target="_blank">SLO Template Element Tutorial</a>
-<p>Users may click on the link above to open (in a new browser tab) a full, step-by-step tutorial for the Template. You may either refer to this browser tab throughout your work, or you might prefer to print the information as a hard copy. Also, you may access information on an individual Template element by clicking on the Help link while you are in that element section. For example if you are in the Learning Goal section, just click on the Help link and then on the Learning Goal Tutorial link that appears as one of the Help options.</p>
-<br><br><br>		    
-			
+			<p>If you have questions or comments about the template, please contact us at IEA Connect at <a href="ieaconnect@ieanea.org">ieaconnect@ieanea.org</a>. To call IEA Connect: 888-IEA-1800  We appreciate your feedback.</p>
+	
+			<br><br><br>
+
 			<button onClick="next2()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
     </div>
 </div>

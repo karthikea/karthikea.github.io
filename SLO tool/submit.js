@@ -1,6 +1,6 @@
 function getYear(){
-	var x=document.getElementById("year").value;
-	document.getElementById("acYear").innerHTML=x;
+	 var val=$('#year').combobox('getText');
+	document.getElementById("acYear").innerHTML=val;
 }
 function getName(){
     var x=document.getElementById("name").value;
@@ -30,6 +30,16 @@ function getInterval(){
     var val=$('#interval').combobox('getText');
 	document.getElementById("selInt").innerHTML=val;
 }
+
+function getStartDate(){
+    var val=$('#start').datebox('getValue');
+	document.getElementById("sd").innerHTML=val;
+}
+function getEndDate(){
+    var val=$('#end').datebox('getValue');
+	document.getElementById("ed").innerHTML=val;
+}
+
 function getGoal(){
     var x=document.getElementById("lgoal").value;
 	document.getElementById("lg").innerHTML=x;
@@ -142,6 +152,8 @@ function submitElement0(){
 	getStandardsLinks();
 	getDistrict();
 	getSchool();
+	getStartDate();
+	getEndDate();
 	//getCheckIns();
 	
 	

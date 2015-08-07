@@ -26,6 +26,10 @@ function exp(){
 	var r2=document.getElementById("r2").innerHTML;
 	var r3=document.getElementById("r3").innerHTML;
 	var r4=document.getElementById("r4").innerHTML;
+	var total=$("#total").val();
+	var achieved=$("#achieved").val();
+	var sd=document.getElementById("sd").innerHTML;
+	var ed=document.getElementById("ed").innerHTML
 	/**
 	var data=[year,name,district,school,subject,course,grade,interval,lgoal,standard,pop,met,asess,assess1,assess2,assess3,g1,g2,g3,g4,g5,e1,e2,r1,r2,r3,r4];
 	var text = "data:text/csv;charset=utf-8,";
@@ -50,7 +54,7 @@ link.click(); // This will download the data file named "my_data.csv".
 document.body.removeChild(link);
 **/
 var sampletext =year+","+name+","+district+","+school+","+subject+","+course+","+grade+","+interval+","+lgoal+","+standard+","+pop+","+met+","+assess+","+assess1+","+assess2+","+assess3+","+g1+","+g2+","+g3+","+g4+","+e1
-+","+e2+","+r1+","+r2+","+r3+","+r4;
++","+e2+","+r1+","+r2+","+r3+","+r4+","+total+","+achieved+","+sd+","+ed;
 var a = document.body.appendChild(
         document.createElement("a")
     );
