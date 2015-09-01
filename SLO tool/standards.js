@@ -47,9 +47,15 @@ var liblinks=[
 	{"name":"Library Standards","link":"https://www.islma.org/ISAIL.htm"}
 ];
 
+var fllinks=[
+	{"name":"American Council on the Teaching of Foreign Language","link":"http://www.actfl.org/about-the-american-council-the-teaching-foreign-languages/resources"}
+];
+
+
 var allinks=[
 	{"name":"Math Common Core","link":"http://www.corestandards.org/Math/Practice/"},
 			  {"name":"Achieve the core","link":"http://achievethecore.org/"},
+			  {"name":"American Council on the Teaching of Foreign Language","link":"http://www.actfl.org/about-the-american-council-the-teaching-foreign-languages/resources"},
 			  {"name":"Dynamic learning maps-Mathematics","link":"http://dynamiclearningmaps.org/sites/default/files/documents/Math_EEs/DLM%20Essential%20Elements%20Math%20%282013%29%20v4.pdf"},
               {"name":"UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
 			  {"name":"C3 Framework for Social Studies","link":"http://www.socialstudies.org/system/files/c3/C3-Framework-for-Social-Studies.pdf"},
@@ -116,14 +122,15 @@ function getStandardsLinks(){
 function createList(object){
     
     var select = document.getElementById("standardlinks"); 
+	var length=select.length;
 	
-	for(i=0;i<=select.length;i++){
+	for(i=0;i<=length;i++){
 		select.remove(1);
 		
 	}
 	
 
-	for(i=0;i<object.length;i++){select
+	for(i=0;i<object.length;i++){
 		//var select = document.getElementById("standardlinks"); 
 		var option = document.createElement("option");
 		option.text = object[i].name;

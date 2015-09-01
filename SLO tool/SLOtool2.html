@@ -216,7 +216,7 @@ window.onbeforeunload = confirmOnPageExit;
       var text = reader.result;
       var array=text.split(",");
 	  document.getElementById("acYear").innerHTML=array[0];
-	  document.getElementById("year").value=array[0];
+	  $('#year').combobox('setText',array[0]);
 	  document.getElementById("edName").innerHTML=array[1];
 	  document.getElementById("name").value=array[1];
 	  document.getElementById("selDistrict").innerHTML=array[2];
@@ -233,42 +233,50 @@ window.onbeforeunload = confirmOnPageExit;
 	  $('#interval').combobox('setText',array[7])
 	  document.getElementById("lg").innerHTML=array[8];
 	  document.getElementById("lgoal").value=array[8]
-	  document.getElementById("selStan").innerHTML=array[9];
-	  document.getElementById("standard").value=array[9];
-	  document.getElementById("selPop").innerHTML=array[10];
-	  document.getElementById("pop").value=array[10];
-	  $('#method').combobox('setText',array[10]);
-	  document.getElementById("selMet").innerHTML=array[11];
-	  $('#method').combobox('setText',array[11])
-	  document.getElementById("a").innerHTML=array[12];
-	  $('#assessment').combobox('setText',array[12])
-	  document.getElementById("a1").innerHTML=array[13];
-	  document.getElementById("assess1").value=array[13];
-      document.getElementById("a2").innerHTML=array[14];
-	  document.getElementById("assess2").value=array[14];
-	  document.getElementById("a3").innerHTML=array[15];
-	  document.getElementById("assess3").value=array[15];
-	  document.getElementById("g1").innerHTML=array[16];
-	  document.getElementById("base").value=array[16];
-	  document.getElementById("g2").innerHTML=array[17];
-	  document.getElementById("mid").value=array[17];
-	  document.getElementById("g3").innerHTML=array[18];
-	  document.getElementById("midresp").value=array[18];
-	  document.getElementById("g4").innerHTML=array[19];
-	  document.getElementById("middes").value=array[19];
+	  var link=array[9]
+	  $("#standardlinks option").each(function() {
+  if($(this).text() == link) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+      var link=document.getElementById("standardlinks").value;
+	//if(link="Math Core Standard"){
+     $("#link").attr("href",link);
+	  document.getElementById("selStan").innerHTML=array[10];
+	  document.getElementById("standard").value=array[10];
+	  document.getElementById("selPop").innerHTML=array[11];
+	  document.getElementById("pop").value=array[11];
+	  document.getElementById("selMet").innerHTML=array[12];
+	  $('#method').combobox('setText',array[12])
+	  document.getElementById("a").innerHTML=array[13];
+	  $('#assessment').combobox('setText',array[13])
+	  document.getElementById("a1").innerHTML=array[14];
+	  document.getElementById("assess1").value=array[14];
+      document.getElementById("a2").innerHTML=array[15];
+	  document.getElementById("assess2").value=array[15];
+	  document.getElementById("a3").innerHTML=array[16];
+	  document.getElementById("assess3").value=array[16];
+	  document.getElementById("g1").innerHTML=array[17];
+	  document.getElementById("base").value=array[17];
+	  document.getElementById("g2").innerHTML=array[18];
+	  document.getElementById("mid").value=array[18];
+	  document.getElementById("g3").innerHTML=array[19];
+	  document.getElementById("midresp").value=array[19];
+	  document.getElementById("g4").innerHTML=array[20];
+	  document.getElementById("middes").value=array[20];
 	  //document.getElementById("g5").innerHTML=array[20];
-	  document.getElementById("e1").innerHTML=array[20];
-	  document.getElementById("e2").innerHTML=array[21];
-	  document.getElementById("r1").innerHTML=array[22];
-	  document.getElementById("r2").innerHTML=array[23];
-	  document.getElementById("r3").innerHTML=array[24];
-	  document.getElementById("r4").innerHTML=array[25];
-	  document.getElementById("total").value=array[26];
-	  document.getElementById("achieved").value=array[27];
-	  document.getElementById("sd").innerHTML=array[28];
-	  $('#start').datebox('setValue',array[28]);
-	  document.getElementById("ed").innerHTML=array[29];
-	  $('#end').datebox('setValue',array[29]);
+	  document.getElementById("e1").innerHTML=array[21];
+	  document.getElementById("e2").innerHTML=array[22];
+	  document.getElementById("r1").innerHTML=array[23];
+	  document.getElementById("r2").innerHTML=array[24];
+	  document.getElementById("r3").innerHTML=array[25];
+	  document.getElementById("r4").innerHTML=array[26];
+	  document.getElementById("total").value=array[27];
+	  document.getElementById("achieved").value=array[28];
+	  document.getElementById("sd").innerHTML=array[29];
+	  $('#start').datebox('setValue',array[29]);
+	  document.getElementById("ed").innerHTML=array[30];
+	  $('#end').datebox('setValue',array[30]);
 	  
     };
     reader.readAsText(input.files[0]);
@@ -1237,7 +1245,7 @@ window.onbeforeunload = confirmOnPageExit;
               <td ><select id="subject" class="easyui-combobox"  style="width:500px;">
 			        <option disabled selected>--Choose or type in subject--</option>
                     <option value="Art">Fine Arts</option>
-					<option value="Fl">Foreign Language</option>
+					<option value="FL">Foreign Language</option>
 					<option value="Science">General Science</option>
 					<option value="PE">Health and Safety</option>
 					<option value="History">History</option>
