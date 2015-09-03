@@ -36,6 +36,9 @@ h3{
 i{
   font-size: 20px;
 }
+u{
+  font-size: 20px;
+}
 
 .lw { font-size: 65px; }
 
@@ -107,7 +110,7 @@ i{
             display:block;
         }
 	
-	#instructions{
+	.content{
 		width: 1000px;
 		margins:auto;
 	}
@@ -192,7 +195,7 @@ window.onbeforeunload = confirmOnPageExit;
     <div class="tab-content">
 		<div id="tab9" class="tab active">
 		
-			<div id="instructions">
+			<div class="content">
 		
 			
 			<p><b>Welcome to the IEA Student Learning Objective (SLO) Interactive Template.</b>  The purpose of the IEA SLO template is to help you, as an educator, organize the ideas you will need to meet the requirements of the student growth portion of your Illinois Performance Evaluation.  The SLO Interactive template project was funded through a grant from the National Education Association (NEA).  The IEA SLO Interactive template is the result of a cooperative process involving active practitioners (50 Illinois National Board Certified Teachers and IEA members from across the State) and Illinois Stakeholders including the Illinois State Board of Education, Center for Assessment and others who work in the area of student growth assessment.  </p>
@@ -290,7 +293,7 @@ window.onbeforeunload = confirmOnPageExit;
 		</div>
 		
         <div id="tab1" class="tab">
-		
+		<div class="content">
 		<a href="edInfoHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		  <h3 style="font-weight:bold">Educator Information</h3>
           <table  style="width:1000px;">
@@ -298,21 +301,21 @@ window.onbeforeunload = confirmOnPageExit;
                <td>Academic year</td>
               <td><select id="year" class="easyui-combobox"  style="width:500px;">
 			        <option disabled selected>--Choose or type in subject--</option>
-                    <option value="Math">2016</option>
-					<option value="LA">2017</option>
-                    <option value="History">2018</option>
-                    <option value="Science">2019</option>
-                    <option value="Art">2020</option>
-					<option value="Fl">2021</option>
-					<option value="PE">2022</option>
-					<option value="VP">2023</option>
-					<option value="VP">2024</option>
-					<option value="VP">2025</option>
-					<option value="VP">2026</option>
-					<option value="VP">2027</option>
-					<option value="VP">2028</option>
-					<option value="VP">2029</option>
-					<option value="VP">2030</option>
+                    <option value="Math">2016-2017</option>
+					<option value="LA">2017-2018</option>
+                    <option value="History">2018-2019</option>
+                    <option value="Science">2019-2020</option>
+                    <option value="Art">2020-2021</option>
+					<option value="Fl">2021-2022</option>
+					<option value="PE">2022-2023</option>
+					<option value="VP">2023-2024</option>
+					<option value="VP">2024-2025</option>
+					<option value="VP">2025-2026</option>
+					<option value="VP">2026-2027</option>
+					<option value="VP">2027-2028</option>
+					<option value="VP">2028-2029</option>
+					<option value="VP">2029-2030</option>
+					<option value="VP">2030-2031</option>
                 </select></td>
             </tr>
             <tr height="100">
@@ -320,7 +323,7 @@ window.onbeforeunload = confirmOnPageExit;
               <td><input type="text" id="name" value=" "></input></td>
             </tr>
 			<tr height="100">
-               <td>District name <p style="font-size:12px;">Note: Please type in district name in the space provided</p></td>
+               <td>District name <p style="font-size:16px;">Note: Please type in district name in the space provided</p></td>
                <td ><select id="district" class="easyui-combobox"  style="width:500px;">
 			        <option disabled selected>--Choose or type in subject--</option>   
 					<option value="070168060">A E R O  Spec Educ Coop</option>
@@ -1246,6 +1249,7 @@ window.onbeforeunload = confirmOnPageExit;
 			        <option disabled selected>--Choose or type in subject--</option>
                     <option value="Art">Fine Arts</option>
 					<option value="FL">Foreign Language</option>
+					<option value="GE">General Education</option>
 					<option value="Science">General Science</option>
 					<option value="PE">Health and Safety</option>
 					<option value="History">History</option>
@@ -1262,7 +1266,7 @@ window.onbeforeunload = confirmOnPageExit;
                 </select></td>
             </tr>
 			<tr height="100">
-              <td>Course <p style="font-size:12px;">Note: For K-5 Teachers, please list a course i.e.  Mathematics, Language, Reading etc. </p></td>
+              <td>Course <p style="font-size:16px;">Note: For K-5 Teachers, please list a course i.e.  Mathematics, Language, Reading etc. </p></td>
               <td ><input type="text" id="course"></input></td>
             </tr>
            <tr height="100">
@@ -1291,15 +1295,15 @@ window.onbeforeunload = confirmOnPageExit;
 			<tr><td></td><td>Start date:<input class="easyui-datebox" style="width:200px" id="start"></input></td><td>End date:<input class="easyui-datebox" style="width:200px" id="end"></input></td></tr>
 			</table>
 			<br>
-			 <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+			 <p style="font-size:12px;"><b>Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer. </b> </p>
 			 <br>
 			  <button  style="width:90px;height:30px;font-size:20px;"onClick="exp()" >Export</button>
 		  <button style="width:90px;height:30px;font-size:20px;" onClick="submitElement0()">Next</button>
-          
+          </div>
         </div>
  
         <div id="tab2" class="tab">
-		
+		<div class="content">
 		<a href="learningGoalHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
         
 		<h3 style="font-weight:bold">Learning Goal</h3>    
@@ -1324,7 +1328,9 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
                     <option value="CSC316">1.5 students will be able to implement stacks,linked lists, queues and determine time complexity as well as traverse through trees</option>
 					-->
                 </select></td>
-				<td><a href="#" id="link" target="_blank">Go to standards site</a></td>
+				</tr>
+				<tr height="50">
+				<td><a href="error.html" id="link" target="_blank">Click here to review selected Standards site in new tab </a></td>
 				</tr>
 				<tr>
 				<td>Enter standards here.</td>
@@ -1346,14 +1352,16 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
                 </select></td>
             </tr>
           </table>
-		  <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <p style="font-size:12px;"><b>Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer.</b> </p>
 		  <br>
 		  <button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement1()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
+		</div>
  
         <div id="tab3" class="tab">
 		
+		<div class="content">
 		<a href="A&EHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
 		<h3 style="font-weight:bold">Assessment and Evaluation</h3>
@@ -1381,21 +1389,19 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
             </tr>
             <tr height="100">
                <td>Describe how the assessments and evaluation procedures may be <a title="Providing students with alternative methods of assessment and/or evaluation procedure that measures growth for all students regardless of differences in ability." class="easyui-tooltip" style="color:red">differentiated</a> to meet the
-needs of all students described in the student population.</td>
+needs of all students described in the student population.The description should include a timeline or points in time for progress monitoring of student performance.</td>
               <td><textarea type="text" id="assess3"></textarea></td>
             </tr>
-			<tr>
-			<td style="font-size:13px;"><b>Note: The description should include a timeline or points in time for progress monitoring of student performance.</b></td>
-			</tr>
           </table>
 		  <br>
-		  <p style="font-size:13px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <p style="font-size:13px;"><b>Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer. </b> </p>
 		  <br>
 		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement2()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
+		</div>
         <div id="tab4" class="tab">
-		
+		<div class="content">
 		<a href="growthTargetsHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		
 		<h3 style="font-weight:bold">Growth Targets</h3>
@@ -1420,7 +1426,7 @@ needs of all students described in the student population.</td>
 			<td>If you answered "Yes" to the previous question, please describe the midpoint check in.</td>
 			<td><textarea type="text" id="midresp"></textarea></td>
 			</tr>
-				<td style="font-size:13px;"><b>Note: If you do not have baseline data, then you will use Addendum 1 located in the “Summary” tab.  Addendum 1 will allow you to identify and add Growth Targets to your “Exported” saved file.</b></td>
+				<td style="font-size:13px;"><b>Note: If you do not have yet have baseline data, you may use the Addendum 1 placeholder section – included when you select the “Export as .doc” (Word file) option from the “Summary” tab – to add your data at a later date.<u> See the Growth Targets Tutorial for more information on your options.</u> </b></td>
 			<tr>
 			   <td>Do you have baseline data?</td>
 			   <td><select id="mid">
@@ -1435,13 +1441,14 @@ appropriate. The targets should be rigorous yet attainable. Click for more info"
               <td><textarea type="text" id="middes"></textarea></td>
             </tr>
           </table>
-		  <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <p style="font-size:12px;"><b>Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer.</b> </p>
 		  <br>
 		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement3()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
+		</div>
        <div id="tab5" class="tab">
-	   
+	   <div class="content">
 	   <a href="outcomeHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 	   
 	   <h3 style="font-weight:bold">Outcomes</h3>
@@ -1473,6 +1480,8 @@ targets translates into an appropriate teacher rating.</td>
 			</tr>
           </table>
 		  <br>
+		  <p><b>Since you will not yet have your end of period data, you will not be able to complete the information below until a later date. You may use the Addendum 2 placeholder section – included when you select the “Export as .doc” (Word file) option from the “Summary” tab – to add your data at a later date.<u> See the Outcomes Tutorial for more information on your options.</u></b></p>
+          <br>
 		  <table>
 		  <tr>
 		  <td>Number of students in SLO:
@@ -1499,17 +1508,20 @@ targets translates into an appropriate teacher rating.</td>
 		  </table>
 		  <p style="font-size:13px;"><b>Note: All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</b></p>
 		  <br>
-		  <p style="font-size:12px;"><b>Note: Remember when finished with a page, click on the Next button (lower left corner) which will move you on to the next tab of the template and will push your content fields to the Summary page for exporting as either a Word or Text file. </b> </p>
+		  <p style="font-size:12px;"><b>Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer. </b> </p>
 		  <br>
 		  <button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
 		  <button onClick="submitElement5()" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
+		</div>
 		 <div id="tab7" class="tab">
 		 <a href="summaryHelp.html" title="Technical difficulties and SLO resources" target="_blank"><span class="glyphicon glyphicon-question-sign" aria-hidden="true" ></span> Help</a>
 		 <h3 style="text-align:center;font-weight:bold">Student Learning Objective</h3>
-		 <p>Proofread, save and print your summary SLO document.  Note:  The IEA watermark and logo will not print.</p>
+		 <div class="content">
+		 <p>Proofread, save and print your summary SLO document.  We recommend you both “Print” (.pdf) and “Export as .doc” (Word file) your work showing on the Summary page. You will find both options at the bottom of this page. Note: The IEA watermark and logo will not print.</p>
          <p>Please review the summary document with your evaluator for input, feedback or approval.</p>
          <p>Both you and your evaluator should sign and date the document. Keep a copy for yourself for progress monitoring.</p>
+		 </div>
 		 <br>
 		 <br>
 		 <div id="page-content" >
@@ -1663,14 +1675,29 @@ needs of all students described in the student population:</td>
 				</tr>
 			</table>
 			<br>
-			<p> Addendum 1:</p>
+			<p> Addendum 1:(Growth Targets)</p>
+			<br>
+			<p>Insert your baseline data here.</p>
 			<br>
 			<br>
 			<br>
-			<p> Addendum 2:</p>
 			<br>
 			<br>
+			<p> Addendum 2:(Outcomes)</p>
 			<br>
+			<p><b>Number of students in SLO: _______</b></p>
+			<br>
+			<p><b>Number that achieved growth target: _______</b></p>
+			<br>
+			<p><b>Percent achieving growth target: _______</b></p>
+			<p>Number that achieved growth target divided by the Number of students in SLO. All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</p>
+			<br>
+			<p><b>Rating: ______</b></p>
+			<p>Compare the resulting percentage to the pre-determined rating percentages (Excellent, Proficient, Needs Improvement, or Unsatisfactory) to manually identify your rating.</p>
+			<br>
+			<br>
+			
+			
 			
 			<input type="button" value="Print" onclick="printSum()" />
 			<script>
@@ -1698,6 +1725,7 @@ needs of all students described in the student population:</td>
 
         </div>
 		<div id="tab8" class="tab"> 
+		<div class="content">
 		<a href="SLO Template Element Tutorial.pdf" target="_blank">SLO Template Element Tutorial</a>
 <p>Users may click on the link above to open (in a new browser tab) a full, step-by-step tutorial for the Template. You may either refer to this browser tab throughout your work, or you might prefer to print the information as a hard copy. Also, you may access information on an individual Template element by clicking on the Help link while you are in that element section. For example if you are in the Learning Goal section, just click on the Help link and then on the Learning Goal Tutorial link that appears as one of the Help options.</p>
 <br><br><br>
@@ -1755,7 +1783,8 @@ needs of all students described in the student population:</td>
 			<br><br><br>
 
 			<button onClick="next2()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
-    </div>
+		</div>
+	</div>
 </div>
 
 
