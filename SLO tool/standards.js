@@ -82,7 +82,7 @@ function getStandardsLinks(){
 	
 		createList(mlinks);
 	}
-	if(subject=="History"){
+	if(subject=="History"||subject=="SS"){
 	
 		createList(hlinks);
 	}
@@ -90,7 +90,7 @@ function getStandardsLinks(){
 	
 		createList(fllinks);
 	}
-	if(subject=="Science"){
+	if(subject=="Science"||subject=="LScience"||subject=="PScience"){
 	
 		createList(slinks);
 	}
@@ -98,15 +98,18 @@ function getStandardsLinks(){
 	
 		createList(lalinks);
 	}
-	if(subject=="Art"){
+	if(subject=="Art"||subject=="PArt"){
 		createList(alinks);
 		}
-	if(subject=="PE"){
+	if(subject=="PE"||subject=="HPE"){
 		createList(pelinks);
 		}
 	if(subject=="Library"){
 		createList(liblinks);
 		}
+	if(subject=="GE"||subject=="sE"||subject=="VP"){
+		createList(allinks);
+	}
 	/**
 	if(subject==="http://www.corestandards.org/Math/Content/2/introduction/"){
 	    va
