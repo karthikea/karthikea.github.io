@@ -217,7 +217,7 @@ window.onbeforeunload = confirmOnPageExit;
     var reader = new FileReader();
     reader.onload = function(){
       var text = reader.result;
-      var array=text.split(",");
+      var array=text.split("@");
 	  document.getElementById("acYear").innerHTML=array[0];
 	  $('#year').combobox('setText',array[0]);
 	  document.getElementById("edName").innerHTML=array[1];

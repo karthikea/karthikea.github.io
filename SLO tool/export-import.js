@@ -54,8 +54,8 @@ link.click(); // This will download the data file named "my_data.csv".
 
 document.body.removeChild(link);
 **/
-var sampletext =year+","+name+","+district+","+school+","+subject+","+course+","+grade+","+interval+","+lgoal+","+standardlink+","+standard+","+pop+","+met+","+assess+","+assess1+","+assess2+","+assess3+","+g1+","+g2+","+g3+","+g4+","+e1
-+","+e2+","+r1+","+r2+","+r3+","+r4+","+total+","+achieved+","+sd+","+ed;
+var sampletext =year+"@"+name+"@"+district+"@"+school+"@"+subject+"@"+course+"@"+grade+"@"+interval+"@"+lgoal+"@"+standardlink+"@"+standard+"@"+pop+"@"+met+"@"+assess+"@"+assess1+"@"+assess2+"@"+assess3+"@"+g1+"@"+g2+"@"+g3+"@"+g4+"@"+e1
++"@"+e2+"@"+r1+","+r2+"@"+r3+"@"+r4+"@"+total+"@"+achieved+"@"+sd+"@"+ed;
 var a = document.body.appendChild(
         document.createElement("a")
     );
