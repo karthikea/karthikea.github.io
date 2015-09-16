@@ -525,7 +525,7 @@
   border-radius: 5px 5px 5px 5px;
 }
 .textbox .textbox-text {
-  font-size: 12px;
+  font-size: 20px;
   border: 0;
   margin: 0;
   padding: 4px;
@@ -538,7 +538,7 @@
   border-radius: 5px 5px 5px 5px;
 }
 .textbox .textbox-prompt {
-  font-size: 12px;
+  font-size: 20px;
   color: #aaa;
 }
 .textbox .textbox-button,
@@ -627,7 +627,7 @@
   vertical-align: middle;
 }
 .combo .combo-text {
-  font-size: 12px;
+  font-size: 20px;
   border: 0px;
   margin: 0;
   padding: 0px 2px;
@@ -678,7 +678,7 @@
 }
 .combobox-item,
 .combobox-group {
-  font-size: 12px;
+  font-size: 20px;
   padding: 0px;
   padding-right: 0px;
 }
@@ -937,7 +937,7 @@
   margin-top: -8px;
 }
 .tabs-title {
-  font-size: 12px;
+  font-size: 20px;
 }
 .tabs-closable {
   padding-right: 8px;
@@ -1303,13 +1303,13 @@
   overflow: hidden;
   height: 18px;
   line-height: 18px;
-  font-size: 12px;
+  font-size: 20px;
 }
 .datagrid-header .datagrid-cell {
   height: auto;
 }
 .datagrid-header .datagrid-cell span {
-  font-size: 12px;
+  font-size: 20px;
 }
 .datagrid-cell-group {
   text-align: center;
@@ -1386,7 +1386,7 @@
   margin: 0;
   padding: 2px 4px;
   border: 1px solid #95B8E7;
-  font-size: 12px;
+  font-size: 20px;
   outline-style: none;
   -moz-border-radius: 0 0 0 0;
   -webkit-border-radius: 0 0 0 0;
@@ -1633,10 +1633,10 @@
   padding: 0;
   height: 30px;
   line-height: 30px;
-  font-size: 12px;
+  font-size: 20px;
 }
 .pagination span {
-  font-size: 12px;
+  font-size: 20px;
 }
 .pagination-link .l-btn-text {
   width: 24px;
@@ -1674,7 +1674,7 @@
 .calendar table {
   table-layout: fixed;
   border-collapse: separate;
-  font-size: 12px;
+  font-size: 20px;
   width: 100%;
   height: 100%;
 }
@@ -1871,7 +1871,7 @@
   text-align: center;
 }
 .datebox-button a {
-  font-size: 12px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   opacity: 0.6;
@@ -2022,14 +2022,14 @@
   vertical-align: middle;
 }
 .searchbox .searchbox-text {
-  font-size: 12px;
+  font-size: 20px;
   border: 0;
   margin: 0;
   padding: 0 2px;
   vertical-align: top;
 }
 .searchbox .searchbox-prompt {
-  font-size: 12px;
+  font-size: 20px;
   color: #ccc;
 }
 .searchbox-button {
