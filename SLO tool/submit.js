@@ -132,6 +132,7 @@ function next1(){
 		
 	jQuery("#t8").addClass('active');
 	jQuery("#t9").removeClass('active');
+	$('html,body').scrollTop(0);
 }
 
 function next2(){
@@ -140,6 +141,7 @@ function next2(){
 		
 	jQuery("#t1").addClass('active');
 	jQuery("#t8").removeClass('active');
+	$('html,body').scrollTop(0);
 }
 
 function submitElement0(){
@@ -165,6 +167,7 @@ function submitElement0(){
 		
 		jQuery("#t2").addClass('active');
 		jQuery("#t1").removeClass('active');
+		$('html,body').scrollTop(0);
  
       
 }
@@ -180,6 +183,7 @@ function submitElement1(){
 		
 		jQuery("#t3").addClass('active');
 		jQuery("#t2").removeClass('active');
+		$('html,body').scrollTop(0);
 	
 }
 function submitElement2(){
@@ -194,6 +198,7 @@ function submitElement2(){
 		
 		jQuery("#t4").addClass('active');
 		jQuery("#t3").removeClass('active');
+		$('html,body').scrollTop(0);
 }
 function submitElement3(){
     getGrowth1();
@@ -207,6 +212,7 @@ function submitElement3(){
 		
 		jQuery("#t5").addClass('active');
 		jQuery("#t4").removeClass('active');
+		$('html,body').scrollTop(0);
 
 }
 /**
@@ -241,6 +247,7 @@ function submitElement5(){
 		
 		jQuery("#t7").addClass('active');
 		jQuery("#t5").removeClass('active');
+		$('html,body').scrollTop(0);
 
 }
 function pubChange(){
