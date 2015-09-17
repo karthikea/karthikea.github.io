@@ -39,6 +39,9 @@ i{
 u{
   font-size: 20px;
 }
+textarea{
+	font-size: 20px;
+}
 
 .lw { font-size: 65px; }
 
@@ -1312,7 +1315,7 @@ window.onbeforeunload = confirmOnPageExit;
 		<table  style="width:1000px;">
             <tr height="100">
                <td>Describe the <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info." class="easyui-tooltip" href="learningGoal.html" target="_blank">learning goal.</a></td>
-              <td><textarea id="lgoal" cols="50" rows="1" value=" "></textarea></td>
+              <td><textarea id="lgoal" cols="50" rows="4" value=" "></textarea></td>
             </tr>
             <tr>
               <td>Identify the <a title="The content, skills, and specific standards to which the SLO
@@ -1335,11 +1338,11 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
 				</tr>
 				<tr>
 				<td>Enter standards here.</td>
-				<td><textarea  id="standard" value="" cols="50" rows="1"></textarea></td>
+				<td><textarea  id="standard" value="" cols="50" rows="4"></textarea></td>
             </tr>
             <tr height="100">
                <td>Describe the <a title="A description of the students, course, grade level, and number of students." class="easyui-tooltip" style="color:red">student population</a> with attention to diverse learners.</td>
-              <td><textarea id="pop" type="text" cols="50" rows="1" value=""></textarea></td>
+              <td><textarea id="pop" type="text" cols="50" rows="4" value=""></textarea></td>
             </tr>
             <tr height="100">
               <td>Methods of instruction.</td>
@@ -1382,16 +1385,16 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
 			 </tr>
             <tr height="100">
                <td>Describe the assessments.</td>
-              <td><textarea type="text" id="assess1" cols="50" rows="1"></textarea></td>
+              <td><textarea type="text" id="assess1" cols="50" rows="4"></textarea></td>
             </tr>
 			 <tr height="100">
                <td>Describe the <a title="The process used to gather information about the growth of students through the use of one or more assessment tools and/or strategies." class="easyui-tooltip" style="color:red">evaluation procedures.</a></td>
-              <td><textarea type="text" id="assess2" cols="50" rows="1"></textarea></td>
+              <td><textarea type="text" id="assess2" cols="50" rows="4"></textarea></td>
             </tr>
             <tr height="100">
                <td>Describe how the assessments and evaluation procedures may be <a title="Providing students with alternative methods of assessment and/or evaluation procedure that measures growth for all students regardless of differences in ability." class="easyui-tooltip" style="color:red">differentiated</a> to meet the
 needs of all students described in the student population.The description should include a timeline or points in time for progress monitoring of student performance.</td>
-              <td><textarea type="text" id="assess3"></textarea></td>
+              <td><textarea type="text" id="assess3" cols="50" rows="4"></textarea></td>
             </tr>
           </table>
 		  <br>
@@ -1412,7 +1415,7 @@ needs of all students described in the student population.The description should
 			</tr>
             <tr height="100">
                <td>Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments." class="easyui-tooltip" style="color:red">baseline data</a> collected, or to be collected.</td>
-              <td><textarea type="text" id="base" cols="50" rows="1"></textarea></td>
+              <td><textarea type="text" id="base" cols="50" rows="4"></textarea></td>
             </tr>
 			<tr>
 			   <td>Will there be a <a title="The teacher and/or evaluator examines the data collected during the first half of the interval of instruction to determine if students are on track to meet their growth targets, and whether the growth targets need to be adjusted due to over- or underestimation, and/or justifiable circumstances for certain students." class="easyui-tooltip" style="color:red">midpoint check-in?</a></td>
@@ -1425,9 +1428,9 @@ needs of all students described in the student population.The description should
 			
 			<tr>
 			<td>If you answered "Yes" to the previous question, please describe the midpoint check in.</td>
-			<td><textarea type="text" id="midresp" cols="50" rows="1"></textarea></td>
+			<td><textarea type="text" id="midresp" cols="50" rows="4"></textarea></td>
 			</tr>
-				<td style="font-size:13px;"><b>Note: If you do not have yet have baseline data, you may use the Addendum 1 placeholder section – included when you select the “Export as .doc” (Word file) option from the “Summary” tab – to add your data at a later date.<u> See the Growth Targets Tutorial for more information on your options.</u> </b></td>
+				<td style="font-size:13px;"><b>Note: <u>If you do not have baseline data</u>, you may use the Addendum 1 to include Growth Targets.</b></td>
 			<tr>
 			   <td>Do you have baseline data?</td>
 			   <td><select id="mid">
@@ -1439,7 +1442,7 @@ needs of all students described in the student population.The description should
             <tr height="100">
                <td>If you answered "Yes" to the previous question, using baseline data, identify <a title=" Target for student growth that should reflect high expectations for student achievement that are developmentally
 appropriate. The targets should be rigorous yet attainable. Click for more info" class="easyui-tooltip" href="growthTargets.html" target="_blank">growth targets</a> for your student population.</td>
-              <td><textarea type="text" id="middes"></textarea></td>
+              <td><textarea type="text" id="middes" cols="50" rows="4"></textarea></td>
             </tr>
           </table>
 		  <p style="font-size:12px;"><b>Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer.</b> </p>

@@ -7,7 +7,7 @@ var mlinks=[
 ];
 
 var hlinks=[
-              {"name":"UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
+              {"name":"National Center for History in the Schools/UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
 			  {"name":"C3 Framework for Social Studies","link":"http://www.socialstudies.org/system/files/c3/C3-Framework-for-Social-Studies.pdf"},
 			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"},
@@ -57,7 +57,7 @@ var allinks=[
 			  {"name":"Achieve the core","link":"http://achievethecore.org/"},
 			  {"name":"American Council on the Teaching of Foreign Language","link":"http://www.actfl.org/about-the-american-council-the-teaching-foreign-languages/resources"},
 			  {"name":"Dynamic learning maps-Mathematics","link":"http://dynamiclearningmaps.org/sites/default/files/documents/Math_EEs/DLM%20Essential%20Elements%20Math%20%282013%29%20v4.pdf"},
-              {"name":"UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
+              {"name":"National Center for History in the Schools/UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
 			  {"name":"C3 Framework for Social Studies","link":"http://www.socialstudies.org/system/files/c3/C3-Framework-for-Social-Studies.pdf"},
 			  {"name":"History/Social Studies Common Core","link":"http://www.corestandards.org/ELA-Literacy/RH/6-8/"},
 			  {"name":"NGSS","link":"http://www.nextgenscience.org/next-generation-science-standards"},
