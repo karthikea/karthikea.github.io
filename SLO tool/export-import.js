@@ -59,7 +59,7 @@ var sampletext =year+"@"+name+"@"+district+"@"+school+"@"+subject+"@"+course+"@"
 var a = document.body.appendChild(
         document.createElement("a")
     );
-a.download = "export.txt";
+a.download = "export.sav";
 if(window.btoa){
 a.href = "data:text/plain;base64," + btoa(sampletext);
 }else{
