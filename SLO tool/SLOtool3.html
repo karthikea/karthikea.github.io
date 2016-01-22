@@ -127,7 +127,10 @@ textarea{
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
  <script type="text/javascript" src="libraries/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
   <script type="text/javascript" src="libraries/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="libraries/pdfjs/js/pdf.js"></script>
+  <script type="text/javascript" src="libraries/pdfjs/js/pdf.worker.js"></script>
  <script type="text/javascript" src="submit.js"></script>
+ <script type="text/javascript" src="parsePDf.js"></script>
  <script type="text/javascript" src="standards.js"></script>
  <script type="text/javascript" src="export-import.js"></script>
  <script type="text/javascript" src="checkIn.js"></script>
@@ -288,6 +291,8 @@ window.onbeforeunload = confirmOnPageExit;
     reader.readAsText(input.files[0]);
   };
 </script>
+
+	
 
 			
 			</div>
@@ -1359,11 +1364,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
 		  <p style="font-size:12px;"><b>Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer.</b> </p>
 		  <br>
 		  <button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button>
-		  <script src="https://apis.google.com/js/platform.js" async defer></script>
-<div class="g-savetodrive"
-   data-src="//example.com/path/to/myfile.pdf"
-   data-filename="My Statement.pdf"
-   data-sitename="My Company Name">
+		 
 </div>
 		  <button onClick="submitElement1()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
         </div>
@@ -1583,6 +1584,7 @@ appropriate. The targets should be rigorous yet attainable. Click for more info"
                <td>Methods of instruction:</td>
 			</tr>
 			<tr height="75">
+			
               <td id="selMet" style="font-style:italic;"></td>
             </tr>
 			

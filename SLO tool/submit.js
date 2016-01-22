@@ -136,11 +136,11 @@ function next1(){
 }
 
 function next2(){
-	jQuery("#tab8").hide();//.hide()
-	jQuery("#tab1").show();//attr('class','tab active');
+	jQuery("#Tab 2").hide();//.hide()
+	jQuery("#Tab 3").show();//attr('class','tab active');
 		
-	jQuery("#t1").addClass('active');
-	jQuery("#t8").removeClass('active');
+	jQuery("#Tab 2").addClass('active');
+	jQuery("#Tab 3").removeClass('active');
 	$('html,body').scrollTop(0);
 }
 
