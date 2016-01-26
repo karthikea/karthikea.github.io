@@ -59,8 +59,119 @@
           <p class="basictext">While the Illinois Education Association is available to answer questions and provide support for SLO development, SLOs require guidance by the district PERA joint committee. IEA encourages teachers to use existing resources, and channel questions through their district PERA joint committee. In the event that a question cannot be answered locally, please feel free to reach out to us.</p>
         </div>
         <div class="w-clearfix textdiv">
-          <p class="basictext">If you have previously started writing the SLO&nbsp;and wish to continue, input the text file here:</p><a href="#" class="w-button button nonfloat">Choose File</a>
-          <p class="basictext fileindicator">No file chosen</p>
+          <p class="basictext">If you have previously started writing the SLO&nbsp;and wish to continue, input the text file here:</p><input type='file' accept='text/plain' onchange='openFile(event)'>
+          <img id='output'>
+		  <script>
+  var openFile = function(event) {
+    var input = event.target;
+
+    var reader = new FileReader();
+    reader.onload = function(){
+      var text = reader.result;
+      var array=text.split("@");
+	  document.getElementById("acYear").innerHTML=array[0];
+	//  $('#year').combobox('setText',array[0]);
+	  $("#year option").each(function() {
+  if($(this).text() == array[0]) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+	  document.getElementById("edName").innerHTML=array[1];
+	  document.getElementById("name").value=array[1];
+	  document.getElementById("selDistrict").innerHTML=array[2];
+	 // $('#district').combobox('setText',array[2]);
+	  $("#district option").each(function() {
+  if($(this).text() == array[2]) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+	  document.getElementById("selSchool").innerHTML=array[3];
+	  document.getElementById("school").value=array[3]
+	  document.getElementById("selSub").innerHTML=array[4];
+	 // $('#subject').combobox('setText',array[4]);
+	  $("#subject option").each(function() {
+  if($(this).text() == array[4]) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+	  document.getElementById("selCor").innerHTML=array[5];
+	  document.getElementById("course").value=array[5];
+	  document.getElementById("selGra").innerHTML=array[6];
+	  //$('#grade').combobox('setText',array[6]);
+	  $("#grade option").each(function() {
+  if($(this).text() == array[0]) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+	  document.getElementById("selInt").innerHTML=array[7];
+	  //$('#interval').combobox('setText',array[7])
+      $("#interval option").each(function() {
+    if($(this).text() == array[7]) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+	  document.getElementById("lg").innerHTML=array[8];
+	  document.getElementById("lgoal").value=array[8]
+	  var link=array[9]
+	  $("#standardlinks option").each(function() {
+  if($(this).text() == link) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+      var link=document.getElementById("standardlinks").value;
+	//if(link="Math Core Standard"){
+     $("#link").attr("href",link);
+	  document.getElementById("selStan").innerHTML=array[10];
+	  document.getElementById("standard").value=array[10];
+	  document.getElementById("selPop").innerHTML=array[11];
+	  document.getElementById("pop").value=array[11];
+	  document.getElementById("selMet").innerHTML=array[12];
+	  $('#method').combobox('setText',array[12])
+	  $("#year option").each(function() {
+  if($(this).text() == array[12]) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+	  document.getElementById("a").innerHTML=array[13];
+	  //$('#assessment').combobox('setText',array[13])
+	  $("#assessment option").each(function() {
+  if($(this).text() == array[13]) {
+    $(this).attr('selected', 'selected');   		
+  }                        
+});
+	  document.getElementById("a1").innerHTML=array[14];
+	  document.getElementById("assess1").value=array[14];
+      document.getElementById("a2").innerHTML=array[15];
+	  document.getElementById("assess2").value=array[15];
+	  document.getElementById("a3").innerHTML=array[16];
+	  document.getElementById("assess3").value=array[16];
+	  document.getElementById("g1").innerHTML=array[17];
+	  document.getElementById("base").value=array[17];
+	  document.getElementById("g2").innerHTML=array[18];
+	  document.getElementById("mid").value=array[18];
+	  document.getElementById("g3").innerHTML=array[19];
+	  document.getElementById("midresp").value=array[19];
+	  document.getElementById("g4").innerHTML=array[20];
+	  document.getElementById("middes").value=array[20];
+	  //document.getElementById("g5").innerHTML=array[20];
+	  document.getElementById("e1").innerHTML=array[21];
+	  document.getElementById("e2").innerHTML=array[22];
+	  document.getElementById("r1").innerHTML=array[23];
+	  document.getElementById("r2").innerHTML=array[24];
+	  document.getElementById("r3").innerHTML=array[25];
+	  document.getElementById("r4").innerHTML=array[26];
+	  document.getElementById("total").value=array[27];
+	  document.getElementById("achieved").value=array[28];
+	  document.getElementById("sd").innerHTML=array[29];
+	  //$('#start').datebox('setValue',array[29]);
+	  document.getElementById("ed").innerHTML=array[30];
+	  //$('#end').datebox('setValue',array[30]);
+	  
+    };
+    reader.readAsText(input.files[0]);
+  };
+</script>
+
         </div>
         <div class="textdiv"><button onClick="next1()">Next</button>
 	
@@ -124,7 +235,7 @@
       </div>
       <div data-w-tab="Tab 3" class="w-tab-pane maintabpane" >
         <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock">
-          <div class="helptext">Help</div>
+          <div class="helptext" target="_blank">Help</div>
         </a>
         <div>
             <div class="textdiv">
@@ -208,7 +319,7 @@
               <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer.</strong>
               </p>
             </div>
-            <div class="textdiv"><button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button><div class="textdiv"><button onClick="submitElement0()" href="#" style="width:90px;height:30px;font-size:20px;">Next</button>
+            <div class="textdiv"><button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button><button onClick="submitElement0()" href="#" style="width:90px;height:30px;font-size:20px;">Next</button>
             </div>
           <div class="w-form-done">
             <p>Thank you! Your submission has been received!</p>
@@ -220,7 +331,7 @@
       </div>
 	  </div>
       <div data-w-tab="Tab 4" class="w-tab-pane maintabpane">
-        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock">
+        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock" target="_blank">
           <div class="helptext">Help</div>
         </a>
         <div class="w-form">
@@ -262,7 +373,7 @@
         </div>
       </div>
       <div data-w-tab="Tab 5" class="w-tab-pane maintabpane">
-        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock">
+        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock" target="_blank">
           <div class="helptext">Help</div>
         </a>
         <div class="w-form">
@@ -296,7 +407,7 @@
         </div>
       </div>
       <div data-w-tab="Tab 6" class="w-tab-pane maintabpane">
-        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock">
+        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock" target="_blank">
           <div class="helptext">Help</div>
         </a>
         <div class="w-form">
@@ -316,7 +427,7 @@
               <textarea id="midresp" placeholder="Example Text" name="DescribeMidpointCheckIn" data-name="DescribeMidpointCheckIn" class="w-input textbox"></textarea>
               <p class="basictext"><strong data-new-link="true">Note:&nbsp;<u>If you do not have baseline data</u>, you may use the Addendum 1 to include Growth Targets.</strong>
                 <br>Do you have baseline data?</p>
-              <select id="mid2" name="BaselineData" data-name="BaselineData" class="w-select dropdown">
+              <select id="mid2" name="BaselineData" data-name="BaselineData" class="w-select dropdown" target="_blank">
                 <option value="">Select one...</option>
                 <option value="First">First Choice</option>
                 <option value="Second">Second Choice</option>
@@ -472,7 +583,7 @@
       </div>
 	  -->
       <div data-w-tab="Tab 8" class="w-tab-pane maintabpane">
-        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock">
+        <a href="http://karthikea.github.io/SLO%20tool/edInfoHelp.html" class="w-inline-block helpblock" target="_blank">
           <div class="helptext">Help</div>
         </a>
         <div class="w-form">
