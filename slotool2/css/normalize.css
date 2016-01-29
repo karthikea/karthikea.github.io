@@ -204,7 +204,7 @@ samp {
 button,
 input,
 optgroup,
-select,
+
 textarea {
   color: inherit;
   /* 1 */
@@ -226,7 +226,7 @@ button {
  * Correct `select` style inheritance in Firefox.
  */
 button,
-select {
+{
   text-transform: none;
 }
 /**
