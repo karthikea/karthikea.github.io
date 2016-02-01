@@ -19,6 +19,7 @@
  <script type="text/javascript" src="js/standards.js"></script>
  <script type="text/javascript" src="js/export-import.js"></script>
   <script type="text/javascript" src="js/modernizr.js"></script>
+   <script type="text/javascript" src="js/webflow.js"></script>
   <script type="text/javascript" src="js/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
   <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
@@ -308,7 +309,7 @@
                     <option value="6-8">6-8</option>
                     <option value="9-12">9-12</option>
               </select>
-              <p class="basictext">Interval of Instruction</p>
+              <p class="basictext"><a title="Identify a clear timeline within which students will reach an academic goal. The interval of instruction refers to the length of time the teacher will spend teaching the content and skills addressed in the SLO." class="easyui-tooltip" href="#" >Interval of Instruction</a></p>
               <select id="interval" name="IntervalofInstruction" data-name="IntervalofInstruction" class="w-select dropdown">
                 <option disabled selected>Choose or type in interval</option>
 					<option value="4">One year</option>
@@ -341,9 +342,10 @@
             <div class="textdiv">
               <p class="basictext"><strong data-new-link="true">Learning Goal</strong>
               </p>
-              <p class="basictext">Describe the learning goal.</p>
+              <p class="basictext">Describe the  <a title="A description of what students will be able to do at the end of a specified period of time aligned to appropriate learning standards. Click for more info." class="easyui-tooltip" href="learningGoal.html" target="_blank">learning goal</a>.</p>
               <textarea id="lgoal" placeholder="Example Text" name="LearningGoal" data-name="LearningGoal" class="w-input textbox"></textarea>
-              <p class="basictext">Identify the content standards associated with the learning goal.</p>
+              <p class="basictext">Identify the <a title="The content, skills, and specific standards to which the SLO
+is aligned." class="easyui-tooltip" style="color:red">content standards</a> associated with the learning goal.</p>
               <select id="standardlinks" name="ContentStandard" data-name="ContentStandard" class="w-select dropdown links">
                 <option value="">Select one...</option>
                 <option value="First">First Choice</option>
@@ -353,7 +355,7 @@
               <p class="basictext"><a href="error.html" id="link" target="_blank">Click here to review selected Standards site in new tab</a></p>
               <p class="basictext">Enter standards here.</p>
               <textarea id="standard" placeholder="Example Text" name="Standards" data-name="Standards" class="w-input textbox"></textarea>
-              <p class="basictext">Describe the student population with attention to diverse learners.</p>
+              <p class="basictext">Describe the <a title="A description of the students, course, grade level, and number of students." class="easyui-tooltip" style="color:red">student population</a> with attention to diverse learners.</p>
               <textarea id="pop" placeholder="Example Text" name="StudentPopulation" data-name="StudentPopulation" class="w-input textbox"></textarea>
               <p class="basictext">Methods of instruction.</p>
               <select id="method" name="MethodsOfInstruction" data-name="MethodsOfInstruction" class="w-select dropdown">
@@ -383,7 +385,7 @@
             <div class="textdiv">
               <p class="basictext"><strong data-new-link="true">Assessment and Evaluation</strong>
               </p>
-              <p class="basictext">Select the assessment.</p>
+              <p class="basictext">Select the <a title="The procedure that will be used to measure student growth for the objective. Click for more info" class="easyui-tooltip" href="assessment.html" target="_blank">assessment</a>.</p>
               <select id="assessment" name="Assessment-2" data-name="Assessment 2" class="w-select dropdown">
                 <option value="">Select one...</option>
                 <option value="First">First Choice</option>
@@ -394,7 +396,7 @@
               <textarea id="assess1" placeholder="Example Text" name="AssessmentDescribe-2" data-name="Assessment Describe 2" class="w-input textbox"></textarea>
               <p class="basictext">Describe the evaluation procedures.</p>
               <textarea id="assess2" placeholder="Example Text" name="EvaluationProcedures-2" data-name="Evaluation Procedures 2" class="w-input textbox"></textarea>
-              <p class="basictext">Describe how the assessments and evaluation procedures may be&nbsp;differentiated&nbsp;to meet the needs of all students described in the student population.The description should include a timeline or points in time for progress monitoring of student performance.</p>
+              <p class="basictext">Describe how the assessments and evaluation procedures may be&nbsp;<a title="Providing students with alternative methods of assessment and/or evaluation procedure that measures growth for all students regardless of differences in ability." class="easyui-tooltip" style="color:red">differentiated</a>&nbsp;to meet the needs of all students described in the student population.The description should include a timeline or points in time for progress monitoring of student performance.</p>
               <textarea id="assess3" placeholder="Example Text" name="Differentiation-2" data-name="Differentiation 2" class="w-input textbox"></textarea>
               <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer.</strong>
               </p>
@@ -417,9 +419,9 @@
             <div class="textdiv">
               <p class="basictext"><strong data-new-link="true">Growth Targets</strong>
               </p>
-              <p class="basictext">Document baseline data collected, or to be collected.</p>
+              <p class="basictext">Document <a title="Summary of student information using test-scores from previous years and results of pre-assessments." class="easyui-tooltip" style="color:red">baseline data</a> collected, or to be collected.</p>
               <textarea id="base" placeholder="Example Text" name="BaselineData" data-name="BaselineData" class="w-input textbox"></textarea>
-              <p class="basictext">Will there be a midpoint check-in?</p>
+              <p class="basictext">Will there be a <a title="The teacher and/or evaluator examines the data collected during the first half of the interval of instruction to determine if students are on track to meet their growth targets, and whether the growth targets need to be adjusted due to over- or underestimation, and/or justifiable circumstances for certain students." class="easyui-tooltip" style="color:red">midpoint check-in</a>?</p>
               <select id="mid" name="MidpointCheckIn" data-name="MidpointCheckIn" class="w-select dropdown">
                 <option value="">Select one...</option>
                 <option value="First">First Choice</option>
