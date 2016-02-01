@@ -21,6 +21,8 @@
   <script type="text/javascript" src="js/modernizr.js"></script>
    <script type="text/javascript" src="js/webflow.js"></script>
   <script type="text/javascript" src="js/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+  <script type="text/javascript" src="js/exportWord/FileSaver.js"></script>
+ <script type="text/javascript" src="js/exportWord/jquery.wordexport.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
   <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
 </head>
@@ -617,7 +619,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
           <div class="helptext">Help</div>
         </a>
         <div class="w-form">
-            <div class="textdiv">
+            <div class="textdiv" id="page-content">
               <p class="basictext"><strong data-new-link="true">Student Learning Objective</strong>
               </p>
               <p class="basictext">Proofread, save and print your summary SLO document. We recommend you both “Print” (.pdf) and “Export as .doc” (Word file) your work showing on the Summary page. You will find both options at the bottom of this page.
@@ -742,8 +744,28 @@ needs of all students described in the student population:</p>
               <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button to save your work to your computer.</strong>
               </p>
             </div>
-            <div class="textdiv"><a href="#" class="w-button button">Print</a>
+            <div class="textdiv"><input type="button" value="Print" onclick="printSum()" />
+			<script>
+					function printSum() {
+						var newWindow = window.open();
+						newWindow.document.write(document.getElementById("page-content").innerHTML);
+						newWindow.print();
+					}
+			</script>
             </div>
+			<a class="word-export" href="javascript:void(0)"> Export as .doc </a>
+			<script type="text/javascript">
+
+				jQuery(document).ready(function($) {
+
+					$("a.word-export").click(function(event) {
+
+					$("#page-content").wordExport();
+
+					});
+
+				});
+				</script>
           <div class="w-form-done">
             <p>Thank you! Your submission has been received!</p>
           </div>
