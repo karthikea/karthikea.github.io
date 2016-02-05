@@ -786,18 +786,8 @@ needs of all students described in the student population:</p>
 			<br>
 			  
             </div>
-            <div class="textdiv"><input type="button" value="Print" onclick="printSum()" />
-			<script>
-					function printSum() {
-						
-						var newWindow = window.open();
-						newWindow.document.write(document.getElementById("page-content").innerHTML);
-						newWindow.print();
-						
-					}
-			</script>
-            </div>
-			 <a href="javascript:demoFromHTML()" class="button">Run Code</a>
+            
+			 <a href="javascript:demoFromHTML()" class="button">Generate pdf</a>
 				 <script>
     function demoFromHTML() {
         var pdf = new jsPDF('p', 'pt', 'letter');
@@ -835,14 +825,14 @@ needs of all students described in the student population:</p>
         function (dispose) {
             // dispose: object with X, Y of the last line add to the PDF 
             //          this allow the insertion of new lines after html
-            pdf.save('Test.pdf');
+            pdf.save('SLOTool.pdf');
         }, margins);
     }
 </script>
 
             </div>
 
-			<a class="word-export" href="javascript:void(0)"> Export as .doc </a>
+			<!--<a class="word-export" href="javascript:void(0)"> Export as .doc </a>-->
 			<script type="text/javascript">
 
 				jQuery(document).ready(function($) {
