@@ -42,7 +42,7 @@
 }
 
 .tab.w--current {
-  background-color: white;
+  background-color: #fff;
 }
 
 .textdiv {
@@ -50,6 +50,7 @@
 }
 
 .basictext {
+  margin-top: 10px;
   font-family: 'Times New Roman', TimesNewRoman, Times, Baskerville, Georgia, serif;
   font-size: 20px;
   line-height: 28px;
@@ -71,13 +72,27 @@
   clear: left;
 }
 
+.basictext.in-line {
+  display: inline;
+  margin-right: 3px;
+  margin-left: 0px;
+}
+
+.basictext.in-line.blue {
+  color: #337ab7;
+}
+
+.basictext.in-line.red {
+  color: red;
+}
+
 .button {
   margin: 3px;
   float: none;
   clear: none;
   border-radius: 5px;
   background-color: #7fb5da;
-  color: black;
+  color: #000;
   font-size: 20px;
 }
 
@@ -99,15 +114,32 @@
 }
 
 .percentageentry {
-  display: inline-block;
+  display: inline;
   width: 55px;
   margin-right: 5px;
   margin-bottom: 0px;
   margin-left: 5px;
   padding-top: 0px;
   padding-bottom: 0px;
-  float: left;
-  clear: left;
+}
+
+.in-line {
+  display: inline-block;
+  margin: 3px;
+}
+
+.in-line-div {
+  padding-right: 0px;
+}
+
+.in-line-div.spacing {
+  margin-bottom: 10px;
+  padding-left: 30px;
+}
+
+.bluelink {
+  color: #337ab7;
+  text-decoration: none;
 }
 
 @media (max-width: 991px) {
@@ -115,7 +147,3 @@
     margin-right: -1px;
   }
 }
-
-@media (max-width: 767px) {}
-
-@media (max-width: 479px) {}

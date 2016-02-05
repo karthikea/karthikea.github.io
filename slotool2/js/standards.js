@@ -74,7 +74,7 @@ var allinks=[
 			   
 
 function getStandardsLinks(){
-	var subject=$("#subject").val();
+	var subject=$('#subject').combobox('getValue');
 	
 	
 

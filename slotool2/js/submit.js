@@ -1,5 +1,5 @@
 function getYear(){
-	 var val=$("#year option:selected").text();
+	 var val=$('#year').combobox('getText');
 	document.getElementById("acYear").innerHTML=val;
 }
 function getName(){
@@ -7,7 +7,7 @@ function getName(){
 	document.getElementById("edName").innerHTML=x;
 }
 function getDistrict(){
-	var val=$("#district option:selected").text();
+    var val=$('#district').combobox('getText');
 	document.getElementById("selDistrict").innerHTML=val;
 }
 function getSchool(){
@@ -15,7 +15,7 @@ function getSchool(){
 	document.getElementById("selSchool").innerHTML=x;
 }
 function getSubject(){
-    var val=$("#subject option:selected").text();
+    var val=$('#subject').combobox('getText');
 	document.getElementById("selSub").innerHTML=val;
 }
 function getCourse(){
@@ -23,20 +23,20 @@ function getCourse(){
 	document.getElementById("selCor").innerHTML=x;
 }
 function getGrade(){
-    var val=$("#grade option:selected").text();
+    var val=$('#grade').combobox('getText');
 	document.getElementById("selGra").innerHTML=val;
 }
 function getInterval(){
-    var val=$("#interval option:selected").text();
+    var val=$('#interval').combobox('getText');
 	document.getElementById("selInt").innerHTML=val;
 }
 
 function getStartDate(){
-    var val=document.getElementById("start").value;
+    var val=$('#start').datebox('getValue');
 	document.getElementById("sd").innerHTML=val;
 }
 function getEndDate(){
-    var val=document.getElementById("end").value;
+    var val=$('#end').datebox('getValue');
 	document.getElementById("ed").innerHTML=val;
 }
 
@@ -53,11 +53,11 @@ function getPop(){
 	document.getElementById("selPop").innerHTML=x;
 }
 function getMethod(){
-    var val=$("#method option:selected").text();
+    var val=$('#method').combobox('getText');
 	document.getElementById("selMet").innerHTML=val;
 }
 function getAssess(){
-    var x=$("#assessment option:selected").text();
+    var x=$('#assessment').combobox('getText');
 	document.getElementById("a").innerHTML=x;
 }
 function getAssess1(){
@@ -127,13 +127,6 @@ function getRating4(){
 }
 	
 function next1(){
-/**
-	jQuery("#tab9").hide();//.hide()
-	jQuery("#tab8").show();//attr('class','tab active');
-		
-	jQuery("#t8").addClass('active');
-	jQuery("#t9").removeClass('active');
-	**/
 	$('.target-tab-link2').triggerHandler('click');
 	$('html,body').scrollTop(0);
 }
@@ -151,26 +144,17 @@ function submitElement0(){
 	getGrade();
 	getInterval();
 	getStandardsLinks();
-	getDistrict();
+	getDistrict()
 	getSchool();
-	//getStartDate();
-	//getEndDate();
+	getStartDate();
+	getEndDate();
 	//getCheckIns();
 	
 	
 	
  
-        // Change tab 
-		/**
-        jQuery("#tab1").hide();
-		jQuery("#tab2").show();
-		
-		jQuery("#t2").addClass('active');
-		jQuery("#t1").removeClass('active');
-		$('html,body').scrollTop(0);
-        **/
-		$('.target-tab-link4').triggerHandler('click');
-		//$('html,body').scrollTop(0);
+        $('.target-tab-link4').triggerHandler('click');
+ 
       
 }
 function submitElement1(){
@@ -180,32 +164,15 @@ function submitElement1(){
 	getMethod();
 	
 	// Change tab 
-	/**
-        jQuery("#tab2").hide();
-		jQuery("#tab3").show();
-		
-		jQuery("#t3").addClass('active');
-		jQuery("#t2").removeClass('active');
-		$('html,body').scrollTop(0);
-	**/
-	$('.target-tab-link5').triggerHandler('click');
+       $('.target-tab-link5').triggerHandler('click');
 }
 function submitElement2(){
     getAssess();
-   getAssess1();
-	//getAssess2();
+    getAssess1();
+	getAssess2();
 	getAssess3();
 	
-	// Change tab 
-	/**
-        jQuery("#tab3").hide();
-		jQuery("#tab4").show();
-		
-		jQuery("#t4").addClass('active');
-		jQuery("#t3").removeClass('active');
-		$('html,body').scrollTop(0);
-		**/
-		$('.target-tab-link6').triggerHandler('click');
+	$('.target-tab-link6').triggerHandler('click');
 }
 function submitElement3(){
     getGrowth1();
@@ -214,15 +181,8 @@ function submitElement3(){
 	getGrowth4();
 	//getGrowth5();
 	// Change tab 
-	/**
-        jQuery("#tab4").hide();
-		jQuery("#tab5").show();
-		
-		jQuery("#t5").addClass('active');
-		jQuery("#t4").removeClass('active');
-		$('html,body').scrollTop(0);
-    **/
-	$('.target-tab-link7').triggerHandler('click');
+        $('.target-tab-link7').triggerHandler('click');
+
 }
 /**
 function submitElement4(){
@@ -251,15 +211,7 @@ function submitElement5(){
 	
 	
 	// Change tab 
-	/**
-        jQuery("#tab5").hide();
-		jQuery("#tab7").show();
-		
-		jQuery("#t7").addClass('active');
-		jQuery("#t5").removeClass('active');
-		$('html,body').scrollTop(0);
-		**/
-		$('.target-tab-link8').triggerHandler('click');
+        $('.target-tab-link8').triggerHandler('click');
 
 }
 function pubChange(){
@@ -319,6 +271,4 @@ function calculate(){
 	  var percent=x*100;
 	  document.getElementById("percent").innerHTML=Math.ceil(percent)+"%";
 	  document.getElementById("e2").innerHTML=percent+"%";
- }
-
-	 
+ } 
