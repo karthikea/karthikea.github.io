@@ -627,7 +627,7 @@
   vertical-align: middle;
 }
 .combo .combo-text {
-  font-size: 20px;
+  font-size: 13px;
   border: 0px;
   margin: 0;
   padding: 0px 2px;
@@ -678,7 +678,7 @@
 }
 .combobox-item,
 .combobox-group {
-  font-size: 20px;
+  font-size: 13px;
   padding: 0px;
   padding-right: 0px;
 }
