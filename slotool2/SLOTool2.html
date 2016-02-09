@@ -19,18 +19,19 @@
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="js/webflow.js"></script>
   <script type="text/javascript" src="js/submit.js"></script>
  <script type="text/javascript" src="js/standards.js"></script>
  <script type="text/javascript" src="js/export-import.js"></script>
   <script type="text/javascript" src="js/exportWord/FileSaver.js"></script>
  <script type="text/javascript" src="js/exportWord/jquery.wordexport.js"></script>
-  <script type="text/javascript" src="js/exportWord/jquery.wordexport.js"></script>
   <script type="text/javascript" src="jsPDF-master/dist/jspdf.debug.js"></script>
-  <script type="text/javascript" src="jsPDF-master/examples/js/jquery/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="jsPDF-master/examples/js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
-    
+
+  <script type="text/javascript" src="js/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+
     <script type="text/javascript" src="jsPDF-master/examples/js/basic.js"></script>
-	<script type="text/javascript" src="js/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+	
+	<!--<script type="text/javascript" src="js/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>-->
   
   <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
   <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
@@ -229,7 +230,7 @@
               <p class="basictext"><strong data-new-link="true">Educator Information</strong>
               </p>
               <p class="basictext">Academic Year</p>
-                <select id="year" class="easyui-combobox"  style="width:500px;">
+                <select id="year" class="easyui-combobox"  style="width:500px;height:30px">
 			        <option disabled selected>--Choose or type in year--</option>
                     <option value="Math">2015-2016</option>
 					<option value="Math">2016-2017</option>
@@ -252,7 +253,7 @@
               <textarea id="name" placeholder="Example Text" name="Educator" data-name="Educator" class="w-input textbox"></textarea>
               <p class="basictext">District</p>
               <p class="basictext smallnote">Note: Please type in district name in the space provided</p>
-              <select id="district" class="easyui-combobox"  style="width:500px;">
+              <select id="district" class="easyui-combobox"  style="width:500px;height:30px">
 			        <option disabled selected>--Choose or type in district--</option>   
 					<option value="070168060">A E R O  Spec Educ Coop</option>
 					<option value="330482170">Abingdon CUSD 217</option>
@@ -1169,7 +1170,7 @@
               <p class="basictext">School Building</p>
               <textarea id="school" placeholder="Example Text" name="SchoolBuilding" data-name="SchoolBuilding" class="w-input textbox"></textarea>
               <p class="basictext">Subject</p>
-              <select id="subject" class="easyui-combobox"  style="width:500px;">
+              <select id="subject" class="easyui-combobox"  style="width:500px;height:30px">
 			        <option disabled selected>--Choose or type in subject--</option>
                     <option value="Art">Fine Arts</option>
 					<option value="FL">Foreign Language</option>
@@ -1193,7 +1194,7 @@
               <textarea id="course" placeholder="Example Text" name="Course" data-name="Course" class="w-input textbox"></textarea>
               <p class="basictext">Grade</p>
               <select class="easyui-combobox" id="grade" data-options="multiple:true,multiline:true" style="width:500px;height:50px">
-                    <option disabled selected> </option>
+                    <option disabled selected>Choose or type in method of grades(s)</option>
 					<option value="PK-2">PK-2</option>
 					<option value="3-5">3-5</option>
                     <option value="6-8">6-8</option>
@@ -1203,7 +1204,7 @@
                     
                 </select>
               <p class="basictext"><a title="Identify a clear timeline within which students will reach an academic goal. The interval of instruction refers to the length of time the teacher will spend teaching the content and skills addressed in the SLO." class="easyui-tooltip" href="#" >Interval of Instruction</a></p>
-              <select class="easyui-combobox" id="interval" style="width:500px;">
+              <select class="easyui-combobox" id="interval" style="width:500px;height:30px">
 			        <option disabled selected>Choose or type in interval</option>
 					<option value="4">One year</option>
                     <option value="2">Semester</option>
@@ -1252,7 +1253,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
               <textarea id="pop" placeholder="Example Text" name="StudentPopulation" data-name="StudentPopulation" class="w-input textbox"></textarea>
               <p class="basictext">Methods of instruction.</p>
               <select class="easyui-combobox" id="method" data-options="multiple:true,multiline:true" style="width:500px;height:50px">
-			        <option disabled selected> </option>
+			        <option disabled selected>Choose or type in method of instruction(s)</option>
                     <option value="Lecture">Lecture Practices</option>
                     <option value="Discussion">Group Discussion</option>
                     <option value="Laboratory">Active Learning Strategies</option>
@@ -1281,7 +1282,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
               <p class="basictext"><strong data-new-link="true">Assessment and Evaluation</strong>
               </p>
               <p class="basictext">Select the <a title="The procedure that will be used to measure student growth for the objective. Click for more info" class="easyui-tooltip" href="assessment.html" target="_blank">assessment</a>.</p>
-              <select class="easyui-combobox" id="assessment"  style="width:500px;height:50px">
+              <select class="easyui-combobox" id="assessment"  style="width:500px;height:30px">
 			        <option disabled selected>Choose or type in assessment type(s)</option>
                     <option value="Lecture">Exam</option>p
                     <option value="Discussion">Essay</option>
@@ -1767,12 +1768,9 @@ needs of all students described in the student population:</p>
               <p class="basictext">Compare the resulting percentage to the pre-determined rating percentages (Excellent, Proficient, Needs Improvement, or Unsatisfactory) to manually identify your rating.</p>
               <br>
 			  <br>
-			  <p class="basictext"><strong data-new-link="true">Important Note for Mac users: The “Export as .doc” (Word file) option will not work for Mac users. To get your summary into Word format you will first need to use the “Print” (.pdf) option, and then convert that PDF file to Word format. To do this click on the “Print” (.pdf) option to save your summary as a PDF on your computer, then visit the PDF Converter website&nbsp;(<a class="bluelink" href="https://www.freepdfconvert.com/pdf-word?gclid=CIOT0dye_McCFQUIaQodwvIPUQ">https://www.freepdfconvert.com/pdf-word?gclid=CIOT0dye_McCFQUIaQodwvIPUQ</a>)&nbsp;and follow the directions provided.</strong>
-              </p>
 			  <br>
 			  <br>
-              <p class="basictext in-line blue"><a class="bluelink">Export as .doc</a>
-              </p>
+              
 			  
             </div>
             <div class="textdiv"><input type="button" value="Print" onclick="printSum()" />
@@ -1787,7 +1785,8 @@ needs of all students described in the student population:</p>
 			</script>
             </div>
 			 
-
+			<p class="basictext"><strong data-new-link="true">Important Note for Mac users: The “Export as .doc” (Word file) option will not work for Mac users. To get your summary into Word format you will first need to use the “Print” (.pdf) option, and then convert that PDF file to Word format. To do this click on the “Print” (.pdf) option to save your summary as a PDF on your computer, then visit the PDF Converter website&nbsp;(<a class="bluelink" href="https://www.freepdfconvert.com/pdf-word?gclid=CIOT0dye_McCFQUIaQodwvIPUQ">https://www.freepdfconvert.com/pdf-word?gclid=CIOT0dye_McCFQUIaQodwvIPUQ</a>)&nbsp;and follow the directions provided.</strong>
+             </p>
 			<a class="word-export" href="javascript:void(0)"> Export as .doc </a>
 			<script type="text/javascript">
 
@@ -1812,7 +1811,7 @@ needs of all students described in the student population:</p>
     </div>
   </div>
   
-  <script type="text/javascript" src="js/webflow.js"></script>
+  
   <!--[if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 </body>
 </html>
