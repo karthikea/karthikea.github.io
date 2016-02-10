@@ -1,3 +1,4 @@
+/**Get and record teacher inputed data**/
 function getYear(){
 	 var val=$('#year').combobox('getText');
 	document.getElementById("acYear").innerHTML=val;
@@ -125,7 +126,7 @@ function getRating4(){
 	var x=document.getElementById("Elb").value;
 	document.getElementById("r4").innerHTML=x+"%-100%";
 }
-	
+/**Record answers and change tabs**/	
 function next1(){
 	$('.target-tab-link2').triggerHandler('click');
 	$('html,body').scrollTop(0);
@@ -135,7 +136,7 @@ function next2(){
 	$('.target-tab-link3').triggerHandler('click');
 	$('html,body').scrollTop(0);
 }
-
+//Submit Educator information
 function submitElement0(){
     getYear();
 	getName();
@@ -157,6 +158,7 @@ function submitElement0(){
  
       
 }
+//Submit Learning Goal
 function submitElement1(){
 	getGoal();
 	getStandards();
@@ -166,14 +168,17 @@ function submitElement1(){
 	// Change tab 
        $('.target-tab-link5').triggerHandler('click');
 }
+//Submit Assessment and Evaluation
 function submitElement2(){
     getAssess();
     getAssess1();
 	getAssess2();
 	getAssess3();
 	
+	// Change tab 
 	$('.target-tab-link6').triggerHandler('click');
 }
+//Submit Growth Targets
 function submitElement3(){
     getGrowth1();
 	getGrowth2();
@@ -184,22 +189,7 @@ function submitElement3(){
         $('.target-tab-link7').triggerHandler('click');
 
 }
-/**
-function submitElement4(){
-
-	getEval1();
-	getEval2();
-
-
-	// Change tab 
-        jQuery("#tab5").hide();
-		jQuery("#tab").show();
-		
-		jQuery("#t6").addClass('active');
-		jQuery("#t5").removeClass('active');
-
-}
-**/
+//Submit Evaluation and Outcomes
 function submitElement5(){
     
 	getEval1();
@@ -214,19 +204,20 @@ function submitElement5(){
         $('.target-tab-link8').triggerHandler('click');
 
 }
+//Update Excellent lower bound if Proficent upper bound changes
 function pubChange(){
     var pub=$("#Pub").val();
 	var elb=parseInt(pub)+1;
 	$("#Elb").val(elb);
 }
-
+//Update Needs Improvement lower bound if Unsatisfactory upper bound changes
 function uubChange(){
     var uub=$("#Uub").val();
 	var nilb=parseInt(uub);
 	$("#NIlb").val(nilb);
 	$("#NIub").attr("min",nilb+1);
 }
-
+//Update Proficent lower bound if Needs Improvement upper bound changes
 function niubChange(){
     var niub=$("#NIub").val();
 	var plb=parseInt(niub)+1;
@@ -237,24 +228,24 @@ function niubChange(){
 function calculate(){
 	 var total=$("#total").val();
 	 var achieved=$("#achieved").val();
-	 var uub=$("#Uub").val();
-	 var pub=$("#Pub").val();
-	 var niub=$("#NIub").val();
-	 var plb=$("#Plb").val();
-	 var nilb=$("#NIlb").val();
-	 var total=$("#total").val();
-	 var achieved=$("#achieved").val();
-	 var x=(achieved/total);
+	 var uub=$("#Uub").val();//Unsatisfactory upperbound
+	 var pub=$("#Pub").val();//Proficent upperbound
+	 var niub=$("#NIub").val();//Needs Improvement upperbound
+	 var plb=$("#Plb").val();//Proficent lowerbound
+	 var nilb=$("#NIlb").val();//Needs Improvement lowerbound
+	 var total=$("#total").val();//total number of students
+	 var achieved=$("#achieved").val();//students that achieved learning goal
+	 var x=(achieved/total);////total number of students divided by students that achieved learning goal
 	 
 	 
 	 
-	 
+	 //
 	 var FirstQ=parseInt(uub)/100;
 	 var SecondQ=(parseInt(niub)/100);
 	 //var ThridQ=parseInt(pub)/100;
 	 
 	 
-	    
+	    /**Get rating**/
 		if (x<(uub/100)){
 	      document.getElementById("rating").innerHTML="Unsatisfactory ";
 		}
@@ -268,7 +259,7 @@ function calculate(){
 			document.getElementById("rating").innerHTML="Excellent ";
 		}
 	  
-	  var percent=x*100;
+	  var percent=x*100;//calculate percentage
 	  document.getElementById("percent").innerHTML=Math.ceil(percent)+"%";
 	  document.getElementById("e2").innerHTML=percent+"%";
  } 

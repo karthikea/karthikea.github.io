@@ -1,3 +1,5 @@
+/**Jsons for the standard links***/
+//Math
 var mlinks=[
               {"name":"Math Common Core","link":"http://www.corestandards.org/Math/Practice/"},
 			  {"name":"Achieve the core","link":"http://achievethecore.org/"},
@@ -5,7 +7,7 @@ var mlinks=[
 			   {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
-
+//History
 var hlinks=[
               {"name":"National Center for History in the Schools/UCLA","link":"http://www.nchs.ucla.edu/history-standards/historical-thinking-standards"},
 			  {"name":"C3 Framework for Social Studies","link":"http://www.socialstudies.org/system/files/c3/C3-Framework-for-Social-Studies.pdf"},
@@ -13,13 +15,13 @@ var hlinks=[
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"},
 			  {"name":"History/Social Studies Common Core","link":"http://www.corestandards.org/ELA-Literacy/RH/6-8/"}
 ];
-
+//Science
 var slinks=[
               {"name":"NGSS","link":"http://www.nextgenscience.org/next-generation-science-standards"},
 			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
-
+//Language Arts
 var lalinks=[
               {"name":"Dynamic learning links","link":"http://dynamiclearningmaps.org/sites/default/files/documents/ELA_EEs/DLM%20E"},
 			   {"name":"Reading Common Core","link":"http://www.corestandards.org/ELA-Literacy/RL/9-10/"},
@@ -28,13 +30,14 @@ var lalinks=[
 			   {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"}
 ];
-
+//Art
 var alinks=[
               {"name":"National Arts Standards","link":"http://www.nationalartsstandards.org"},
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/"},
 			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
 			  {"name":"National Association for Music Education","link":"http://www.nafme.org/my-classroom/standards/"}
 ];
+//Physical Education
 var pelinks=[
               {"name":"National PE Standards, dev. by Shape ","link":"http://www.shapeamerica.org/standards/pe/index.cfm"},
 			  {"name":"National Board for Professional Teaching Standards","link":"http://boardcertifiedteachers.org/certificate-areas"},
@@ -42,16 +45,16 @@ var pelinks=[
 			  
 ];
 
-
+//Library
 var liblinks=[
 	{"name":"Library Standards","link":"https://www.islma.org/ISAIL.htm"}
 ];
-
+//Foreign Language
 var fllinks=[
 	{"name":"American Council on the Teaching of Foreign Language","link":"http://www.actfl.org/about-the-american-council-the-teaching-foreign-languages/resources"}
 ];
 
-
+//All links 
 var allinks=[
 	{"name":"Math Common Core","link":"http://www.corestandards.org/Math/Practice/"},
 			  {"name":"Achieve the core","link":"http://achievethecore.org/"},
@@ -72,7 +75,7 @@ var allinks=[
 			  {"name":"Illinois State Standards","link":"http://www.isbe.net/ils/pdh/standards.htm#goals"}
 ];
 			   
-
+//Get the proper json based on the selected subject
 function getStandardsLinks(){
 	var subject=$('#subject').combobox('getValue');
 	
@@ -121,7 +124,7 @@ function getStandardsLinks(){
 	**/
 }
 
-
+//Populate standard links list
 function createList(object){
     
     var select = document.getElementById("standardlinks"); 
@@ -141,17 +144,17 @@ function createList(object){
 		select.add(option);
 	}
 }
-
+//List all links if no subject has been selected
 $(document).ready(function(){
 	createList(allinks);
 	});
-	
+//Set Link to standard value	
 $(function(ready){
 $( ".links" ).change(function() {
     var link=document.getElementById("standardlinks").value;
-	//if(link="Math Core Standard"){
+	
     $("#link").attr("href",link);	
-	//}
+	
 	});
 		
   
