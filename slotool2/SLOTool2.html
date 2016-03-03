@@ -33,8 +33,28 @@
 	
 	<!--<script type="text/javascript" src="js/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>-->
   
-  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
-  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+<script>
+/*Present warning for exiting page. Code modified from http://stackoverflow.com/questions/1119289/how-to-show-the-are-you-sure-you-want-to-navigate-away-from-this-page-when-ch*/
+var confirmOnPageExit = function (e) 
+{
+    // If we haven't been passed the event get the window.event
+    e = e || window.event;
+
+    var message = 'If you leave the SLO Tool then all your work will be lost';
+
+    // For IE6-8 and Firefox prior to version 4
+    if (e) 
+    {
+        e.returnValue = message;
+    }
+
+    // For Chrome, Safari, IE8+ and Opera 12+
+    return message;
+};
+
+// Turn it on - assign the function that returns the string
+window.onbeforeunload = confirmOnPageExit;
+</script>  
 </head>
 <body>
   <div class="w-section header"><img width="80" src="images/template.jpg" class="logo">
@@ -176,9 +196,9 @@
 	  <!--Tutrorial-->
         <div class="w-form formwrapper">
           <form id="email-form" name="email-form" data-name="Email Form">
-            <p class="basictext"><a href="SLO Template Element Tutorial.pdf" target="_blank">IEA SLO&nbsp;Interactive Template Tutorial</a>
+            <p class="basictext"><a href="pdfs/SLO Template Element Tutorial.pdf" target="_blank">IEA SLO&nbsp;Interactive Template Tutorial</a>
               <br>Users may click on the link above to open (in a new browser tab) a full, step-by-step tutorial for the template. You may either refer to this browser tab throughout your work, or you might prefer to print the information as a hard copy. Also, you may access information on an individual topic by clicking on the Help link while you are in that element section. For example if you are in the Learning Goal section, click on the Help link and then on the Learning Goal Tutorial link that appears as one of the Help options.</p>
-            <p class="basictext"><a href="Glossary.pdf" target="_blank">Link to Glossary</a>
+            <p class="basictext"><a href="pdfs/Glossary.pdf" target="_blank">Link to Glossary</a>
               <br>This glossary provides the user with a set of standard definitions for key terms used throughout the SLO Interactive Template. Users can click on this link to open the glossary in a new tab, and refer to this tab as needed during their work on the template.</p>
             <p class="basictext"><strong data-new-link="true">Technical Information</strong>
               <br><strong data-new-link="true"><em><br>Preferred Browser.&nbsp;</em></strong>The SLO Interactive Template works best in the Chrome browser – whether you are using a PC or a Mac. You can download Chrome for free by going to the following link,&nbsp;<a href="https://www.google.com/chrome/browser/desktop/">https://www.google.com/chrome/browser/desktop/</a>

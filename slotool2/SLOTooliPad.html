@@ -32,8 +32,28 @@
     <script type="text/javascript" src="jsPDF-master/examples/js/basic.js"></script>
 	
   
-  <link rel="shortcut icon" type="image/x-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico">
-  <link rel="apple-touch-icon" href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png">
+<script>
+/*Present warning for exiting page. Code modified from http://stackoverflow.com/questions/1119289/how-to-show-the-are-you-sure-you-want-to-navigate-away-from-this-page-when-ch*/
+var confirmOnPageExit = function (e) 
+{
+    // If we haven't been passed the event get the window.event
+    e = e || window.event;
+
+    var message = 'If you leave the SLO Tool then all your work will be lost';
+
+    // For IE6-8 and Firefox prior to version 4
+    if (e) 
+    {
+        e.returnValue = message;
+    }
+
+    // For Chrome, Safari, IE8+ and Opera 12+
+    return message;
+};
+
+// Turn it on - assign the function that returns the string
+window.onbeforeunload = confirmOnPageExit;
+</script>
 </head>
 <body>
   <div class="w-section header"><img width="80" src="images/template.jpg" class="logo">
@@ -174,9 +194,9 @@
 	  <!--Tutrorial-->
         <div class="w-form formwrapper">
           <form id="email-form" name="email-form" data-name="Email Form">
-            <p class="basictext"><a href="SLO Template Elementipad.pdf" target="_blank">IEA SLO&nbsp;Interactive Template Tutorial</a>
+            <p class="basictext"><a href="pdfs/SLO Template Elementipad.pdf" target="_blank">IEA SLO&nbsp;Interactive Template Tutorial</a>
               <br>Users may click on the link above to open (in a new browser tab) a full, step-by-step tutorial for the template. You may either refer to this browser tab throughout your work, or you might prefer to print the information as a hard copy. Also, you may access information on an individual topic by clicking on the Help link while you are in that element section. For example if you are in the Learning Goal section, click on the Help link and then on the Learning Goal Tutorial link that appears as one of the Help options.</p>
-            <p class="basictext"><a href="Glossary.pdf" target="_blank">Link to Glossary</a>
+            <p class="basictext"><a href="pdfs/Glossary.pdf" target="_blank">Link to Glossary</a>
               <br>This glossary provides the user with a set of standard definitions for key terms used throughout the SLO Interactive Template. Users can click on this link to open the glossary in a new tab, and refer to this tab as needed during their work on the template.</p>
             <p class="basictext"><strong data-new-link="true">Technical Information</strong>
               <br>
@@ -1211,7 +1231,7 @@
               <input class="easyui-datebox" style="width:200px" id="start"></input>
               <p class="basictext">End Date</p>
                <input class="easyui-datebox" style="width:200px" id="end"></input>
-              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
+              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="pdfs/SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
               </p>
             </div>
             <div class="textdiv"><button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button><button onClick="submitElement0()" href="#" style="width:90px;height:30px;font-size:20px;">Next</button>
@@ -1257,7 +1277,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
                     <option value="Workshop">Cooperative Group Assignments</option>
                     <option value="CSC316">Independent Work</option>
                 </select>
-              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
+              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="pdfs/SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
               </p>
             </div>
             <div class="textdiv"><button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button><button onClick="submitElement1()" href="#" style="width:90px;height:30px;font-size:20px;" >Next</button>
@@ -1293,7 +1313,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
               <textarea id="assess2" placeholder="Example Text" name="EvaluationProcedures-2" data-name="Evaluation Procedures 2" class="w-input textbox"></textarea>
               <p class="basictext">Describe how the assessments and evaluation procedures may be&nbsp;<a title="Providing students with alternative methods of assessment and/or evaluation procedure that measures growth for all students regardless of differences in ability." class="easyui-tooltip" style="color:red">differentiated</a>&nbsp;to meet the needs of all students described in the student population.The description should include a timeline or points in time for progress monitoring of student performance.</p>
               <textarea id="assess3" placeholder="Example Text" name="Differentiation-2" data-name="Differentiation 2" class="w-input textbox"></textarea>
-              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work..</strong>
+              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="pdfs/SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work..</strong>
               </p>
             </div>
             <div class="textdiv"><button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button><button onClick="submitElement2()" style="width:90px;height:30px;font-size:20px;" >Next</button>
@@ -1334,7 +1354,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
               </select>
               <p class="basictext">If you answered "Yes" to the previous question, using baseline data, identify&nbsp;growth targets&nbsp;for your student population.</p>
               <textarea id="middes" placeholder="Example Text" name="GrowthTargets" data-name="GrowthTargets" class="w-input textbox"></textarea>
-              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
+              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="pdfs/SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
               </p>
             </div>
             <div class="textdiv"><button onClick="exp()"style="width:90px;height:30px;font-size:20px;" >Export</button><button onClick="submitElement3()" style="width:90px;height:30px;font-size:20px;" >Next</button>
@@ -1410,7 +1430,7 @@ is aligned." class="easyui-tooltip" style="color:red">content standards</a> asso
 			  <p id="percent"></p>
               <p class="basictext"><strong data-new-link="true">Note: All percentages are based on a round rule of rounding up from the hundredths; for example, using the State Default model – 50.45% rounds up to 51% and thus a Proficient ranking.</strong>
               </p>
-              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
+              <p class="basictext"><strong data-new-link="true">Note: When finished with the page, click the Next button to move to the next tab. If you need to leave your session, click on the Export button and follow the instructions on step 3 of the <a href="pdfs/SLO Template Elementipad.pdf" target="_blank">Tutorial pdf</a> to save your work.</strong>
               </p>
             </div>
             <div class="textdiv"><button onClick="exp()" style="width:90px;height:30px;font-size:20px;" >Export</button>
