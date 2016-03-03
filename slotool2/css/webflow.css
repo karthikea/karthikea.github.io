@@ -190,8 +190,7 @@ fieldset {
   margin: 0;
   border: 0;
 }
-button,
-html input[type="button"],
+
 input[type="reset"] {
   border: 0;
   cursor: pointer;
