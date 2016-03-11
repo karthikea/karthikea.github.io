@@ -1,0 +1,13 @@
+To Change AIR Resource links:
+
+	1. Open up assessment.html in an editor
+	2. Go to the section that contains the resource links. It will be labelled by a comment header called Resource links.
+	3. Find the broken link from the list of links.
+	4. Either delete the link or change the url to the new site. (Both the "href=" and the text url).
+
+To Change Content Standards:
+		1. Open up standards.js in a text editor.
+		2. Find the broken link in one the jsons. Each json is labelled by subject. There is also a json containing all the standard links
+		3. Change the "link" atribute to the correct url or remove the link from the json.
+		4. Change or remove the link in the "All links" json as well.
+		
